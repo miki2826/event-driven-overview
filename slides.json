@@ -1,0 +1,21 @@
+[{
+    "steps": [
+        [{
+            "name": "p",
+            "value": [{
+                "name": "img",
+                "attributes": {
+                    "src": "https://cloud.githubusercontent.com/assets/3624786/7565262/56c85948-f7f7-11e4-8986-fb31f35c1c6d.png",
+                    "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                    "class": "absolute-element"
+                }
+            }]
+        }, {
+            "name": "h2",
+            "attributes": {
+                "class": "absolute-element",
+                "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+            },
+            "value": "Choose Your Channels"
+        }]]
+}]
