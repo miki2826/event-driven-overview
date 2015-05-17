@@ -17,7 +17,7 @@ angular.module('myApp.ui-homer', [])
                     var deltaY = center.y - rect.top;
                     var deltaX = center.x - rect.left;
                     var startAngle = Math.round(Math.atan2(deltaY, deltaX) * (180/Math.PI));
-                    console.log(startAngle);
+                    //console.log(startAngle);
                     if (startAngle < 0) {
                         startAngle = 360 + startAngle;
                     }
