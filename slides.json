@@ -1,21 +1,503 @@
-[{
-    "steps": [
-        [{
-            "name": "p",
-            "value": [{
-                "name": "img",
-                "attributes": {
-                    "src": "https://cloud.githubusercontent.com/assets/3624786/7565262/56c85948-f7f7-11e4-8986-fb31f35c1c6d.png",
-                    "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
-                    "class": "absolute-element"
+[
+    {
+        "steps": [
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7565262/56c85948-f7f7-11e4-8986-fb31f35c1c6d.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "h2",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": "Choose Your Channels"
                 }
-            }]
-        }, {
-            "name": "h2",
-            "attributes": {
-                "class": "absolute-element",
-                "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
-            },
-            "value": "Choose Your Channels"
-        }]]
-}]
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "Connection Before Content"
+                },
+                {
+                    "name": "p",
+                    "attributes": {
+                        "class": "fragment",
+                        "data-fragment-index": "0",
+                        "style": "height: 300px;"
+                    },
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7647770/073ffa18-fae3-11e4-9b1a-94483fd590b5.png",
+                                "style": "width: 100px; height: 100px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 160px; top: 160px;",
+                                "class": "absolute-element"
+                            }
+                        },
+                        {
+                            "name": "div",
+                            "value": [
+                                {
+                                    "name": "div",
+                                    "attributes": {
+                                        "style": "position: absolute; z-index: 4; left: 280px; top: 174px;",
+                                        "class": "absolute-element"
+                                    },
+                                    "value": [
+                                        {
+                                            "name": "h3",
+                                            "value": "Michael Dimenshtein"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "div",
+                                    "value": [
+                                        {
+                                            "name": "div",
+                                            "attributes": {
+                                                "style": "position: absolute; z-index: 4; left: 280px; top: 234px;",
+                                                "class": "absolute-element"
+                                            },
+                                            "value": "Email: michaeld@liveperson.com"
+                                        },
+                                        {
+                                            "name": "div",
+                                            "attributes": {
+                                                "style": "position: absolute; z-index: 4; left: 280px; top: 274px;",
+                                                "class": "absolute-element"
+                                            },
+                                            "value": "Twitter & Github: @miki2826"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "p",
+                    "attributes": {
+                        "class": "fragment",
+                        "data-fragment-index": "1",
+                        "style": "height: 300px;"
+                    },
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7647773/13fb52ac-fae3-11e4-8172-bec579a050d0.png",
+                                "style": "width: 100px; height: 100px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 160px; top: 360px;",
+                                "class": "absolute-element"
+                            }
+                        },
+                        {
+                            "name": "div",
+                            "value": [
+                                {
+                                    "name": "div",
+                                    "attributes": {
+                                        "style": "position: absolute; z-index: 4; left: 280px; top: 374px;",
+                                        "class": "absolute-element"
+                                    },
+                                    "value": [
+                                        {
+                                            "name": "h3",
+                                            "value": "Itai Koren"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "div",
+                                    "value": [
+                                        {
+                                            "name": "div",
+                                            "attributes": {
+                                                "style": "position: absolute; z-index: 4; left: 280px; top: 434px;",
+                                                "class": "absolute-element"
+                                            },
+                                            "value": "Email: itaik@liveperson.com"
+                                        },
+                                        {
+                                            "name": "div",
+                                            "attributes": {
+                                                "style": "position: absolute; z-index: 4; left: 280px; top: 474px;",
+                                                "class": "absolute-element"
+                                            },
+                                            "value": "Twitter & Github: @itkoren"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7648881/690fc784-faf0-11e4-99fe-f1c17e0e8d6f.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "h2",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": "Software Components Exchange Information"
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7649107/713f847e-faf2-11e4-99b9-d21ced1f63c5.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "h2",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": "Producers Supply Information"
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7649158/f4dc74c2-faf2-11e4-8623-57793d635569.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "h2",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": "Consumers Receive Information"
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7649629/72809512-faf7-11e4-83e1-155d6b1b804c.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "h2",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": "How Does Information Flow?"
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": [
+                        {
+                            "name": "h3",
+                            "value": "Pull:"
+                        },
+                        {
+                            "name": "h3",
+                            "value": "Request/Response & Direct API Call Model"
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7652858/6d69ee9e-fb19-11e4-910f-e04730bdd66b.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": [
+                        {
+                            "name": "h3",
+                            "value": "Push:"
+                        },
+                        {
+                            "name": "h3",
+                            "value": "Callback Model"
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7652512/00810f72-fb16-11e4-8773-f123daa53986.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "h2",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": "Consumer Needs to Know Producer"
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "span",
+                            "attributes": {
+                                "style": "font-style: italic; font-weight: bold;"
+                            },
+                            "value": "\"Each part of the architecture is like a puzzle piece No single piece needs to know what the picture is, All that matters is that the piece does its own job correctly\""
+                        },
+                        {
+                            "name": "span",
+                            "value": " - Nicholas Zakas, "
+                        },
+                        {
+                            "name": "a",
+                            "attributes": {
+                                "href": "http://www.slideshare.net/nzakas/scalable-javascript-application-architecture"
+                            },
+                            "value": "Scalable JavaScript Application Architecture"
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": "In order to ensure low coupling, in large scale applications, modules must be entirely independent of one another, and should not communicate directly with one another."
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7653368/039489a2-fb1e-11e4-801c-8197019ad6a8.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "h2",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": "Event Driven (Mainly Follows the Pub/Sub - Observer/Mediator Pattern)"
+                }
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "Pros"
+                },
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "ul",
+                            "value": [
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "0"
+                                    },
+                                    "value": "Flexible"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "1"
+                                    },
+                                    "value": "Extensible"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "2"
+                                    },
+                                    "value": "Efficient"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "3"
+                                    },
+                                    "value": "Encourages SoC by Reducing Coupling and Increasing Cohesion"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Behind any structured programing principles, there is structured design with its two main core principles: Coupling & Cohesion",
+                        "These two principles, were first introduced by Larry Constantine and Edward Yourdon in their book \"Structured Design: Fundamentals of a Discipline of Computer Program and System Design\" (1976) - http://www.amazon.com/Structured-Design-Fundamentals-Discipline-Computer/dp/0138544719 - and are still valid and relevant today."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "ul",
+                            "value": [
+                                {
+                                    "name": "li",
+                                    "value": "Coupling: The Degree of Dependency Between Modules"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "0"
+                                    },
+                                    "value": "Cohesion: The Measure of How Strongly-Related is the Set of Functions Performed by a Module"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "Cons"
+                },
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "ul",
+                            "value": [
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "0"
+                                    },
+                                    "value": "Complexity"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "1"
+                                    },
+                                    "value": "Control Flow"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "2"
+                                    },
+                                    "value": "Harder to Follow and Debug"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": ""
+                }
+            ]
+        ]
+    }
+]

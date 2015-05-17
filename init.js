@@ -56,23 +56,25 @@ Reveal.initialize({
     // Opens links in an iframe preview overlay
     previewLinks: false,
 
-    theme: queryHash.theme, // available themes are in /css/theme
+    theme: queryHash.theme || "solarized", //"beige", // available themes are in /css/theme
 
     // Transition style
-    transition: queryHash.transition || "default", // default/cube/page/concave/zoom/linear/fade/none
+    transition: queryHash.transition || "linear", // default/cube/page/concave/zoom/linear/fade/none
 
     // Transition speed
     transitionSpeed: "default", // default/fast/slow
 
     // Transition style for full page slide backgrounds
-    backgroundTransition: "default", // default/none/slide/concave/convex/zoom
+    backgroundTransition: "slide", // default/none/slide/concave/convex/zoom
 
     // Number of slides away from the current that are visible
     viewDistance: 3,
 
     // Parallax scrolling
-    // parallaxBackgroundImage: "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg",
-    // parallaxBackgroundSize: "2100px 900px",
+    //parallaxBackgroundImage: "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg",
+    //parallaxBackgroundSize: "2100px 900px",
+    //parallaxBackgroundImage: "http://lh4.ggpht.com/-uKJwuofWfq8/UVrQZNEB7-I/AAAAAAAAAvA/PSHn17VmD1g/image_thumb%25255B1%25255D.png?imgmax=800",
+    //parallaxBackgroundSize: "1600px 900px",
 
 //	multiplex: {
 //		// Example values. To generate your own, see the socket.io server instructions.
