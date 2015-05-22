@@ -9,7 +9,7 @@ angular.module('myApp.ui-homer', [])
             link: function (scope, elm, attrs) {
                 var center = {
                     x: window.screen.width / 2,
-                    y: window.screen.height / 2
+                    y: window.screen.availHeight / 2
                 };
 
                 function inRange(limitA, limitB, num) {
@@ -26,15 +26,20 @@ angular.module('myApp.ui-homer', [])
                         homerAngleComparedToCenter = 360 + homerAngleComparedToCenter;
                     }
 
-                    var limit = (homerAngleComparedToCenter - 180 > 0) ? (homerAngleComparedToCenter - 180) : (360 - homerAngleComparedToCenter + 180)
+                    var isSecondQuadrant = (homerAngleComparedToCenter - 180 > 0);
+                    var limit = isSecondQuadrant ? (homerAngleComparedToCenter - 180) : (360 - homerAngleComparedToCenter + 180)
 
                     if (inRange(limit, homerAngleComparedToCenter, angle)) {
-                        if (scope.source !== "homer_awake") {
+                        if (scope.source !== "homer_awake" && isSecondQuadrant) {
                             scope.source = "homer_awake";
+                        } else if (scope.source !== "homer_sleepy" && !isSecondQuadrant) {
+                            scope.source = "homer_sleepy";
                         }
                     } else {
-                        if (scope.source !== "homer_sleepy") {
+                        if (scope.source !== "homer_sleepy" && isSecondQuadrant) {
                             scope.source = "homer_sleepy";
+                        } else if (scope.source !== "homer_awake" && !isSecondQuadrant) {
+                            scope.source = "homer_awake";
                         }
                     }
                 }

@@ -19,7 +19,7 @@
 
         var center = {
             x: window.screen.width / 2,
-            y: window.screen.height / 2
+            y: window.screen.availHeight / 2
         };
 
         function initPosition(pos) {
@@ -37,15 +37,20 @@
                     homerAngleComparedToCenter = 360 + homerAngleComparedToCenter;
                 }
 
-                var limit = (homerAngleComparedToCenter - 180 > 0) ? (homerAngleComparedToCenter - 180) : (360 - homerAngleComparedToCenter + 180)
+                var isSecondQuadrant = (homerAngleComparedToCenter - 180 > 0);
+                var limit = isSecondQuadrant ? (homerAngleComparedToCenter - 180) : (homerAngleComparedToCenter + 180);
 
                 if (inRange(limit, homerAngleComparedToCenter, angle)) {
-                    if (elm.src !== "../../img/homer_awake.jpg") {
+                    if (elm.src !== "../../img/homer_awake.jpg" && isSecondQuadrant) {
                         elm.src = "../../img/homer_awake.jpg";
+                    } else if (elm.src !== "../../img/homer_sleepy.jpg" && !isSecondQuadrant) {
+                        elm.src = "../../img/homer_sleepy.jpg";
                     }
                 } else {
-                    if (elm.src !== "../../img/homer_sleepy.jpg") {
+                    if (elm.src !== "../../img/homer_sleepy.jpg" && isSecondQuadrant) {
                         elm.src = "../../img/homer_sleepy.jpg";
+                    } else if (elm.src !== "../../img/homer_awake.jpg" && !isSecondQuadrant) {
+                        elm.src = "../../img/homer_awake.jpg";
                     }
                 }
             }

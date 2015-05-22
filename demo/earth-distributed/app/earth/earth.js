@@ -10,21 +10,7 @@ angular.module('myApp.earth', ['ngRoute'])
     }])
 
     .controller('EarthCtrl', ['$scope', 'CourierManager', function ($scope, CourierManager) {
-
-        CourierManager.createCourier({
-            id: "homer1",
-            url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
-            top: "0 px",
-            left: "0 px"
-        });
-
-        CourierManager.createCourier({
-            id: "homer2",
-            url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
-            top: "450px",
-            left: "-150px"
-        });
-
+        createHomers(CourierManager);
 
         function getAngle(el) {
             var st = window.getComputedStyle(el, null);
@@ -65,3 +51,62 @@ angular.module('myApp.earth', ['ngRoute'])
         }, 100);
 
     }]);
+
+
+function createHomers(CourierManager) {
+    CourierManager.createCourier({
+        id: "homer1",
+        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        top: "0px",
+        left: "0px"
+    });
+
+    CourierManager.createCourier({
+        id: "homer2",
+        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        top: "350px",
+        left: "0px"
+    });
+
+    CourierManager.createCourier({
+        id: "homer3",
+        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        top: "700px",
+        left: "0px"
+    });
+
+    CourierManager.createCourier({
+        id: "homer4",
+        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        top: "0px",
+        left: "720px"
+    });
+
+    CourierManager.createCourier({
+        id: "homer5",
+        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        top: "700px",
+        left: "720px"
+    });
+
+    CourierManager.createCourier({
+        id: "homer6",
+        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        top: "0px",
+        left: "1290px"
+    });
+
+    CourierManager.createCourier({
+        id: "homer7",
+        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        top: "350px",
+        left: "1290px"
+    });
+
+    CourierManager.createCourier({
+        id: "homer8",
+        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        top: "700px",
+        left: "1290px"
+    });
+}

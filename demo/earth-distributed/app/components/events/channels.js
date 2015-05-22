@@ -11,7 +11,7 @@ angular.module('myApp.channels', [])
                     style: {
                         width: "150px",
                         height: "150px",
-                        position: "relative",
+                        position: "fixed",
                         border: "0",
                         top: options.top,
                         left: options.left
