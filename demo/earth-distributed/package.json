@@ -1,0 +1,14 @@
+{
+  "name": "choose-your-channels",
+  "private": true,
+  "version": "0.0.0",
+  "description": "JSIL Conf example project",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.6.1"
+  },
+  "scripts": {
+
+    "start": "http-server -a localhost -p 8000 -c-1"
+  }
+}

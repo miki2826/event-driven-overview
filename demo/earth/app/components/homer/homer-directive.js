@@ -12,18 +12,23 @@ angular.module('myApp.ui-homer', [])
                     y: window.screen.height / 2
                 };
 
+                function inRange(limitA, limitB, num) {
+                    return num <= Math.max(limitA,limitB) && num > Math.min(limitA,limitB);
+                }
+
                 function understandAngle(angle) {
                     var rect = elm[0].getBoundingClientRect();
                     var deltaY = center.y - rect.top;
                     var deltaX = center.x - rect.left;
-                    var startAngle = Math.round(Math.atan2(deltaY, deltaX) * (180/Math.PI));
-                    //console.log(startAngle);
-                    if (startAngle < 0) {
-                        startAngle = 360 + startAngle;
-                    }
-                    startAngle += 50;
+                    var homerAngleComparedToCenter = Math.round(Math.atan2(deltaX, deltaY) * (180 / Math.PI));
 
-                    if (angle > startAngle && angle < startAngle + 180) {
+                    if (homerAngleComparedToCenter < 0) {
+                        homerAngleComparedToCenter = 360 + homerAngleComparedToCenter;
+                    }
+
+                    var limit = (homerAngleComparedToCenter - 180 > 0) ? (homerAngleComparedToCenter - 180) : (360 - homerAngleComparedToCenter + 180)
+
+                    if (inRange(limit, homerAngleComparedToCenter, angle)) {
                         if (scope.source !== "homer_awake") {
                             scope.source = "homer_awake";
                         }

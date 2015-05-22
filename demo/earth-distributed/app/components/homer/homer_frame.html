@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Homer</title>
+    <style>
+        .homer {
+            width: 120px;
+            height: 120px;
+        }
+    </style>
+
+    <script type="text/javascript" src="../events/lpPostMessageCourier.js"></script>
+
+    <script type="text/javascript">
+        var courier = new window.LPPostMessageCourier();
+
+        var startPosition;
+
+        var center = {
+            x: window.screen.width / 2,
+            y: window.screen.height / 2
+        };
+
+        function initPosition(pos) {
+            startPosition = pos;
+        }
+
+        function understandAngle(angle) {
+            if (startPosition) {
+                var elm = document.querySelector(".homer");
+                var deltaY = center.y - startPosition.top;
+                var deltaX = startPosition.left - center.x;
+                var homerAngleComparedToCenter = Math.round(Math.atan2(deltaX, deltaY) * (180 / Math.PI));
+
+                if (homerAngleComparedToCenter < 0) {
+                    homerAngleComparedToCenter = 360 + homerAngleComparedToCenter;
+                }
+
+                var limit = (homerAngleComparedToCenter - 180 > 0) ? (homerAngleComparedToCenter - 180) : (360 - homerAngleComparedToCenter + 180)
+
+                if (inRange(limit, homerAngleComparedToCenter, angle)) {
+                    if (elm.src !== "../../img/homer_awake.jpg") {
+                        elm.src = "../../img/homer_awake.jpg";
+                    }
+                } else {
+                    if (elm.src !== "../../img/homer_sleepy.jpg") {
+                        elm.src = "../../img/homer_sleepy.jpg";
+                    }
+                }
+            }
+        }
+
+        function inRange(limitA, limitB, num) {
+            return num <= Math.max(limitA,limitB) && num > Math.min(limitA,limitB);
+        }
+
+        courier.bind({
+            appName: "EarthCtrl",
+            eventName: "rotation",
+            func: understandAngle,
+            async: true
+        });
+
+        courier.bind({
+            appName: "CourierManager",
+            eventName: "position",
+            func: initPosition,
+            async: true
+        });
+
+//        scope.source = attrs.default;
+    </script>
+</head>
+<body>
+    <img src="../../img/homer_awake.jpg" class="homer">
+</body>
+</html>
