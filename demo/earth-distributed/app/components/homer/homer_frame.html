@@ -37,19 +37,19 @@
                     homerAngleComparedToCenter = 360 + homerAngleComparedToCenter;
                 }
 
-                var isSecondQuadrant = (homerAngleComparedToCenter - 180 > 0);
-                var limit = isSecondQuadrant ? (homerAngleComparedToCenter - 180) : (homerAngleComparedToCenter + 180);
+                var isSecondHalf = (homerAngleComparedToCenter - 180 > 0);
+                var limit = isSecondHalf ? (homerAngleComparedToCenter - 180) : (homerAngleComparedToCenter + 180);
 
                 if (inRange(limit, homerAngleComparedToCenter, angle)) {
-                    if (elm.src !== "../../img/homer_awake.jpg" && isSecondQuadrant) {
+                    if (elm.src !== "../../img/homer_awake.jpg" && isSecondHalf) {
                         elm.src = "../../img/homer_awake.jpg";
-                    } else if (elm.src !== "../../img/homer_sleepy.jpg" && !isSecondQuadrant) {
+                    } else if (elm.src !== "../../img/homer_sleepy.jpg" && !isSecondHalf) {
                         elm.src = "../../img/homer_sleepy.jpg";
                     }
                 } else {
-                    if (elm.src !== "../../img/homer_sleepy.jpg" && isSecondQuadrant) {
+                    if (elm.src !== "../../img/homer_sleepy.jpg" && isSecondHalf) {
                         elm.src = "../../img/homer_sleepy.jpg";
-                    } else if (elm.src !== "../../img/homer_awake.jpg" && !isSecondQuadrant) {
+                    } else if (elm.src !== "../../img/homer_awake.jpg" && !isSecondHalf) {
                         elm.src = "../../img/homer_awake.jpg";
                     }
                 }

@@ -26,19 +26,19 @@ angular.module('myApp.ui-homer', [])
                         homerAngleComparedToCenter = 360 + homerAngleComparedToCenter;
                     }
 
-                    var isSecondQuadrant = (homerAngleComparedToCenter - 180 > 0);
-                    var limit = isSecondQuadrant ? (homerAngleComparedToCenter - 180) : (360 - homerAngleComparedToCenter + 180)
+                    var isSecondHalf = (homerAngleComparedToCenter - 180 > 0);
+                    var limit = isSecondHalf ? (homerAngleComparedToCenter - 180) : (360 - homerAngleComparedToCenter + 180)
 
                     if (inRange(limit, homerAngleComparedToCenter, angle)) {
-                        if (scope.source !== "homer_awake" && isSecondQuadrant) {
+                        if (scope.source !== "homer_awake" && isSecondHalf) {
                             scope.source = "homer_awake";
-                        } else if (scope.source !== "homer_sleepy" && !isSecondQuadrant) {
+                        } else if (scope.source !== "homer_sleepy" && !isSecondHalf) {
                             scope.source = "homer_sleepy";
                         }
                     } else {
-                        if (scope.source !== "homer_sleepy" && isSecondQuadrant) {
+                        if (scope.source !== "homer_sleepy" && isSecondHalf) {
                             scope.source = "homer_sleepy";
-                        } else if (scope.source !== "homer_awake" && !isSecondQuadrant) {
+                        } else if (scope.source !== "homer_awake" && !isSecondHalf) {
                             scope.source = "homer_awake";
                         }
                     }
