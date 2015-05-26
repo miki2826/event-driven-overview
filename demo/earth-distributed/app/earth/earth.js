@@ -122,11 +122,12 @@ function getCrossDomainWidgetUrl() {
     else if (-1 !== current.toLowerCase().indexOf("127.0.0.1")) {
         different = window.location.protocol + "//localhost";
     }
-    else if (-1 !== current.toLowerCase().indexOf("webyoda.github.io")) {
-        different = window.location.protocol + "//webyoda.chronosjs.co.vu";
+    else if (-1 !== current.toLowerCase().indexOf("webyoda.github.io") &&
+             -1 !== window.location.protocol.toLowerCase().indexOf("http:")) {
+        different = "webyoda.github.io";
     }
-    else if (-1 !== current.toLowerCase().indexOf("webyoda.chronosjs.co.vu")) {
-        different = window.location.protocol + "//webyoda.github.io";
+    else {
+        different = window.location.protocol + "//" + current;
     }
 
     return different + (window.location.port ? ":" + window.location.port : "") + "/choose-your-channels/demo/earth-distributed/app/components/homer/homer_frame.html";
