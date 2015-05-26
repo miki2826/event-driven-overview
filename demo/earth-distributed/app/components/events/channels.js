@@ -1,6 +1,6 @@
 angular.module('myApp.channels', [])
-    .factory('CourierManager', function ($window, $log) {
-        var CourierManager = (function() {
+    .factory('chronosjsCourierSupervisor', function ($window, $log) {
+        var chronosjsCourierSupervisor = (function() {
 
             var couriers = {};
 
@@ -23,7 +23,7 @@ angular.module('myApp.channels', [])
                             delete couriers[options.id];
                         } else {
                             couriers[options.id].trigger({
-                                appName: "CourierManager",
+                                appName: "CourierSupervisor",
                                 eventName: "position",
                                 data: {
                                     top: parseInt(options.top, 10),
@@ -59,5 +59,5 @@ angular.module('myApp.channels', [])
         })();
 
 
-        return CourierManager;
+        return chronosjsCourierSupervisor;
     });

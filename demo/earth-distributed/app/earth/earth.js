@@ -9,8 +9,8 @@ angular.module('myApp.earth', ['ngRoute'])
         });
     }])
 
-    .controller('EarthCtrl', ['$scope', 'CourierManager', function ($scope, CourierManager) {
-        createHomers(CourierManager);
+    .controller('EarthCtrl', ['$scope', 'chronosjsCourierSupervisor', function ($scope, chronosjsCourierSupervisor) {
+        createHomers(chronosjsCourierSupervisor);
 
         function getAngle(el) {
             var st = window.getComputedStyle(el, null);
@@ -43,7 +43,7 @@ angular.module('myApp.earth', ['ngRoute'])
             var data = getAngle(sunImage);
             $scope.deg = data;
             $scope.$apply();
-            CourierManager.applyAll("trigger", {
+            chronosjsCourierSupervisor.applyAll("trigger", {
                 appName: "EarthCtrl",
                 eventName: "rotation",
                 data: data
@@ -53,60 +53,81 @@ angular.module('myApp.earth', ['ngRoute'])
     }]);
 
 
-function createHomers(CourierManager) {
-    CourierManager.createCourier({
+function createHomers(chronosjsCourierSupervisor) {
+    var widgetUrl = getCrossDomainWidgetUrl();
+    chronosjsCourierSupervisor.createCourier({
         id: "homer1",
-        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        url: widgetUrl,
         top: "0px",
         left: "0px"
     });
 
-    CourierManager.createCourier({
+    chronosjsCourierSupervisor.createCourier({
         id: "homer2",
-        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        url: widgetUrl,
         top: "350px",
         left: "0px"
     });
 
-    CourierManager.createCourier({
+    chronosjsCourierSupervisor.createCourier({
         id: "homer3",
-        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        url: widgetUrl,
         top: "700px",
         left: "0px"
     });
 
-    CourierManager.createCourier({
+    chronosjsCourierSupervisor.createCourier({
         id: "homer4",
-        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        url: widgetUrl,
         top: "0px",
         left: "720px"
     });
 
-    CourierManager.createCourier({
+    chronosjsCourierSupervisor.createCourier({
         id: "homer5",
-        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        url: widgetUrl,
         top: "700px",
         left: "720px"
     });
 
-    CourierManager.createCourier({
+    chronosjsCourierSupervisor.createCourier({
         id: "homer6",
-        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        url: widgetUrl,
         top: "0px",
         left: "1290px"
     });
 
-    CourierManager.createCourier({
+    chronosjsCourierSupervisor.createCourier({
         id: "homer7",
-        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        url: widgetUrl,
         top: "350px",
         left: "1290px"
     });
 
-    CourierManager.createCourier({
+    chronosjsCourierSupervisor.createCourier({
         id: "homer8",
-        url: "http://127.0.0.1:8000/app/components/homer/homer_frame.html",
+        url: widgetUrl,
         top: "700px",
         left: "1290px"
     });
+}
+
+function getCrossDomainWidgetUrl() {
+    var current = window.location.hostname.toLowerCase();
+    var different;
+
+    if (-1 !== current.indexOf("localhost")) {
+        different = window.location.protocol + "//127.0.0.1";
+    }
+    else if (-1 !== current.toLowerCase().indexOf("127.0.0.1")) {
+        different = window.location.protocol + "//localhost";
+    }
+    else if (-1 !== current.toLowerCase().indexOf("webyoda.github.io")) {
+        different = window.location.protocol + "//webyoda.chronosjs.co.vu";
+    }
+    else if (-1 !== current.toLowerCase().indexOf("webyoda.chronosjs.co.vu")) {
+        different = window.location.protocol + "//webyoda.github.io";
+    }
+
+    return different + (window.location.port ? ":" + window.location.port : "") + "/choose-your-channels/demo/earth-distributed/app/components/homer/homer_frame.html";
 }

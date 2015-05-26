@@ -9,7 +9,7 @@ angular.module('myApp.earth', ['ngRoute'])
         });
     }])
 
-    .controller('EarthCtrl', ['$scope', 'lpEventChannel', function ($scope, lpEventChannel) {
+    .controller('EarthCtrl', ['$scope', 'chronosjsChannel', function ($scope, chronosjsChannel) {
 
         function getAngle(el) {
             var st = window.getComputedStyle(el, null);
@@ -42,7 +42,7 @@ angular.module('myApp.earth', ['ngRoute'])
             var data = getAngle(sunImage);
             $scope.deg = data;
             $scope.$apply();
-            lpEventChannel.trigger({
+            chronosjsChannel.trigger({
                 appName: "EarthCtrl",
                 eventName: "rotation",
                 data: data

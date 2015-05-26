@@ -2,7 +2,7 @@
 
 angular.module('myApp.ui-homer', [])
 
-    .directive('homerImage', ['lpEventChannel', function (lpEventChannel) {
+    .directive('homerImage', ['chronosjsChannel', function (chronosjsChannel) {
         return {
             template: '<image ng-src="img/{{source}}.jpg" class="homer"></image>',
             restrict: "EAC",
@@ -19,7 +19,7 @@ angular.module('myApp.ui-homer', [])
                 function understandAngle(angle) {
                     var rect = elm[0].getBoundingClientRect();
                     var deltaY = center.y - rect.top;
-                    var deltaX = center.x - rect.left;
+                    var deltaX = rect.left - center.x;
                     var homerAngleComparedToCenter = Math.round(Math.atan2(deltaX, deltaY) * (180 / Math.PI));
 
                     if (homerAngleComparedToCenter < 0) {
@@ -44,7 +44,7 @@ angular.module('myApp.ui-homer', [])
                     }
                 }
 
-                lpEventChannel.bind({
+                chronosjsChannel.bind({
                     appName: "EarthCtrl",
                     eventName: "rotation",
                     func: understandAngle,

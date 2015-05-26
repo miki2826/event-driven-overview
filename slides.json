@@ -243,9 +243,36 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784315/1bf6ee84-016a-11e5-95e8-ddf1824f4221.png",
                                 "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
                                 "class": "absolute-element"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784190/44581678-0165-11e5-980b-77a6f6d6b0cf.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "0"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784194/62ff7698-0165-11e5-9896-123c304d3df6.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "1"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784198/7f7eaf3c-0165-11e5-8907-0128be94e5b1.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "2"
                             }
                         }
                     ]
@@ -275,9 +302,18 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7750603/da33b55a-ffdd-11e4-9109-3c7c68c7cb1e.gif",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784378/889c9e42-016c-11e5-8400-788aa1f3075a.png",
                                 "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
                                 "class": "absolute-element"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7750603/da33b55a-ffdd-11e4-9109-3c7c68c7cb1e.gif",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "0"
                             }
                         }
                     ]
@@ -363,11 +399,20 @@
                                 "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
                                 "class": "absolute-element"
                             }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784412/737d11da-016d-11e5-8f7f-c74a421f059f.png",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "0"
+                            }
                         }
                     ]
                 },
                 {
-                    "name": "h2",
+                    "name": "h3",
                     "attributes": {
                         "class": "absolute-element",
                         "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
@@ -496,6 +541,494 @@
                 {
                     "name": "notes",
                     "value": ""
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": "Javascript is Callback Driven by Nature"
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=native_events.js",
+                                "style": "top: 250px; width: 916px; height: 292px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": "MVC Frameworks, Embraces SoC and Supplies Needed Tools for Using Pub/Sub"
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=backbone_message_service.js",
+                                "style": "top: 250px; width: 916px; height: 292px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_message_service.js",
+                                "style": "top: 100px; width: 916px; height: 422px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=backbone_model.js",
+                                "style": "top: 20px; width: 916px; height: 622px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_scope.js",
+                                "style": "top: 20px; width: 916px; height: 622px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "h2",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": "Meet <a href=\"https://github.com/LivePersonInc/chronosjs\">chronosjs</a>!"
+                }
+            ],
+            [
+                {
+                    "name": "h3",
+                    "value": "A Native Javascript Event Channels (Pub/Sub) Implementation"
+                },
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "ul",
+                            "value": [
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "0"
+                                    },
+                                    "value": "Small Size"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "1"
+                                    },
+                                    "value": "No Additional Dependencies"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "2"
+                                    },
+                                    "value": "Allows High Level of Granularity with AppName & EventName"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "3"
+                                    },
+                                    "value": "Supports 3 Models of Interaction while Keeping Producer/Consumer Low Coupling (Events, Commands, Request/Response)"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "4"
+                                    },
+                                    "value": "Supports Synchronous and Asynchronous Triggering"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "5"
+                                    },
+                                    "value": "Allows Data to Be Passed by Reference and By Value"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": ""
+                }
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "The World of Homer - Demo"
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "width: 100%; height: 550px; max-height: none; max-width: none; background-color: white"
+                    },
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "./demo/earth/app/index.html",
+                                "style": "top: 10px; width: 100%; height: 100%; max-height: none; max-width: none; background-color: white"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "ChronosJS Channel"
+                },
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_channel.js",
+                                "style": "top: 180px; width: 916px; height: 422px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "Earth Controller"
+                },
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_earth_controller.js",
+                                "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "Homer Directive"
+                },
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_homer_directive.js",
+                                "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "ul",
+                            "attributes": {
+                                "style": "list-style-type: none;"
+                            },
+                            "value": [
+                                {
+                                    "name": "li",
+                                    "value": "But What If We Would Like to Make \"The World of Homer\" a Platform?<br><br>"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "0"
+                                    },
+                                    "value": "And Allow Other Developers to Create and Host Different Homers (as Widgets)?"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "ul",
+                            "attributes": {
+                                "style": "list-style-type: none;"
+                            },
+                            "value": [
+                                {
+                                    "name": "li",
+                                    "value": "We Would Have to Use IFrames to Load Them Homers (Widgets)<br><br>"
+                                },
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "0"
+                                    },
+                                    "value": "And How Would We Communicate with Them?"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "ul",
+                            "attributes": {
+                                "style": "list-style-type: none;"
+                            },
+                            "value": [
+                                {
+                                    "name": "li",
+                                    "value": "What About the Same Origin Policy (Cross Domain Limit)"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "h2",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": "Meet <a href=\"https://github.com/LivePersonInc/chronosjs\">chronosjs</a> courier!"
+                }
+            ],
+            [
+                {
+                    "name": "h3",
+                    "value": "chronosjs courier - All Available chronosjs Channels over PostMessage (Cross Domain)"
+                },
+                {
+                    "name": "notes",
+                    "value": ""
+                }
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "ChronosJS Courier (Supervisor)"
+                },
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_supervisor.js",
+                                "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "Earth Controller"
+                },
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_earth_controller.js",
+                                "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "Homer Widget (Cross Domain)"
+                },
+                {
+                    "name": "div",
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "//itkoren.github.io/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_homer_widget.html",
+                                "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "h2",
+                    "value": "The World of Homer Widgets - Demo"
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "width: 100%; height: 550px; max-height: none; max-width: none; background-color: white"
+                    },
+                    "value": [
+                        {
+                            "name": "iframe",
+                            "attributes": {
+                                "src": "./demo/earth-distributed/app/index.html",
+                                "style": "top: 10px; width: 100%; height: 100%; max-height: none; max-width: none; background-color: white"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "p",
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "",
+                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "p",
+                    "attributes": {
+                        "class": "absolute-element",
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                    },
+                    "value": "@GitHub <a href=\"https://github.com/LivePersonInc/chronosjs\">https://github.com/LivePersonInc/chronosjs</a>"
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "width: 100%; height: 550px; max-height: none; max-width: none;"
+                    },
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7810851/4fd1a9a6-03ae-11e5-9297-87fbf50634a6.png",
+                                "style": "width: 269px; height: 523px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 369px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "width: 100%; height: 550px; max-height: none; max-width: none;"
+                    },
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7811015/a7785186-03af-11e5-9647-d7e3faf56ce1.png",
+                                "style": "width: 569px; height: 323px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 189px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
                 }
             ]
         ]

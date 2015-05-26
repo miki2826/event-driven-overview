@@ -1,6 +1,6 @@
 angular.module('myApp.channels', [])
-.factory('lpEventChannel', function ($window) {
-    var channels = new $window.LPEventChannel();
+.factory('chronosjsChannel', function ($window) {
+    var chronosjsChannel = new $window.LPEventChannel();
 
-    return channels;
+    return chronosjsChannel;
 });
