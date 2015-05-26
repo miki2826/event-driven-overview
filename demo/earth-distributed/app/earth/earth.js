@@ -124,7 +124,7 @@ function getCrossDomainWidgetUrl() {
     }
     else if (-1 !== current.toLowerCase().indexOf("webyoda.github.io") &&
              -1 !== window.location.protocol.toLowerCase().indexOf("http:")) {
-        different = "webyoda.github.io";
+        different = "https://webyoda.github.io";
     }
     else {
         different = window.location.protocol + "//" + current;
