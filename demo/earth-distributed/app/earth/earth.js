@@ -39,7 +39,10 @@ angular.module('myApp.earth', ['ngRoute'])
         var sunImage = document.querySelector('.sun');
         $scope.deg = getAngle(sunImage);
 
-        setInterval(function () {
+        var intervalId;
+        function publishAngle() {
+            clearTimeout(intervalId);
+
             var data = getAngle(sunImage);
             $scope.deg = data;
             $scope.$apply();
@@ -48,9 +51,13 @@ angular.module('myApp.earth', ['ngRoute'])
                 eventName: "rotation",
                 data: data
             });
-        }, 100);
 
+            intervalId = setTimeout(publishAngle, 200);
+        }
+
+        intervalId = setTimeout(publishAngle, 200);
     }]);
+
 
 
 function createHomers(chronosjsCourierSupervisor) {
@@ -66,7 +73,8 @@ function createHomers(chronosjsCourierSupervisor) {
         id: "marge",
         url: widgetUrl  + "marge_frame.html",
         top: "50%",
-        left: "0px"
+        left: "0px",
+        marginTop: "-50px"
     });
 
     chronosjsCourierSupervisor.createCourier({
@@ -80,14 +88,16 @@ function createHomers(chronosjsCourierSupervisor) {
         id: "maggie",
         url: widgetUrl + "maggie_frame.html",
         top: "0px",
-        left: "50%"
+        left: "50%",
+        marginLeft: "-50px"
     });
 
     chronosjsCourierSupervisor.createCourier({
         id: "lisa",
         url: widgetUrl + "lisa_frame.html",
         bottom: "0px",
-        left: "50%"
+        left: "50%",
+        marginLeft: "-50px"
     });
 
     chronosjsCourierSupervisor.createCourier({
@@ -101,7 +111,8 @@ function createHomers(chronosjsCourierSupervisor) {
         id: "barney",
         url: widgetUrl + "barney_frame.html",
         top: "50%",
-        right: "0px"
+        right: "0px",
+        marginTop: "-50px"
     });
 
     chronosjsCourierSupervisor.createCourier({

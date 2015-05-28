@@ -38,7 +38,10 @@ angular.module('myApp.earth', ['ngRoute'])
         var sunImage = document.querySelector('.sun');
         $scope.deg = getAngle(sunImage);
 
-        setInterval(function () {
+        var intervalId;
+        function publishAngle() {
+            clearTimeout(intervalId);
+
             var data = getAngle(sunImage);
             $scope.deg = data;
             $scope.$apply();
@@ -47,6 +50,10 @@ angular.module('myApp.earth', ['ngRoute'])
                 eventName: "rotation",
                 data: data
             });
-        }, 100);
+
+            intervalId = setTimeout(publishAngle, 200);
+        }
+
+        intervalId = setTimeout(publishAngle, 200);
 
     }]);

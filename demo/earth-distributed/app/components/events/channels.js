@@ -16,7 +16,9 @@ angular.module('myApp.channels', [])
                         top: options.top,
                         left: options.left,
                         right: options.right,
-                        bottom: options.bottom
+                        bottom: options.bottom,
+                        marginLeft: options.marginLeft,
+                        marginTop: options.marginTop
                     },
                     callback: function (err, iframe) {
                         if (err) {
