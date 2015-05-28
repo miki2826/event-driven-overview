@@ -1,5 +1,5 @@
 angular.module('myApp.channels', [])
-    .factory('chronosjsCourierSupervisor', function ($window, $log) {
+    .factory('chronosjsCourierSupervisor', function ($window) {
         var chronosjsCourierSupervisor = (function() {
 
             var couriers = {};
@@ -19,7 +19,6 @@ angular.module('myApp.channels', [])
                         bottom: options.bottom
                     },
                     callback: function (err, iframe) {
-                        $log.log("initialized iframe url=" + options.url + "with err=" + JSON.stringify(err));
                         if (err) {
                             couriers[options.id] = null;
                             delete couriers[options.id];
