@@ -135,5 +135,5 @@ function getCrossDomainWidgetUrl() {
         different = window.location.protocol + "//" + current;
     }
 
-    return different + (0 < window.location.port.length ? ":" + window.location.port : "") + (-1 !== (parts[1] && parts[1].indexOf("app")) ? "/app" : "/" + parts[1] + "/demo/earth-distributed/app") + "/components/simpsons/";
+    return different + (0 < window.location.port.length ? ":" + window.location.port : "") + (-1 !== (parts[1] && parts[1].indexOf("app")) ? "/app" : "/" + parts[1] + "/demo/earth-distributed/app") + "/components/simpson/";
 }
