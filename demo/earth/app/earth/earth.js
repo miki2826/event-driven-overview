@@ -23,9 +23,6 @@ angular.module('myApp.earth', ['ngRoute'])
             var values = tr.split('(')[1].split(')')[0].split(',');
             var a = values[0];
             var b = values[1];
-            var c = values[2];
-            var d = values[3];
-
             var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
 
             if (angle < 0) {
@@ -54,6 +51,6 @@ angular.module('myApp.earth', ['ngRoute'])
             intervalId = setTimeout(publishAngle, 200);
         }
 
-        intervalId = setTimeout(publishAngle, 200);
+        intervalId = setTimeout(publishAngle, 100);
 
     }]);

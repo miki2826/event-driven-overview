@@ -11,24 +11,23 @@ angular.module('myApp.ui-homer', [])
                     x: window.screen.width / 2,
                     y: window.screen.availHeight / 2
                 };
+                var rect = elm[0].getBoundingClientRect();
+                var deltaY = center.y - rect.top;
+                var deltaX = rect.left - center.x;
+                var homerAngleComparedToCenter = Math.round(Math.atan2(deltaX, deltaY) * (180 / Math.PI));
+
+                if (homerAngleComparedToCenter < 0) {
+                    homerAngleComparedToCenter = 360 + homerAngleComparedToCenter;
+                }
+
+                var isSecondHalf = (homerAngleComparedToCenter - 180 > 0);
+                var limit = isSecondHalf ? (homerAngleComparedToCenter - 180) : (360 - homerAngleComparedToCenter + 180);
 
                 function inRange(limitA, limitB, num) {
                     return num <= Math.max(limitA,limitB) && num > Math.min(limitA,limitB);
                 }
 
                 function understandAngle(angle) {
-                    var rect = elm[0].getBoundingClientRect();
-                    var deltaY = center.y - rect.top;
-                    var deltaX = rect.left - center.x;
-                    var homerAngleComparedToCenter = Math.round(Math.atan2(deltaX, deltaY) * (180 / Math.PI));
-
-                    if (homerAngleComparedToCenter < 0) {
-                        homerAngleComparedToCenter = 360 + homerAngleComparedToCenter;
-                    }
-
-                    var isSecondHalf = (homerAngleComparedToCenter - 180 > 0);
-                    var limit = isSecondHalf ? (homerAngleComparedToCenter - 180) : (360 - homerAngleComparedToCenter + 180)
-
                     if (inRange(limit, homerAngleComparedToCenter, angle)) {
                         if (scope.source !== "homer_awake" && isSecondHalf) {
                             scope.source = "homer_awake";

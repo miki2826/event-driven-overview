@@ -1,5 +1,10 @@
 var courier = new window.LPPostMessageCourier();
 var startPosition;
+var deltaY;
+var deltaX;
+var widgetAngleComparedToCenter;
+var isSecondHalf;
+var limit;
 var center = {
     x: window.screen.width / 2,
     y: window.screen.availHeight / 2
@@ -7,23 +12,23 @@ var center = {
 
 function initPosition(pos) {
     startPosition = pos;
+    deltaY = center.y - startPosition.top;
+    deltaX = startPosition.left - center.x;
+    widgetAngleComparedToCenter = Math.round(Math.atan2(deltaX, deltaY) * (180 / Math.PI));
+
+    if (widgetAngleComparedToCenter < 0) {
+        widgetAngleComparedToCenter = 360 + widgetAngleComparedToCenter;
+    }
+
+    isSecondHalf = (widgetAngleComparedToCenter - 180 > 0);
+    limit = isSecondHalf ? (widgetAngleComparedToCenter - 180) : (widgetAngleComparedToCenter + 180);
 }
 
 function understandAngle(angle) {
     if (startPosition) {
         var elm = document.querySelector(".simpson");
-        var deltaY = center.y - startPosition.top;
-        var deltaX = startPosition.left - center.x;
-        var homerAngleComparedToCenter = Math.round(Math.atan2(deltaX, deltaY) * (180 / Math.PI));
 
-        if (homerAngleComparedToCenter < 0) {
-            homerAngleComparedToCenter = 360 + homerAngleComparedToCenter;
-        }
-
-        var isSecondHalf = (homerAngleComparedToCenter - 180 > 0);
-        var limit = isSecondHalf ? (homerAngleComparedToCenter - 180) : (homerAngleComparedToCenter + 180);
-
-        if (inRange(limit, homerAngleComparedToCenter, angle)) {
+        if (inRange(limit, widgetAngleComparedToCenter, angle)) {
             if (elm.src !== "../../img/" + window.awakeImageName && isSecondHalf) {
                 elm.src = "../../img/" + window.awakeImageName;
             } else if (elm.src !== "../../img/" + window.sleepImageName && !isSecondHalf) {
