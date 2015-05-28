@@ -9,8 +9,8 @@ angular.module('myApp.channels', [])
                     url: options.url,
                     bust: false,
                     style: {
-                        width: "130px",
-                        height: "130px",
+                        width: "140px",
+                        height: "140px",
                         position: "fixed",
                         border: "0",
                         top: options.top,
@@ -18,18 +18,19 @@ angular.module('myApp.channels', [])
                         right: options.right,
                         bottom: options.bottom
                     },
-                    callback: function (err) {
+                    callback: function (err, iframe) {
                         $log.log("initialized iframe url=" + options.url + "with err=" + JSON.stringify(err));
                         if (err) {
                             couriers[options.id] = null;
                             delete couriers[options.id];
                         } else {
+                            var rec = iframe.getBoundingClientRect();
                             couriers[options.id].trigger({
                                 appName: "CourierSupervisor",
                                 eventName: "position",
                                 data: {
-                                    top: parseInt(options.top, 10),
-                                    left: parseInt(options.left, 10) > 0 ? parseInt(options.left, 10) : 0
+                                    top: Math.floor(rec.top),
+                                    left: Math.floor(rec.left)
                                 }
                             })
                         }
