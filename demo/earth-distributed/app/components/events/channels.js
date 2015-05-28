@@ -9,12 +9,14 @@ angular.module('myApp.channels', [])
                     url: options.url,
                     bust: false,
                     style: {
-                        width: "150px",
-                        height: "150px",
+                        width: "130px",
+                        height: "130px",
                         position: "fixed",
                         border: "0",
                         top: options.top,
-                        left: options.left
+                        left: options.left,
+                        right: options.right,
+                        bottom: options.bottom
                     },
                     callback: function (err) {
                         $log.log("initialized iframe url=" + options.url + "with err=" + JSON.stringify(err));
