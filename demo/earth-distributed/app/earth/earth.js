@@ -65,14 +65,14 @@ function createHomers(chronosjsCourierSupervisor) {
     chronosjsCourierSupervisor.createCourier({
         id: "homer2",
         url: widgetUrl,
-        top: "350px",
+        top: "50%",
         left: "0px"
     });
 
     chronosjsCourierSupervisor.createCourier({
         id: "homer3",
         url: widgetUrl,
-        top: "700px",
+        bottom: "0px",
         left: "0px"
     });
 
@@ -80,35 +80,35 @@ function createHomers(chronosjsCourierSupervisor) {
         id: "homer4",
         url: widgetUrl,
         top: "0px",
-        left: "720px"
+        left: "50%"
     });
 
     chronosjsCourierSupervisor.createCourier({
         id: "homer5",
         url: widgetUrl,
-        top: "700px",
-        left: "720px"
+        bottom: "0px",
+        left: "50%"
     });
 
     chronosjsCourierSupervisor.createCourier({
         id: "homer6",
         url: widgetUrl,
         top: "0px",
-        left: "1290px"
+        right: "0px"
     });
 
     chronosjsCourierSupervisor.createCourier({
         id: "homer7",
         url: widgetUrl,
-        top: "350px",
-        left: "1290px"
+        bottom: "50%",
+        right: "0px"
     });
 
     chronosjsCourierSupervisor.createCourier({
         id: "homer8",
         url: widgetUrl,
-        top: "700px",
-        left: "1290px"
+        bottom: "0px",
+        right: "0px"
     });
 }
 
