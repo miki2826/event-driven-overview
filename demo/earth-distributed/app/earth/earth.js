@@ -100,7 +100,7 @@ function createHomers(chronosjsCourierSupervisor) {
     chronosjsCourierSupervisor.createCourier({
         id: "homer7",
         url: widgetUrl,
-        bottom: "50%",
+        top: "50%",
         right: "0px"
     });
 
