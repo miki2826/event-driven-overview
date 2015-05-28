@@ -57,56 +57,56 @@ function createHomers(chronosjsCourierSupervisor) {
     var widgetUrl = getCrossDomainWidgetUrl();
     chronosjsCourierSupervisor.createCourier({
         id: "homer1",
-        url: widgetUrl,
+        url: widgetUrl + "homer_frame.html",
         top: "0px",
         left: "0px"
     });
 
     chronosjsCourierSupervisor.createCourier({
-        id: "homer2",
-        url: widgetUrl,
+        id: "marge",
+        url: widgetUrl  + "marge_frame.html",
         top: "50%",
         left: "0px"
     });
 
     chronosjsCourierSupervisor.createCourier({
-        id: "homer3",
-        url: widgetUrl,
+        id: "bart",
+        url: widgetUrl + "bart_frame.html",
         bottom: "0px",
         left: "0px"
     });
 
     chronosjsCourierSupervisor.createCourier({
-        id: "homer4",
-        url: widgetUrl,
+        id: "maggie",
+        url: widgetUrl + "maggie_frame.html",
         top: "0px",
         left: "50%"
     });
 
     chronosjsCourierSupervisor.createCourier({
-        id: "homer5",
-        url: widgetUrl,
+        id: "lisa",
+        url: widgetUrl + "lisa_frame.html",
         bottom: "0px",
         left: "50%"
     });
 
     chronosjsCourierSupervisor.createCourier({
-        id: "homer6",
-        url: widgetUrl,
+        id: "willie",
+        url: widgetUrl + "willie_frame.html",
         top: "0px",
         right: "0px"
     });
 
     chronosjsCourierSupervisor.createCourier({
-        id: "homer7",
-        url: widgetUrl,
+        id: "barney",
+        url: widgetUrl + "barney_frame.html",
         top: "50%",
         right: "0px"
     });
 
     chronosjsCourierSupervisor.createCourier({
-        id: "homer8",
-        url: widgetUrl,
+        id: "grampa",
+        url: widgetUrl + "grampa_frame.html",
         bottom: "0px",
         right: "0px"
     });
@@ -135,5 +135,5 @@ function getCrossDomainWidgetUrl() {
         different = window.location.protocol + "//" + current;
     }
 
-    return different + (0 < window.location.port.length ? ":" + window.location.port : "") + (-1 !== (parts[1] && parts[1].indexOf("app")) ? "/app" : "/" + parts[1] + "/demo/earth-distributed/app") + "/components/homer/homer_frame.html";
+    return different + (0 < window.location.port.length ? ":" + window.location.port : "") + (-1 !== (parts[1] && parts[1].indexOf("app")) ? "/app" : "/" + parts[1] + "/demo/earth-distributed/app") + "/components/simpson/";
 }
