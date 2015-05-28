@@ -9,8 +9,8 @@ angular.module('myApp.channels', [])
                     url: options.url,
                     bust: false,
                     style: {
-                        width: "140px",
-                        height: "140px",
+                        width: "100px",
+                        height: "100px",
                         position: "fixed",
                         border: "0",
                         top: options.top,
