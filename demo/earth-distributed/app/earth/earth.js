@@ -114,6 +114,7 @@ function createHomers(chronosjsCourierSupervisor) {
 
 function getCrossDomainWidgetUrl() {
     var current = window.location.hostname.toLowerCase();
+    var parts = window.location.pathname.split("/");
     var different;
 
     if (-1 !== current.indexOf("localhost")) {
@@ -134,5 +135,5 @@ function getCrossDomainWidgetUrl() {
         different = window.location.protocol + "//" + current;
     }
 
-    return different + (0 < window.location.port.length ? ":" + window.location.port : "") + (-1 !== window.location.pathname.indexOf("/app") ? window.location.pathname : window.location.pathname + "/demo/earth-distributed/app") + "/components/simpson/";
+    return different + (0 < window.location.port.length ? ":" + window.location.port : "") + (-1 !== (parts[1] && parts[1].indexOf("app")) ? "/app" : "/" + parts[1] + "/demo/earth-distributed/app") + "/components/simpsons/";
 }
