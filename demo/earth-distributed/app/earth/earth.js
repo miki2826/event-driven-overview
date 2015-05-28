@@ -134,5 +134,5 @@ function getCrossDomainWidgetUrl() {
         different = window.location.protocol + "//" + current;
     }
 
-    return different + (0 < window.location.port.length ? ":" + window.location.port : "") + (1 < window.location.pathname.length ? window.location.pathname + "/demo/earth-distributed" : "") + "/app/components/homer/homer_frame.html";
+    return different + (0 < window.location.port.length ? ":" + window.location.port : "") + (-1 !== window.location.pathname.indexOf("/app") ? window.location.pathname : window.location.pathname + "/demo/earth-distributed/app") + "/components/homer/homer_frame.html";
 }
