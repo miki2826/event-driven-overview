@@ -49,7 +49,7 @@ angular.module('myApp.earth', ['ngRoute'])
                 data: data
             });
 
-            intervalId = setTimeout(publishAngle, 200);
+            intervalId = setTimeout(publishAngle, 100);
         }
 
         intervalId = setTimeout(publishAngle, 100);
@@ -59,12 +59,12 @@ angular.module('myApp.earth', ['ngRoute'])
 
 function createHomers(chronosjsCourierSupervisor) {
     var widgetUrl = getCrossDomainWidgetUrl();
-    //chronosjsCourierSupervisor.createCourier({
-    //    id: "homer1",
-    //    url: widgetUrl + "homer_frame.html",
-    //    top: "0px",
-    //    left: "0px"
-    //});
+    chronosjsCourierSupervisor.createCourier({
+        id: "homer1",
+        url: widgetUrl + "homer_frame.html",
+        top: "0px",
+        left: "0px"
+    });
 
     chronosjsCourierSupervisor.createCourier({
         id: "marge",
@@ -81,13 +81,13 @@ function createHomers(chronosjsCourierSupervisor) {
         left: "0px"
     });
 
-    //chronosjsCourierSupervisor.createCourier({
-    //    id: "maggie",
-    //    url: widgetUrl + "maggie_frame.html",
-    //    top: "0px",
-    //    left: "50%",
-    //    marginLeft: "-50px"
-    //});
+    chronosjsCourierSupervisor.createCourier({
+        id: "maggie",
+        url: widgetUrl + "maggie_frame.html",
+        top: "0px",
+        left: "50%",
+        marginLeft: "-50px"
+    });
 
     chronosjsCourierSupervisor.createCourier({
         id: "lisa",
@@ -97,20 +97,20 @@ function createHomers(chronosjsCourierSupervisor) {
         marginLeft: "-50px"
     });
 
-    //chronosjsCourierSupervisor.createCourier({
-    //    id: "willie",
-    //    url: widgetUrl + "willie_frame.html",
-    //    top: "0px",
-    //    right: "0px"
-    //});
-    //
-    //chronosjsCourierSupervisor.createCourier({
-    //    id: "barney",
-    //    url: widgetUrl + "barney_frame.html",
-    //    top: "50%",
-    //    right: "0px",
-    //    marginTop: "-50px"
-    //});
+    chronosjsCourierSupervisor.createCourier({
+        id: "willie",
+        url: widgetUrl + "willie_frame.html",
+        top: "0px",
+        right: "0px"
+    });
+
+    chronosjsCourierSupervisor.createCourier({
+        id: "barney",
+        url: widgetUrl + "barney_frame.html",
+        top: "50%",
+        right: "0px",
+        marginTop: "-50px"
+    });
 
     chronosjsCourierSupervisor.createCourier({
         id: "grampa",

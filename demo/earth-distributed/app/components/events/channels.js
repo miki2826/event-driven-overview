@@ -30,8 +30,14 @@ angular.module('myApp.channels', [])
                                 appName: "CourierSupervisor",
                                 eventName: "position",
                                 data: {
-                                    top: Math.floor(rec.top),
-                                    left: Math.floor(rec.left)
+                                    start: {
+                                        top: Math.floor(rec.top),
+                                        left: Math.floor(rec.left)
+                                    },
+                                    center: {
+                                        x: Math.floor(document.body.scrollWidth / 2),
+                                        y: Math.floor(document.body.scrollHeight / 2)
+                                    }
                                 }
                             })
                         }

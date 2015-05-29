@@ -5,15 +5,11 @@ var deltaX;
 var widgetAngleComparedToCenter;
 var isSecondHalf;
 var limit;
-var center = {
-    x: window.screen.width / 2,
-    y: window.screen.availHeight / 2
-};
 
 function initPosition(pos) {
-    startPosition = pos;
-    deltaY = center.y - startPosition.top;
-    deltaX = startPosition.left - center.x;
+    startPosition = pos.start;
+    deltaY = pos.center.y - startPosition.top;
+    deltaX = startPosition.left - pos.center.x;
     widgetAngleComparedToCenter = Math.round(Math.atan2(deltaX, deltaY) * (180 / Math.PI));
 
     if (widgetAngleComparedToCenter < 0) {
@@ -49,15 +45,15 @@ function inRange(limitA, limitB, num) {
 }
 
 courier.bind({
-    appName: "EarthCtrl",
-    eventName: "rotation",
-    func: understandAngle,
+    appName: "CourierSupervisor",
+    eventName: "position",
+    func: initPosition,
     async: true
 });
 
 courier.bind({
-    appName: "CourierSupervisor",
-    eventName: "position",
-    func: initPosition,
+    appName: "EarthCtrl",
+    eventName: "rotation",
+    func: understandAngle,
     async: true
 });

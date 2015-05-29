@@ -8,8 +8,8 @@ angular.module('myApp.ui-homer', [])
             restrict: "EAC",
             link: function (scope, elm, attrs) {
                 var center = {
-                    x: window.screen.width / 2,
-                    y: window.screen.availHeight / 2
+                    x: document.body.scrollWidth / 2,
+                    y: document.body.scrollHeight / 2
                 };
                 var rect = elm[0].getBoundingClientRect();
                 var deltaY = center.y - rect.top;
