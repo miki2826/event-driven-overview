@@ -10,7 +10,7 @@ angular.module('myApp.earth', ['ngRoute'])
     }])
 
     .controller('EarthCtrl', ['$scope', 'chronosjsCourierSupervisor', function ($scope, chronosjsCourierSupervisor) {
-        createHomers(chronosjsCourierSupervisor);
+        createWidgets(chronosjsCourierSupervisor);
 
         function getAngle(el) {
             var st = window.getComputedStyle(el, null);
@@ -57,7 +57,7 @@ angular.module('myApp.earth', ['ngRoute'])
 
 
 
-function createHomers(chronosjsCourierSupervisor) {
+function createWidgets(chronosjsCourierSupervisor) {
     var widgetUrl = getCrossDomainWidgetUrl();
     chronosjsCourierSupervisor.createCourier({
         id: "homer1",

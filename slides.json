@@ -822,7 +822,7 @@
                                         "class": "fragment",
                                         "data-fragment-index": "0"
                                     },
-                                    "value": "And Allow Other Developers to Create and Host Different Homers (as Widgets)?"
+                                    "value": "And Allow Other Developers to Create and Host Different Simpsons (as Widgets)?"
                                 }
                             ]
                         }
@@ -841,7 +841,7 @@
                             "value": [
                                 {
                                     "name": "li",
-                                    "value": "We Would Have to Use IFrames to Load Them Homers (Widgets)<br><br>"
+                                    "value": "We Would Have to Use IFrames to Load Them Simpsons (Widgets)<br><br>"
                                 },
                                 {
                                     "name": "li",
@@ -950,7 +950,7 @@
             [
                 {
                     "name": "h2",
-                    "value": "Homer Widget (Cross Domain)"
+                    "value": "Simpsons Widget (Cross Domain)"
                 },
                 {
                     "name": "div",
@@ -968,7 +968,7 @@
             [
                 {
                     "name": "h3",
-                    "value": "The World of Homer Widgets - Demo"
+                    "value": "The World of Simpsons Widgets - Demo"
                 },
                 {
                     "name": "div",
