@@ -30,6 +30,17 @@
                     "value": "Connection Before Content"
                 },
                 {
+                    "name": "notes",
+                    "value": [
+                        "@LivePerson it is all about creating a meaningful connection",
+                        "So We have a saying: connection before content",
+                        "I would like to introduce Miki Dimenstein",
+                        "Although not long ago, he was still playing with Java & Maven",
+                        "Miki is today working for the LivePerson Frontend Infra team",
+                        ""
+                    ]
+                },
+                {
                     "name": "p",
                     "attributes": {
                         "class": "fragment",
@@ -56,7 +67,10 @@
                                     },
                                     "value": [
                                         {
-                                            "name": "h3",
+                                            "name": "h4",
+                                            "attributes": {
+                                                "style": "font-weight: bold;"
+                                            },
                                             "value": "Michael Dimenshtein"
                                         }
                                     ]
@@ -121,7 +135,10 @@
                                     },
                                     "value": [
                                         {
-                                            "name": "h3",
+                                            "name": "h4",
+                                            "attributes": {
+                                                "style": "font-weight: bold;"
+                                            },
                                             "value": "Itai Koren"
                                         }
                                     ]
@@ -167,10 +184,10 @@
                     ]
                 },
                 {
-                    "name": "h2",
+                    "name": "h4",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "Software Components Exchange Information"
                 }
@@ -190,10 +207,10 @@
                     ]
                 },
                 {
-                    "name": "h2",
+                    "name": "h4",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "Producers Supply Information"
                 }
@@ -213,10 +230,10 @@
                     ]
                 },
                 {
-                    "name": "h2",
+                    "name": "h4",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "Consumers Receive Information"
                 }
@@ -236,10 +253,10 @@
                     ]
                 },
                 {
-                    "name": "h2",
+                    "name": "h4",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "How Does Information Flow?"
                 }
@@ -293,11 +310,17 @@
                     },
                     "value": [
                         {
-                            "name": "h3",
+                            "name": "h4",
+                            "attributes": {
+                                "style": "font-weight: bold;"
+                            },
                             "value": "Pull:"
                         },
                         {
-                            "name": "h3",
+                            "name": "h4",
+                            "attributes": {
+                                "style": "font-weight: bold;"
+                            },
                             "value": "Request/Response & Direct API Call Model"
                         }
                     ]
@@ -334,11 +357,17 @@
                     },
                     "value": [
                         {
-                            "name": "h3",
+                            "name": "h4",
+                            "attributes": {
+                                "style": "font-weight: bold;"
+                            },
                             "value": "Push:"
                         },
                         {
-                            "name": "h3",
+                            "name": "h4",
+                            "attributes": {
+                                "style": "font-weight: bold;"
+                            },
                             "value": "Callback Model"
                         }
                     ]
@@ -359,12 +388,12 @@
                     ]
                 },
                 {
-                    "name": "h2",
+                    "name": "h4",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
-                    "value": "Consumer Needs to Know Producer"
+                    "value": "The Consumer Needs to Know The Producer"
                 }
             ],
             [
@@ -420,10 +449,10 @@
                     ]
                 },
                 {
-                    "name": "h3",
+                    "name": "h4",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "Event Driven (Mainly Follows the Pub/Sub - Observer/Mediator Pattern)"
                 }
@@ -651,17 +680,20 @@
                     ]
                 },
                 {
-                    "name": "h2",
+                    "name": "h3",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 587px;"
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 587px; font-weight: bold;"
                     },
                     "value": "Meet <a href=\"https://github.com/LivePersonInc/chronosjs\">chronosjs</a>!"
                 }
             ],
             [
                 {
-                    "name": "h3",
+                    "name": "h4",
+                    "attributes": {
+                        "style": "font-weight: bold;"
+                    },
                     "value": "A Native Javascript Event Channels (Pub/Sub) Implementation"
                 },
                 {
@@ -708,7 +740,7 @@
                                         "class": "fragment",
                                         "data-fragment-index": "4"
                                     },
-                                    "value": "Supports Synchronous and Asynchronous Triggering"
+                                    "value": "Supports Synchronous and Asynchronous Binding"
                                 },
                                 {
                                     "name": "li",
@@ -729,7 +761,10 @@
             ],
             [
                 {
-                    "name": "h2",
+                    "name": "h4",
+                    "attributes": {
+                        "style": "font-weight: bold;"
+                    },
                     "value": "The World of Homer - Demo"
                 },
                 {
@@ -750,7 +785,10 @@
             ],
             [
                 {
-                    "name": "h2",
+                    "name": "h4",
+                    "attributes": {
+                        "style": "font-weight: bold;"
+                    },
                     "value": "ChronosJS Channel"
                 },
                 {
@@ -768,7 +806,10 @@
             ],
             [
                 {
-                    "name": "h2",
+                    "name": "h4",
+                    "attributes": {
+                        "style": "font-weight: bold;"
+                    },
                     "value": "Earth Controller"
                 },
                 {
@@ -786,7 +827,10 @@
             ],
             [
                 {
-                    "name": "h2",
+                    "name": "h4",
+                    "attributes": {
+                        "style": "font-weight: bold;"
+                    },
                     "value": "Homer Directive"
                 },
                 {
@@ -879,32 +923,58 @@
                 {
                     "name": "div",
                     "attributes": {
-                        "style": "width: 100%; height: 550px; max-height: none; max-width: none;"
+                        "style": "width: 100%; height: 600px; position: absolute; z-index: 4; left: 0; top: 6px;"
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "div",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7897463/5d2fc742-06e5-11e5-88d2-3d471155fa91.png",
-                                "style": "width: 389px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
-                                "class": "absolute-element"
-                            }
+                                "style": "width: 100%; height: 550px; max-height: none; max-width: none;"
+                            },
+                            "value": [
+                                {
+                                    "name": "img",
+                                    "attributes": {
+                                        "src": "https://cloud.githubusercontent.com/assets/3624786/7897463/5d2fc742-06e5-11e5-88d2-3d471155fa91.png",
+                                        "style": "width: 389px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
+                                        "class": "absolute-element"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "h4",
+                            "attributes": {
+                                "class": "absolute-element fragment fade-out",
+                                "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 587px; font-weight: bold;"
+                            },
+                            "value": "Meet <a href=\"https://github.com/LivePersonInc/chronosjs\">chronosjs</a> courier!"
+                        },
+                        {
+                            "name": "span",
+                            "attributes": {
+                                "class": "absolute-element fragment fade-in",
+                                "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 587px; font-weight: bold;"
+                            },
+                            "value": [
+                                {
+                                    "name": "h4",
+                                    "attributes": {
+                                        "class": "absolute-element fragment fade-out"
+                                    },
+                                    "value": "All Available chronosjs Channels"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "h4",
+                            "attributes": {
+                                "class": "absolute-element fragment fade-in",
+                                "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 587px; font-weight: bold;"
+                            },
+                            "value": "Over PostMessage (Cross Domain)"
                         }
                     ]
-                },
-                {
-                    "name": "h2",
-                    "attributes": {
-                        "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 587px;"
-                    },
-                    "value": "Meet <a href=\"https://github.com/LivePersonInc/chronosjs\">chronosjs</a> courier!"
-                }
-            ],
-            [
-                {
-                    "name": "h3",
-                    "value": "chronosjs courier - All Available chronosjs Channels over PostMessage (Cross Domain)"
                 },
                 {
                     "name": "notes",
@@ -913,7 +983,10 @@
             ],
             [
                 {
-                    "name": "h2",
+                    "name": "h4",
+                    "attributes": {
+                        "style": "font-weight: bold;"
+                    },
                     "value": "ChronosJS Courier (Supervisor)"
                 },
                 {
@@ -931,7 +1004,10 @@
             ],
             [
                 {
-                    "name": "h2",
+                    "name": "h4",
+                    "attributes": {
+                        "style": "font-weight: bold;"
+                    },
                     "value": "Earth Controller"
                 },
                 {
@@ -949,7 +1025,10 @@
             ],
             [
                 {
-                    "name": "h2",
+                    "name": "h4",
+                    "attributes": {
+                        "style": "font-weight: bold;"
+                    },
                     "value": "Simpsons Widget (Cross Domain)"
                 },
                 {
@@ -967,7 +1046,10 @@
             ],
             [
                 {
-                    "name": "h3",
+                    "name": "h4",
+                    "attributes": {
+                        "style": "font-weight: bold;"
+                    },
                     "value": "The World of Simpsons Widgets - Demo"
                 },
                 {
@@ -1007,7 +1089,7 @@
                     "name": "div",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 836px; height: 125px; z-index: 4; left: 100px; top: 507px;"
+                        "style": "position: absolute; width: 936px; height: 125px; z-index: 4; left: 10px; top: 517px;"
                     },
                     "value": [
                         {
@@ -1054,12 +1136,28 @@
                     ]
                 },
                 {
-                    "name": "h2",
+                    "name": "div",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 170px; top: 327px;"
                     },
-                    "value": "We Are Hiring!"
+                    "value": [
+                        {
+                            "name": "h3",
+                            "attributes": {
+                                "style": "font-weight: bold;"
+                            },
+                            "value": "We Are Hiring!"
+                        },
+                        {
+                            "name": "a",
+                            "attributes": {
+                                "href": "mailto:peoplejobs@liveperson.com",
+                                "target": "_blank"
+                            },
+                            "value": "peoplejobs@liveperson.com"
+                        }
+                    ]
                 }
             ],
             [
