@@ -1,6 +1,6 @@
-angular.module('myApp.channels', [])
-.factory('chronosjsChannel', function ($window) {
-    var chronosjsChannel = new $window.Chronos.Channels();
+angular.module('myApp.chronos', [])
+.factory('Chronos.Channels', function ($window) {
+    var channels = new $window.Chronos.Channels();
 
-    return chronosjsChannel;
+    return channels;
 });

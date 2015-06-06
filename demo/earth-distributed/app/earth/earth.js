@@ -9,8 +9,8 @@ angular.module('myApp.earth', ['ngRoute'])
         });
     }])
 
-    .controller('EarthCtrl', ['$scope', 'chronosjsCourierSupervisor', function ($scope, chronosjsCourierSupervisor) {
-        createWidgets(chronosjsCourierSupervisor);
+    .controller('EarthCtrl', ['$scope', 'Chronos.CourierSupervisor', function ($scope, chronosCourierSupervisor) {
+        createWidgets(chronosCourierSupervisor);
 
         function getAngle(el) {
             var st = window.getComputedStyle(el, null);
@@ -43,7 +43,7 @@ angular.module('myApp.earth', ['ngRoute'])
             var data = getAngle(sunImage);
             $scope.deg = data;
             $scope.$apply();
-            chronosjsCourierSupervisor.applyAll("trigger", {
+            chronosCourierSupervisor.applyAll("trigger", {
                 appName: "EarthCtrl",
                 eventName: "rotation",
                 data: data

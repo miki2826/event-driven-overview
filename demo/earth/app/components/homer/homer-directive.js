@@ -2,7 +2,7 @@
 
 angular.module('myApp.ui-homer', [])
 
-    .directive('homerImage', ['chronosjsChannel', function (chronosjsChannel) {
+    .directive('homerImage', ['Chronos.Channels', function (chronosChannels) {
         return {
             template: '<image ng-src="img/{{source}}.jpg" class="homer"></image>',
             restrict: "EAC",
@@ -43,7 +43,7 @@ angular.module('myApp.ui-homer', [])
                     }
                 }
 
-                chronosjsChannel.bind({
+                chronosChannels.bind({
                     appName: "EarthCtrl",
                     eventName: "rotation",
                     func: understandAngle,
