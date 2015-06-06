@@ -43,7 +43,7 @@ angular.module('myApp.channels', [])
                         }
                     }
                 };
-                couriers[options.id] = $window.LPPostMessageCourier({
+                couriers[options.id] = $window.Chronos.PostMessageCourier({
                     target: target
                 });
             }

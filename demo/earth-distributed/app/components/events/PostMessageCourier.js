@@ -1,48 +1,29 @@
 ;(function (root, factory) {
     "use strict";
-
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    //<amd>
     if ("function" === typeof define && define.amd) {
-        // Browser globals
-        namespace = getNamespace();
-
+        root.Chronos = root.Chronos || {};
         // AMD. Register as an anonymous module.
-        define("lpEventsUtil", ["exports"], function (exports) {
-            if (!namespace.lpEventsUtil) {
-                factory(root, namespace);
+        define("Chronos.EventsUtil", ["exports"], function () {
+            if (!root.Chronos.EventsUtil) {
+                factory(root, root.Chronos);
             }
 
-            return namespace.lpEventsUtil;
+            return root.Chronos.EventsUtil;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.lpEventsUtil) {
-            factory(root, namespace);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" === typeof exports) {
+    //</amd>
+    if ("object" === typeof exports) {
         // CommonJS
         factory(root, exports);
     }
     else {
         // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace);
+        root.Chronos = root.Chronos || {};
+        factory(root, root.Chronos);
     }
-}(this, function (root, exports) {
+}(typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports) {
     "use strict";
 
     function getListeners(lstnrs, eventName, appName) {
@@ -67,8 +48,8 @@
     }
 
     function log(msg, level, app) {
-        if (root.lpTag && "function" === typeof root.lpTag.log) {
-            root.lpTag.log(msg, level, app);
+        if (root && "function" === typeof root.log) {
+            root.log(msg, level, app);
         }
     }
 
@@ -268,7 +249,7 @@
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.lpEventsUtil = exports.lpEventsUtil || {
+    exports.EventsUtil = exports.EventsUtil || {
         getListeners: getListeners,
         log: log,
         unbind: unbind,
@@ -280,55 +261,38 @@
 
 ;(function (root, factory) {
     "use strict";
-
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    //<amd>
     if ("function" === typeof define && define.amd) {
         // Browser globals
-        namespace = getNamespace();
+        root.Chronos = root.Chronos || {};
 
         // AMD. Register as an anonymous module.
-        define("lpEvents", ["exports", "lpEventsUtil"], function (exports, evUtil) {
-            if (!namespace.LPEvents) {
-                factory(root, namespace, namespace.lpEventsUtil);
+        define("Chronos.Events", ["exports", "Chronos.EventsUtil"], function () {
+            if (!root.Chronos.Events) {
+                factory(root, root.Chronos, root.Chronos.EventsUtil);
             }
 
-            return namespace.LPEvents;
+            return root.Chronos.Events;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPEvents) {
-            factory(root, namespace, namespace.lpEventsUtil);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" === typeof exports) {
+    //</amd>
+    if ("object" === typeof exports) {
         // CommonJS
-        factory(root, exports, require("util/lpEventsUtil"));
+        factory(root, exports, require("util/EventsUtil"));
     }
     else {
         /**
-         * @depend ./util/lpEventsUtil.js
+         * @depend ./util/EventsUtil.js
          */
         // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace, namespace.lpEventsUtil);
+        root.Chronos = root.Chronos || {};
+        factory(root, root.Chronos, root.Chronos.EventsUtil);
     }
-}(this, function (root, exports, evUtil) {
+}(typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports, evUtil) {
     "use strict";
 
-    function LPEvents(defaults) {
+    function Events(defaults) {
         var appName = "Events",
             attrName = "eventName",
             eventId = 0,
@@ -537,57 +501,40 @@
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.LPEvents = exports.LPEvents || LPEvents;
+    exports.Events = exports.Events || Events;
 }));
 
 ;(function (root, factory) {
     "use strict";
-
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    //<amd>
     if ("function" === typeof define && define.amd) {
         // Browser globals
-        namespace = getNamespace();
+        root.Chronos = root.Chronos || {};
 
         // AMD. Register as an anonymous module.
-        define("lpCommandUtil", ["exports", "lpEventsUtil"], function (exports, evUtil) {
-            if (!namespace.lpCommandUtil) {
-                factory(root, namespace, namespace.lpEventsUtil);
+        define("Chronos.CommandsUtil", ["exports", "Chronos.EventsUtil"], function () {
+            if (!root.Chronos.CommandsUtil) {
+                factory(root, root.Chronos, root.Chronos.EventsUtil);
             }
 
-            return namespace.lpCommandUtil;
+            return root.Chronos.CommandsUtil;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.lpCommandUtil) {
-            factory(root, namespace, namespace.lpEventsUtil);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" === typeof exports) {
+    //</amd>
+    if ("object" === typeof exports) {
         // CommonJS
-        factory(root, exports, require("util/lpEventsUtil"));
+        factory(root, exports, require("util/EventsUtil"));
     }
     else {
         /**
-         * @depend ./lpEventsUtil.js
+         * @depend ./EventsUtil.js
          */
-        // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace, namespace.lpEventsUtil);
+            // Browser globals
+        root.Chronos = root.Chronos || {};
+        factory(root, root.Chronos, root.Chronos.EventsUtil);
     }
-}(this, function (root, exports, evUtil) {
+}(typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports, evUtil) {
     "use strict";
 
     /**
@@ -631,64 +578,47 @@
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.lpCommandUtil = exports.lpCommandUtil || {
-        bind: bind,
-        valid: valid
-    };
+    exports.CommandsUtil = exports.CommandsUtil || {
+            bind: bind,
+            valid: valid
+        };
 }));
 
 ;(function (root, factory) {
     "use strict";
-
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    //<amd>
     if ("function" === typeof define && define.amd) {
         // Browser globals
-        namespace = getNamespace();
+        root.Chronos = root.Chronos || {};
 
         // AMD. Register as an anonymous module.
-        define("lpCommands", ["exports", "lpEventsUtil", "lpCommandUtil"], function (exports, evUtil, cmdUtil) {
-            if (!namespace.lpCommands) {
-                factory(root, namespace, namespace.lpEventsUtil, namespace.lpCommandUtil);
+        define("Chronos.Commands", ["exports", "Chronos.EventsUtil", "Chronos.CommandsUtil"], function () {
+            if (!root.Chronos.Commands) {
+                factory(root, root.Chronos, root.Chronos.EventsUtil, root.Chronos.CommandsUtil);
             }
 
-            return namespace.LPCommands;
+            return root.Chronos.Commands;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.lpCommands) {
-            factory(root, namespace, namespace.lpEventsUtil, namespace.lpCommandUtil);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" === typeof exports) {
+    //</amd>
+    if ("object" === typeof exports) {
         // CommonJS
-        factory(root, exports, require("util/lpEventsUtil"), require("util/lpCommandUtil"));
+        factory(root, exports, require("util/EventsUtil"), require("util/CommandsUtil"));
     }
     else {
         /**
-         * @depend ./util/lpEventsUtil.js
-         * @depend ./util/lpCommandUtil.js
+         * @depend ./util/EventsUtil.js
+         * @depend ./util/CommandsUtil.js
          */
         // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace, namespace.lpEventsUtil, namespace.lpCommandUtil);
+        root.Chronos = root.Chronos || {};
+        factory(root, root.Chronos, root.Chronos.EventsUtil, root.Chronos.CommandsUtil);
     }
-}(this, function (root, exports, evUtil, cmdUtil) {
+}(typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports, evUtil, cmdUtil) {
     "use strict";
 
-    function LPCommands(defaults) {
+    function Commands(defaults) {
         var appName = "Commands",
             attrName = "cmdName",
             commandId = 0,
@@ -830,59 +760,43 @@
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.LPCommands = exports.LPCommands || LPCommands;
+    exports.Commands = exports.Commands || Commands;
 }));
 
 ;(function (root, factory) {
     "use strict";
 
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    //<amd>
     if ("function" === typeof define && define.amd) {
         // Browser globals
-        namespace = getNamespace();
+        root.Chronos = root.Chronos || {};
 
         // AMD. Register as an anonymous module.
-        define("lpReqres", ["exports", "lpEventsUtil", "lpCommandUtil"], function (exports, evUtil, cmdUtil) {
-            if (!namespace.LPReqRes) {
-                factory(root, namespace, namespace.lpEventsUtil, namespace.lpCommandUtil);
+        define("Chronos.Reqres", ["exports", "Chronos.EventsUtil", "Chronos.CommandsUtil"], function () {
+            if (!root.Chronos.ReqRes) {
+                factory(root, root.Chronos, root.Chronos.EventsUtil, root.Chronos.CommandsUtil);
             }
 
-            return namespace.LPReqRes;
+            return root.Chronos.ReqRes;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPReqRes) {
-            factory(root, namespace, namespace.lpEventsUtil, namespace.lpCommandUtil);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" === typeof exports) {
+    //</amd>
+    if ("object" === typeof exports) {
         // CommonJS
-        factory(root, exports, require("util/lpEventsUtil"), require("util/lpCommandUtil"));
+        factory(root, exports, require("util/EventsUtil"), require("util/CommandsUtil"));
     }
     else {
         /**
-         * @depend ./util/lpEventsUtil.js
-         * @depend ./util/lpCommandUtil.js
+         * @depend ./util/EventsUtil.js
+         * @depend ./util/CommandsUtil.js
          */
         // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace, namespace.lpEventsUtil, namespace.lpCommandUtil);
+        root.Chronos = root.Chronos || {};
+        factory(root, root.Chronos, root.Chronos.EventsUtil, root.Chronos.CommandsUtil);
     }
-}(this, function (root, exports, evUtil, cmdUtil) {
-    function LPReqRes(defaults) {
+}(typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports, evUtil, cmdUtil) {
+    function ReqRes(defaults) {
         var appName = "ReqRes",
             attrName = "reqName",
             requestId = 0,
@@ -1026,7 +940,7 @@
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.LPReqRes = exports.LPReqRes || LPReqRes;
+    exports.ReqRes = exports.ReqRes || ReqRes;
 }));
 
 // Just a very dumb proxy wrapper to unify
@@ -1034,61 +948,44 @@
 // channel proxy wrapper
 ;(function (root, factory) {
     "use strict";
-
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    //<amd>
     if ("function" === typeof define && define.amd) {
         // Browser globals
-        namespace = getNamespace();
+        root.Chronos = root.Chronos || {};
 
         // AMD. Register as an anonymous module.
-        define("lpEventChannel", ["exports", "lpEvents", "lpCommands", "lpReqres"], function (exports, LPEvents, LPCommands, LPReqRes) {
-            if (!namespace.LPEventChannel) {
-                factory(root, namespace, namespace.LPEvents, namespace.LPCommands, namespace.LPReqRes);
+        define("Chronos.Channels", ["exports", "Chronos.Events", "Chronos.Commands", "Chronos.Reqres"], function () {
+            if (!root.Chronos.Channels) {
+                factory(root, root.Chronos, root.Chronos.Events, root.Chronos.Commands, root.Chronos.ReqRes);
             }
 
-            return namespace.LPEventChannel;
+            return root.Chronos.Channels;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPEventChannel) {
-            factory(root, namespace, namespace.LPEvents, namespace.LPCommands, namespace.LPReqRes);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" === typeof exports) {
+    //</amd>
+    if ("object" === typeof exports) {
         // CommonJS
-        factory(root, exports, require("./lpEvents"), require("./lpCommands"), require("./lpReqres"));
+        factory(root, exports, require("./Events"), require("./Commands"), require("./Reqres"));
     }
     else {
         /**
-         * @depend ./lpEvents.js
-         * @depend ./lpCommands.js
-         * @depend ./lpReqres.js
+         * @depend ./Events.js
+         * @depend ./Commands.js
+         * @depend ./Reqres.js
          */
         // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace, namespace.LPEvents, namespace.LPCommands, namespace.LPReqRes);
+        root.Chronos = root.Chronos || {};
+        factory(root, root.Chronos, root.Chronos.Events, root.Chronos.Commands, root.Chronos.ReqRes);
     }
-}(this, function (root, exports, LPEvents, LPCommands, LPReqRes) {
-    function LPEventChannel(options) {
+}(typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports, Events, Commands, ReqRes) {
+    function Channels(options) {
 
         options = options || {};
 
-        var events = options.events || new LPEvents();
-        var commands = options.commands || new LPCommands();
-        var reqres = options.reqres || new LPReqRes();
+        var events = options.events || new Events();
+        var commands = options.commands || new Commands();
+        var reqres = options.reqres || new ReqRes();
 
 
         this.once = events.once;
@@ -1112,54 +1009,37 @@
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.LPEventChannel = exports.LPEventChannel || LPEventChannel;
+    exports.Channels = exports.Channels || Channels;
 }));
 
 ;(function (root, factory) {
     "use strict";
 
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    /* istanbul ignore if */
+    //<amd>
     if ("function" === typeof define && define.amd) {
-        // Browser globals
-        namespace = getNamespace();
 
         // AMD. Register as an anonymous module.
-        define("lpCircuitBreaker", ["exports"], function (exports) {
-            if (!namespace.LPCircuitBreaker) {
-                factory(root, namespace);
+        define("CircuitBreaker", ["exports"], function () {
+            if (!root.CircuitBreaker) {
+                factory(root);
             }
 
-            return namespace.LPCircuitBreaker;
+            return root.CircuitBreaker;
         });
 
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPCircuitBreaker) {
-            factory(root, namespace);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" === typeof exports) {
+    //</amd>
+    /* istanbul ignore else */
+    if ("object" === typeof exports) {
         // CommonJS
-        factory(root, exports);
+        factory(exports);
     }
     else {
-        // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace);
+        factory(root);
     }
-}(this, function (root, exports) {
+}(typeof CircuitRoot === "undefined" ? this : CircuitRoot , function (root) {
     "use strict";
 
     /*jshint validthis:true */
@@ -1175,7 +1055,7 @@
 
     /**
      * @type {{FAILURE: string, SUCCESS: string, TIMEOUT: string, OUTAGE: string}}
-     * Measure types for each slide
+     * Measure types for each bucket
      */
     var MEASURE = {
         FAILURE: "failure",
@@ -1185,33 +1065,35 @@
     };
 
     /**
-     * LPCircuitBreaker constructor
+     * CircuitBreaker constructor
      * @constructor
      * @param {Object} [options] the configuration options for the instance
-     * @param {Number} [options.timeWindow = 30000] - the time window that will be used for state calculations
-     * @param {Number} [options.slidesNumber = 10] - the number of slides that the time window will be split to (a slide is a sliding unit that is added/remove from the time window)
+     * @param {Number} [options.slidingTimeWindow = 30000] - the time window that will be used for state calculations [milliseconds]
+     * @param {Number} [options.bucketsNumber = 10] - the number of the buckets that the time window will be split to (a bucket is a sliding unit that is added/remove from the time window)
      * @param {Number} [options.tolerance = 50] - the tolerance before opening the circuit in percentage
-     * @param {Number} [options.calibration = 5] - the calibration of minimum calls before starting to validate measurements
+     * @param {Number} [options.calibration = 5] - the calibration of minimum calls before starting to validate measurements [number]
+     * @param {Number} [options.timeout = 0] - optional timeout parameter to apply and time the command [number]
      * @param {Function} [options.onopen] - handler for open
      * @param {Function} [options.onclose] - handler for close
      */
-    function LPCircuitBreaker(options) {
+    function CircuitBreaker(options) {
         // For forcing new keyword
-        if (false === (this instanceof LPCircuitBreaker)) {
-            return new LPCircuitBreaker(options);
+        if (false === (this instanceof CircuitBreaker)) {
+            return new CircuitBreaker(options);
         }
 
         this.initialize(options);
     }
 
-    LPCircuitBreaker.prototype = (function () {
+    CircuitBreaker.prototype = (function () {
         /**
          * Method for initialization
          * @param {Object} [options] the configuration options for the instance
-         * @param {Number} [options.timeWindow = 30000] - the time window that will be used for state calculations
-         * @param {Number} [options.slidesNumber = 10] - the number of slides that the time window will be split to (a slide is a sliding unit that is added/remove from the time window)
+         * @param {Number} [options.slidingTimeWindow = 30000] - the time window that will be used for state calculations [milliseconds]
+         * @param {Number} [options.bucketsNumber = 10] - the number of the buckets that the time window will be split to (a bucket is a sliding unit that is added/remove from the time window)
          * @param {Number} [options.tolerance = 50] - the tolerance before opening the circuit in percentage
-         * @param {Number} [options.calibration = 5] - the calibration of minimum calls before starting to validate measurements
+         * @param {Number} [options.calibration = 5] - the calibration of minimum calls before starting to validate measurements [number]
+         * @param {Number} [options.timeout = 0] - optional timeout parameter to apply and time the command [number]
          * @param {Function} [options.onopen] - handler for open
          * @param {Function} [options.onclose] - handler for close
          */
@@ -1219,17 +1101,16 @@
             if (!this.initialized) {
                 options = options || {};
 
-                this.timeWindow = !isNaN(options.timeWindow) && 0 < options.timeWindow ? parseInt(options.timeWindow, 10) : 30000;
-                this.slidesNumber = !isNaN(options.slidesNumber) && 0 < options.slidesNumber ? parseInt(options.slidesNumber, 10) : 10;
+                this.slidingTimeWindow = !isNaN(options.slidingTimeWindow) && 0 < options.slidingTimeWindow ? parseInt(options.slidingTimeWindow, 10) : 30000;
+                this.bucketsNumber = !isNaN(options.bucketsNumber) && 0 < options.bucketsNumber ? parseInt(options.bucketsNumber, 10) : 10;
                 this.tolerance = !isNaN(options.tolerance) && 0 < options.tolerance ? parseInt(options.tolerance, 10) : 50;
                 this.calibration = !isNaN(options.calibration) && 0 < options.calibration ? parseInt(options.calibration, 10) : 5;
-
+                this.timeout = !isNaN(options.timeout) && 0 < options.timeout ? parseInt(options.timeout, 10) : 0;
                 this.onopen = ("function" === typeof options.onopen) ? options.onopen : function() {};
                 this.onclose = ("function" === typeof options.onclose) ? options.onclose : function() {};
+                this.buckets = [_createBucket.call(this)];
 
-                this.slides = [_createSlide.call(this)];
                 this.state = STATE.CLOSED;
-
                 this.initialized = true;
 
                 _startTicking.call(this);
@@ -1241,14 +1122,20 @@
          * Code waiting for this promise uses this method
          * @param {Function} command - the command to run via the circuit
          * @param {Function} [fallback] - the fallback to run when circuit is opened
+         * @param {Function} [timeout] - the timeout for the executed command
          */
-        function run(command, fallback) {
+        function run(command, fallback, timeout) {
+            if (fallback && "function" !== typeof fallback) {
+                timeout = fallback;
+                fallback = void 0;
+            }
+
             if (isOpen.call(this)) {
                 _fallback.call(this, fallback || function() {});
                 return false;
             }
             else {
-                return _execute.call(this, command);
+                return _execute.call(this, command, timeout);
             }
         }
 
@@ -1284,19 +1171,19 @@
         }
 
         /**
-         * Method for calculating the needed metrics based on all calculation slides
+         * Method for calculating the needed metrics based on all calculation buckets
          */
         function calculate() {
+            var bucketErrors;
+            var percent;
             var total = 0;
             var error = 0;
-            var percent;
 
-            for (var i = 0, l = this.slides.length; i < l; i++) {
-                var slide = this.slides[i];
-                var errors = (slide[MEASURE.FAILURE] + slide[MEASURE.TIMEOUT]);
 
-                error += errors;
-                total += (errors + slide[MEASURE.SUCCESS]);
+            for (var i = 0; i < this.buckets.length; i++) {
+                bucketErrors = (this.buckets[i][MEASURE.FAILURE] + this.buckets[i][MEASURE.TIMEOUT]);
+                error += bucketErrors;
+                total += bucketErrors + this.buckets[i][MEASURE.SUCCESS];
             }
 
             percent = (error / (total > 0 ? total : 1)) * 100;
@@ -1309,7 +1196,7 @@
         }
 
         /**
-         * Method for the timer tick which manages the slides
+         * Method for the timer tick which manages the buckets
          * @private
          */
         function _tick() {
@@ -1317,70 +1204,74 @@
                 clearTimeout(this.timer);
             }
 
-            if (this.slides.length > this.slidesNumber) {
-                this.slides.shift();
-            }
+            _createNextSlidingBucket.call(this);
 
-            this.slideIndex++;
-
-            if (this.slideIndex > this.slidesNumber) {
-                this.slideIndex = 0;
+            if (this.bucketIndex > this.bucketsNumber) {
+                this.bucketIndex = 0;
 
                 if (isOpen.call(this)) {
                     this.state = STATE.HALF_OPEN;
                 }
             }
 
-            this.slides.push(_createSlide.call(this));
-
-            if (this.slides.length > this.slidesNumber) {
-                this.slides.shift();
-            }
-
-            this.timer = setTimeout(_tick.bind(this), this.slidingWindow);
+            this.timer = setTimeout(_tick.bind(this), this.bucket);
         }
 
         /**
-         * Method for starting the timer and creating the metrics slides for calculations
+         * Method for starting the timer and creating the metrics buckets for calculations
          * @private
          */
         function _startTicking() {
-            this.slideIndex = 0;
-            this.slidingWindow = this.timeWindow / this.slidesNumber;
+            this.bucketIndex = 0;
+            this.bucket = this.slidingTimeWindow / this.bucketsNumber;
 
             if (this.timer) {
                 clearTimeout(this.timer);
             }
 
-            this.timer = setTimeout(_tick.bind(this), this.slidingWindow);
+            this.timer = setTimeout(_tick.bind(this), this.bucket);
         }
 
         /**
-         * Method for creating a single metrics slide for calculations
+         * Method for creating a single metrics bucket for calculations
          * @private
          */
-        function _createSlide() {
-            var slide = {};
+        function _createBucket() {
+            var bucket = {};
 
-            slide[MEASURE.FAILURE] = 0;
-            slide[MEASURE.SUCCESS] = 0;
-            slide[MEASURE.TIMEOUT] = 0;
-            slide[MEASURE.OUTAGE] = 0;
+            bucket[MEASURE.FAILURE] = 0;
+            bucket[MEASURE.SUCCESS] = 0;
+            bucket[MEASURE.TIMEOUT] = 0;
+            bucket[MEASURE.OUTAGE] = 0;
 
-            return slide;
+            return bucket;
         }
 
         /**
-         * Method for retrieving the last metrics slide for calculations
+         * Method for retrieving the last metrics bucket for calculations
          * @private
          */
-        function _getLastSlide() {
-            return this.slides[this.slides.length - 1];
+        function _getLastBucket() {
+            return this.buckets[this.buckets.length - 1];
+        }
+
+        /**
+         * Method for creating the next bucket and removing the first bucket in case we got to the needed buckets number
+         * @private
+         */
+        function _createNextSlidingBucket() {
+            this.bucketIndex++;
+
+            this.buckets.push(_createBucket.call(this));
+
+            if (this.buckets.length > this.bucketsNumber) {
+                this.buckets.shift();
+            }
         }
 
         /**
          * Method for adding a calculation measure for a command
-         * @param {LPCircuitBreaker.MEASURE} prop - the measurement property (success, error, timeout)
+         * @param {CircuitBreaker.MEASURE} prop - the measurement property (success, error, timeout)
          * @param {Object} status - the status of the command (A single command can only be resolved once and represent a single measurement)
          * @private
          */
@@ -1389,41 +1280,50 @@
                 if (status.done) {
                     return;
                 }
+                else if (status.timer) {
+                    clearTimeout(status.timer);
+                    status.timer = null;
+                    delete status.timer;
+                }
 
-                var slide = _getLastSlide.call(this);
-                slide[prop]++;
+                var bucket = _getLastBucket.call(this);
+                bucket[prop]++;
 
-                if ("undefined" === typeof this.forced) {
+                if (!this.forced) {
                     _updateState.call(this);
                 }
 
                 status.done = true;
-            };
+            }.bind(this);
         }
 
         /**
          * Method for executing a command via the circuit and counting the needed metrics
          * @param {Function} command - the command to run via the circuit
+         * @param {Number} timeout - optional timeout for the command
          * @private
          */
-        function _execute(command) {
-            var result;
+        function _execute(command, timeout) {
             var status = {
                 done: false
             };
-            var success = _measure(MEASURE.SUCCESS, status).bind(this);
-            var failure = _measure(MEASURE.FAILURE, status).bind(this);
-            var timeout = _measure(MEASURE.TIMEOUT, status).bind(this);
+            var markSuccess = _measure.call(this, MEASURE.SUCCESS, status);
+            var markFailure = _measure.call(this, MEASURE.FAILURE, status);
+            var markTimeout = _measure.call(this, MEASURE.TIMEOUT, status);
+
+            timeout = !isNaN(timeout) && 0 < timeout ? parseInt(timeout, 10) : this.timeout;
+
+            if (0 < timeout) {
+                status.timer = setTimeout(markTimeout, timeout);
+            }
 
             try {
-                result = command(success, failure, timeout);
+                command(markSuccess, markFailure, markTimeout);
             }
             catch(ex) {
-                failure();
-                return false;
+                // TODO: Deal with errors
+                markFailure();
             }
-
-            return result;
         }
 
         /**
@@ -1435,10 +1335,12 @@
             try {
                 fallback();
             }
-            catch(ex) {}
+            catch(ex) {
+                // TODO: Deal with errors
+            }
 
-            var slide = _getLastSlide.call(this);
-            slide[MEASURE.OUTAGE]++;
+            var bucket = _getLastBucket.call(this);
+            bucket[MEASURE.OUTAGE]++;
         }
 
         /**
@@ -1449,7 +1351,7 @@
             var metrics = calculate.call(this);
 
             if (STATE.HALF_OPEN === this.state) {
-                var lastCommandFailed = !_getLastSlide.call(this)[MEASURE.SUCCESS] && 0 < metrics.error;
+                var lastCommandFailed = !_getLastBucket.call(this)[MEASURE.SUCCESS] && 0 < metrics.error;
 
                 if (lastCommandFailed) {
                     this.state = STATE.OPEN;
@@ -1478,8 +1380,7 @@
             open: open,
             reset: reset,
             isOpen: isOpen,
-            calculate: calculate,
-            bind: bind
+            calculate: calculate
         };
     }());
 
@@ -1487,7 +1388,7 @@
      * @type {{OPEN: number, HALF_OPEN: number, CLOSED: number}}
      * State representation for the circuit
      */
-    LPCircuitBreaker.STATE = STATE;
+    CircuitBreaker.STATE = STATE;
 
     /**
      * Method to polyfill bind native functionality in case it does not exist
@@ -1496,6 +1397,7 @@
      * @param {Object} object - the object to bind to
      * @returns {Function} the bound function
      */
+    /* istanbul ignore next */
     function bind(object) {
         /*jshint validthis:true */
         var args;
@@ -1523,83 +1425,66 @@
         return bound;
     }
 
+    /* istanbul ignore if  */
     if (!Function.prototype.bind) {
         Function.prototype.bind = bind;
     }
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.LPCircuitBreaker = exports.LPCircuitBreaker || LPCircuitBreaker;
+    root.CircuitBreaker = root.CircuitBreaker || CircuitBreaker;
 }));
 
 ;(function (root, factory) {
     "use strict";
 
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    //<amd>
     if ("function" === typeof define && define.amd) {
-        // Browser globals
-        namespace = getNamespace();
 
         // AMD. Register as an anonymous module.
-        define("lpTtlCache", ["exports"], function (exports) {
-            if (!namespace.LPTtlCache) {
-                factory(root, namespace);
+        define("cacher", ["exports"], function () {
+            if (!root.Cacher) {
+                factory(root);
             }
 
-            return namespace.LPTtlCache;
+            return root.Cacher;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPTtlCache) {
-            factory(root, namespace);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" === typeof exports) {
+    //</amd>
+    if ("object" === typeof exports) {
         // CommonJS
-        factory(root, exports);
+        factory(exports);
     }
     else {
-        // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace);
+        factory(root);
     }
-}(this, function (root, exports) {
+}(typeof CacherRoot === "undefined" ? this : CacherRoot , function (root) {
     "use strict";
 
     /*jshint validthis:true */
 
     /**
-     * LPTtlCache constructor
+     * Cacher constructor
      * @constructor
      * @param {Object} [options] - the configuration options for the instance
      * @param {Number} [options.max] - optional max items in cache
      * @param {Number} [options.ttl] - optional TTL for each cache item
      * @param {Number} [options.interval] - optional interval for eviction loop
      * @param {Function} [options.ontimeout] - optional global handler for timeout of items in cache
+     * @param {Array} [options.stores] - optional array of stores by priority
+     * @param {Function} [options.oncomplete] - optional callback for loading completion
      */
-    function LPTtlCache(options) {
+    function Cacher(options) {
         // For forcing new keyword
-        if (false === (this instanceof LPTtlCache)) {
-            return new LPTtlCache(options);
+        if (false === (this instanceof Cacher)) {
+            return new Cacher(options);
         }
 
         this.initialize(options);
     }
 
-    LPTtlCache.prototype = (function () {
+    Cacher.prototype = (function () {
         /**
          * Method for initialization
          * @param {Object} [options] - the configuration options for the instance
@@ -1607,8 +1492,20 @@
          * @param {Number} [options.ttl] - optional TTL for each cache item
          * @param {Number} [options.interval] - optional interval for eviction loop
          * @param {Function} [options.ontimeout] - optional global handler for timeout of items in cache - return false if you want the item to not be deleted after ttl
+         * @param {Array} [options.stores] - optional array of stores by priority
+         * @param {Function} [options.oncomplete] - optional callback for loading completion
          */
         function initialize(options) {
+            var that = this;
+            var stop = false;
+            var index = 0;
+
+            function addItem(err, item) {
+                that.nostore = true;
+                set.call(that, item.key, item.value, item.ttl);
+                delete that.nostore;
+            }
+
             if (!this.initialized) {
                 options = options || {};
 
@@ -1619,7 +1516,22 @@
                 this.interval = !isNaN(options.interval) && 0 < options.interval ? parseInt(options.interval, 10) : 1000;  // Interval for running the eviction loop
                 this.ontimeout = "function" === typeof options.ontimeout ? options.ontimeout : function () {
                 };              // Callback for timeout of items
+                this.stores = options.stores || [];
+
+                while (index < this.stores.length && !stop) {
+                    if (this.stores[index].autoload && this.stores[index].load) {
+                        stop = true;
+                        this.stores[index].load({
+                            onitem: addItem,
+                            oncomplete: options.oncomplete
+                        });
+                    }
+
+                    index++;
+                }
+
                 this.initialized = true;
+
                 _evict.call(this);
             }
         }
@@ -1661,6 +1573,8 @@
                 this.cache[key] = null;
                 delete this.cache[key];
                 this.length--;
+
+                _syncStores.call(this, "remove", key);
             }
 
             return item;
@@ -1680,11 +1594,34 @@
         }
 
         /**
+         * Method for syncing with stores
+         * @param {String} action - the sync action (add, remove)
+         * @param {String} key - the key for the item to be removed
+         * @param {Object} item - the item to cache
+         * @param {Number} ttl - the time to live for the item inside the cache
+         * @private
+         */
+        function _syncStores(action, key, item, ttl) {
+            if (!this.nostore) {
+                for (var i = 0; i < this.stores.length; i++) {
+                    if (this.stores[i][action]) {
+                        this.stores[i][action](key, item, ttl);
+                    }
+                    else if (this.stores[i].save) {
+                        this.stores[i].save({
+                            items: this.cache
+                        });
+                    }
+                }
+            }
+        }
+
+        /**
          * Method for rejecting the promise
-         * @param key - the key for the item to be cached
-         * @param item - the item to cache
-         * @param ttl - the time to live for the item inside the cache
-         * @param callback - optional callback to be called on item timeout
+         * @param {String} key - the key for the item to be cached
+         * @param {Object} item - the item to cache
+         * @param {Number} ttl - the time to live for the item inside the cache
+         * @param {Function} callback - optional callback to be called on item timeout
          * @returns {Boolean} indication whether the item had been added to the cache or not (since the cache is full)
          * @private
          */
@@ -1693,7 +1630,7 @@
             var timeout;
 
             if (0 === this.max || this.length < this.max) {
-                eviction = (!isNaN(ttl) && 0 <= ttl ? parseInt(ttl, 10) : this.ttl);
+                eviction = (!isNaN(ttl) ? parseInt(ttl, 10) : this.ttl);
 
                 this.cache[key] = {
                     item: item
@@ -1709,6 +1646,9 @@
                 if ("function" === typeof callback) {
                     this.cache[key].callback = callback;
                 }
+
+                _syncStores.call(this, "set", key, item, ttl);
+
                 if (eviction && (this.cache[key].callback || "function" === typeof this.ontimeout)) {
                     _evict.call(this);
                 }
@@ -1770,52 +1710,32 @@
 
 // attach properties to the exports object to define
 // the exported module properties.
-    exports.LPTtlCache = exports.LPTtlCache || LPTtlCache;
+    root.Cacher = root.Cacher || Cacher;
 }))
 ;
 
 
-;(function (root, factory) {
+;(function (root, chronosRoot, factory) {
     "use strict";
-
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    chronosRoot.Chronos = chronosRoot.Chronos || {};
+    //<amd>
     if ("function" === typeof define && define.amd) {
-        // Browser globals
-        namespace = getNamespace();
 
         // AMD. Register as an anonymous module.
-        define("lpPostMessageUtilities", ["exports"], function (exports) {
-            if (!namespace.LPPostMessageUtilities) {
-                factory(root, namespace);
+        define("Chronos.PostMessageUtilities", ["exports"], function () {
+            if (!chronosRoot.Chronos.PostMessageUtilities) {
+                factory(root, chronosRoot.Chronos);
             }
 
-            return namespace.LPPostMessageUtilities;
+            return chronosRoot.Chronos.PostMessageUtilities;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPPostMessageUtilities) {
-            factory(root, namespace);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" !== typeof exports) {
-        // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace);
+    //</amd>
+    if ("object" !== typeof exports) {
+        factory(root, chronosRoot.Chronos);
     }
-}(this, function (root, exports) {
+}(this, typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports) {
     "use strict";
 
     var SEQUENCE_FORMAT = "_xxxxxx-4xxx-yxxx";
@@ -2047,8 +1967,8 @@
      * @param {String} app - the app which logs
      */
     function log(msg, level, app) {
-        if (root.lpTag && "function" === typeof root.lpTag.log) {
-            root.lpTag.log(msg, level, app);
+        if (root && "function" === typeof root.log) {
+            root.log(msg, level, app);
         }
     }
 
@@ -2092,7 +2012,7 @@
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.LPPostMessageUtilities = exports.LPPostMessageUtilities || {
+    exports.PostMessageUtilities = exports.PostMessageUtilities || {
         SEQUENCE_FORMAT: SEQUENCE_FORMAT,
         stringify: stringify,
         hasPostMessageObjectsSupport: hasPostMessageObjectsSupport,
@@ -2110,73 +2030,54 @@
     };
 }));
 
-;(function (root, factory) {
+;(function (root, chronosRoot, factory) {
     "use strict";
 
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    chronosRoot.Chronos = chronosRoot.Chronos || {};
+    //<amd>
     if ("function" === typeof define && define.amd) {
-        // Browser globals
-        namespace = getNamespace();
 
         // AMD. Register as an anonymous module.
-        define("lpPostMessageChannelPolyfill", ["exports", "lpPostMessageUtilities"], function (exports, LPPostMessageUtilities) {
-            if (!namespace.LPPostMessageChannelPolyfill) {
-                factory(root, namespace, namespace.LPPostMessageUtilities);
+        define("Chronos.PostMessageChannelPolyfill", ["exports", "Chronos.PostMessageUtilities"], function () {
+            if (!chronosRoot.Chronos.PostMessageChannelPolyfill) {
+                factory(root, chronosRoot.Chronos, chronosRoot.Chronos.PostMessageUtilities);
             }
 
-            return namespace.LPPostMessageChannelPolyfill;
+            return chronosRoot.Chronos.PostMessageChannelPolyfill;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPPostMessageChannelPolyfill) {
-            factory(root, namespace, namespace.LPPostMessageUtilities);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" !== typeof exports) {
+    //</amd>
+    if ("object" !== typeof exports) {
         /**
-         * @depend ./lpPostMessageUtilities.js
+         * @depend ./PostMessageUtilities.js
          */
-        // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace, namespace.LPPostMessageUtilities);
+        factory(root, chronosRoot.Chronos, chronosRoot.Chronos.PostMessageUtilities);
     }
-}(this, function (root, exports, LPPostMessageUtilities) {
+}(this, typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports, PostMessageUtilities) {
     "use strict";
 
     /*jshint validthis:true */
     var PORT_PREFIX = "LPPort_";
 
     /**
-     * LPPostMessageChannelPolyfill constructor
+     * PostMessageChannelPolyfill constructor
      * @constructor
      * @param {Object} target - The DOM node of the target iframe or window
      * @param {Object} [options] the configuration options for the instance
      * @param {Function} [options.serialize = JSON.stringify] - optional serialization method for post message
      * @param {Function} [options.deserialize = JSON.parse] - optional deserialization method for post message
      */
-    function LPPostMessageChannelPolyfill(target, options) {
+    function PostMessageChannelPolyfill(target, options) {
         // For forcing new keyword
-        if (false === (this instanceof LPPostMessageChannelPolyfill)) {
-            return new LPPostMessageChannelPolyfill(target, options);
+        if (false === (this instanceof PostMessageChannelPolyfill)) {
+            return new PostMessageChannelPolyfill(target, options);
         }
 
         this.initialize(target, options);
     }
 
-    LPPostMessageChannelPolyfill.prototype = (function () {
+    PostMessageChannelPolyfill.prototype = (function () {
         /**
          * Method for initialization
          * @param {Object} target - The DOM node of the target iframe or window
@@ -2190,9 +2091,9 @@
 
                 this.target = target || root.top;
                 this.hosted = this.target === root || this.target === root.top;
-                this.portId = LPPostMessageUtilities.createUniqueSequence(PORT_PREFIX + LPPostMessageUtilities.SEQUENCE_FORMAT);
-                this.serialize = LPPostMessageUtilities.parseFunction(options.serialize, LPPostMessageUtilities.stringify);
-                this.deserialize = LPPostMessageUtilities.parseFunction(options.deserialize, JSON.parse);
+                this.portId = PostMessageUtilities.createUniqueSequence(PORT_PREFIX + PostMessageUtilities.SEQUENCE_FORMAT);
+                this.serialize = PostMessageUtilities.parseFunction(options.serialize, PostMessageUtilities.stringify);
+                this.deserialize = PostMessageUtilities.parseFunction(options.deserialize, JSON.parse);
 
                 this.initialized = true;
             }
@@ -2218,7 +2119,7 @@
                     receiver.postMessage(parsed, origin);
                 }
                 catch(ex) {
-                    LPPostMessageUtilities.log("Error while trying to post the message", "ERROR", "PostMessageChannelPolyfill");
+                    PostMessageUtilities.log("Error while trying to post the message", "ERROR", "PostMessageChannelPolyfill");
                     return false;
                 }
             }
@@ -2242,7 +2143,7 @@
          */
         function _getOrigin() {
             if (!this.origin) {
-                this.origin = LPPostMessageUtilities.resolveOrigin(this.target);
+                this.origin = PostMessageUtilities.resolveOrigin(this.target);
             }
 
             return this.origin;
@@ -2282,7 +2183,7 @@
                     }
                 }
                 catch (ex) {
-                    LPPostMessageUtilities.log("Error while trying to deserialize the message", "ERROR", "PostMessageChannelPolyfill");
+                    PostMessageUtilities.log("Error while trying to deserialize the message", "ERROR", "PostMessageChannelPolyfill");
                 }
             }
 
@@ -2298,54 +2199,35 @@
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.LPPostMessageChannelPolyfill = exports.LPPostMessageChannelPolyfill || LPPostMessageChannelPolyfill;
+    exports.PostMessageChannelPolyfill = exports.PostMessageChannelPolyfill || PostMessageChannelPolyfill;
 }));
 
-;(function (root, factory) {
+;(function (root, chronosRoot, factory) {
     "use strict";
 
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    chronosRoot.Chronos = chronosRoot.Chronos || {};
+    //<amd>
     if ("function" === typeof define && define.amd) {
-        // Browser globals
-        namespace = getNamespace();
 
         // AMD. Register as an anonymous module.
-        define("lpPostMessageChannel", ["exports", "lpPostMessageUtilities", "lpPostMessageChannelPolyfill"], function (exports, LPPostMessageUtilities, LPPostMessageChannelPolyfill) {
-            if (!namespace.LPPostMessageChannel) {
-                factory(root, namespace, namespace.LPPostMessageUtilities, namespace.LPPostMessageChannelPolyfill);
+        define("Chronos.PostMessageChannel", ["exports", "Chronos.PostMessageUtilities", "Chronos.PostMessageChannelPolyfill"], function () {
+            if (!chronosRoot.Chronos.PostMessageChannel) {
+                factory(root, chronosRoot.Chronos, chronosRoot.Chronos.PostMessageUtilities, chronosRoot.Chronos.PostMessageChannelPolyfill);
             }
 
-            return namespace.LPPostMessageChannel;
+            return chronosRoot.Chronos.PostMessageChannel;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPPostMessageChannel) {
-            factory(root, namespace, namespace.LPPostMessageUtilities, namespace.LPPostMessageChannelPolyfill);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" !== typeof exports) {
+    //</amd>
+    if ("object" !== typeof exports) {
         /**
-         * @depend ./lpPostMessageUtilities.js
-         * @depend ./lpPostMessageChannelPolyfill.js
+         * @depend ./PostMessageUtilities.js
+         * @depend ./PostMessageChannelPolyfill.js
          */
-        // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace, namespace.LPPostMessageUtilities, namespace.LPPostMessageChannelPolyfill);
+        factory(root, chronosRoot.Chronos, chronosRoot.Chronos.PostMessageUtilities, chronosRoot.Chronos.PostMessageChannelPolyfill);
     }
-}(this, function (root, exports, LPPostMessageUtilities, LPPostMessageChannelPolyfill) {
+}(this, typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports, PostMessageUtilities, PostMessageChannelPolyfill) {
     "use strict";
 
     /*jshint validthis:true */
@@ -2358,7 +2240,7 @@
     var DEFAULT_BODY_LOAD_DELAY = 100;
 
     /**
-     * LPPostMessageChannel constructor
+     * PostMessageChannel constructor
      * @constructor
      * @param {Object} options the configuration options for the instance
      * @param {Object} options.target - the target iframe or iframe configuration
@@ -2384,16 +2266,16 @@
      * @param {String} [options.hostParam] - optional parameter of the host parameter name (default is lpHost)
      * @param {Function} onmessage - the handler for incoming messages
      */
-    function LPPostMessageChannel(options, onmessage) {
+    function PostMessageChannel(options, onmessage) {
         // For forcing new keyword
-        if (false === (this instanceof LPPostMessageChannel)) {
-            return new LPPostMessageChannel(options, onmessage);
+        if (false === (this instanceof PostMessageChannel)) {
+            return new PostMessageChannel(options, onmessage);
         }
 
         this.initialize(options, onmessage);
     }
 
-    LPPostMessageChannel.prototype = (function () {
+    PostMessageChannel.prototype = (function () {
         /**
          * Method for initialization
          * @param {Object} options the configuration options for the instance
@@ -2423,104 +2305,15 @@
         function initialize(options, onmessage) {
             var handleMessage;
             var handler;
-            var initiated;
-
-            /**
-             * Method for handling the initial handler binding for needed event listeners
-             * @param {Object} event - the event object on message
-             */
-            function _handleMessage(event) {
-                var handshake;
-                var previous;
-
-                if (event.ports && 0 < event.ports.length) {
-                    this.receiver = event.ports[0];
-
-                    if (_isHandshake.call(this, event)) {
-                        if (!this.token) {
-                            this.token = event.data;
-                        }
-                    }
-
-                    this.receiver.start();
-
-                    // Swap Listeners
-                    previous = this.removeListener.bind(this);
-                    this.removeListener = LPPostMessageUtilities.addEventListener(this.receiver, "message", handler);
-                    previous();
-
-                    if (this.hosted && !this.ready) {
-                        handshake = true;
-                    }
-                }
-                else {
-                    if (_isHandshake.call(this, event)) {
-                        if (!this.token) {
-                            this.token = event.data;
-                        }
-
-                        if (this.hosted && !this.ready) {
-                            handshake = true;
-                        }
-                    }
-                    else if (this.token) {
-                        this.receiver.receive.call(this.receiver, event);
-                    }
-                }
-
-                if (handshake) {
-                    this.receiver.postMessage(HANSHAKE_PREFIX + this.token);
-                    _onReady.call(this);
-                }
-            }
 
             if (!this.initialized) {
                 this.hosted = false;
                 this.messageQueue = [];
 
                 options = options || {};
-
-                this.serialize = LPPostMessageUtilities.parseFunction(options.serialize, LPPostMessageUtilities.stringify);
-                this.deserialize = LPPostMessageUtilities.parseFunction(options.deserialize, JSON.parse);
-                this.targetOrigin = options.targetOrigin;
-                this.maxConcurrency = LPPostMessageUtilities.parseNumber(options.maxConcurrency, DEFAULT_CONCURRENCY);
-                this.handshakeInterval = LPPostMessageUtilities.parseNumber(options.handshakeInterval, DEFAULT_HANDSHAKE_RETRY_INTERVAL);
-                this.handshakeAttempts = LPPostMessageUtilities.parseNumber(options.handshakeAttempts, DEFAULT_HANDSHAKE_RETRY_ATTEMPTS);
-                this.hostParam = options.hostParam;
-                this.channel = "undefined" !== typeof options.channel ? options.channel : _getChannelUrlIndicator();
-                this.useObjects = options.useObjects;
-                this.onready = _wrapReadyCallback(options.onready, options.target).bind(this);
-                this.removeDispose = options.removeDispose;
-
-                handler = _wrapMessageHandler(onmessage).bind(this);
-
-                this.channelFactory = _hookupMessageChannel.call(this, handler);
-
-                // No Iframe - We are inside it (hosted) initialized by the host/container
-                if (!options.target || (options.target !== root || options.target === root.top) && "undefined" !== typeof Window && options.target instanceof Window) {
-                    this.hosted = true;
-                    this.target = options.target || root.top;
-                }
-                else if (options.target.contentWindow) { // We've got a reference to an "external" iframe
-                    this.target = options.target;
-                }
-                else if (options.target.url) { // We've got the needed configuration for creating an iframe
-                    this.targetUrl = options.target.url;
-                    this.targetOrigin = this.targetOrigin || LPPostMessageUtilities.getHost(options.target.url);
-                }
-
-                if (!this.hosted) {
-                    this.token = LPPostMessageUtilities.createUniqueSequence(TOKEN_PREFIX + LPPostMessageUtilities.SEQUENCE_FORMAT);
-                }
-
-                if (this.targetUrl) { // We've got the needed configuration for creating an iframe
-                    this.loading = true;
-                    this.targetContainer = options.target.container || document.body;
-                    this.target = _createIFrame.call(this, options.target, this.targetContainer);
-                }
-
+                handler = _initParameters.call(this, options, onmessage);
                 if (!_isNativeMessageChannelSupported.call(this)) {
-                    this.receiver = new LPPostMessageChannelPolyfill(this.target, {
+                    this.receiver = new PostMessageChannelPolyfill(this.target, {
                         serialize: this.serialize,
                         deserialize: this.deserialize
                     });
@@ -2528,46 +2321,15 @@
                 }
 
                 if (this.hosted || !_isNativeMessageChannelSupported.call(this)) {
-                    handleMessage = _handleMessage.bind(this);
-                    this.removeListener = LPPostMessageUtilities.addEventListener(root, "message", handleMessage);
+                    handleMessage = _getHandleMessage(handler).bind(this);
+                    this.removeListener = PostMessageUtilities.addEventListener(root, "message", handleMessage);
                 }
                 else if (_isNativeMessageChannelSupported.call(this)) {
                     this.channelFactory();
                 }
 
                 if (this.target && !this.loading && !this.ready) {
-                    try {
-                        initiated = _handshake.call(this);
-                    }
-                    catch(ex) {
-                        initiated = false;
-                    }
-
-                    if (!initiated) {
-                        // Fallback to pure postMessage
-                        this.channel = false;
-                        this.receiver = new LPPostMessageChannelPolyfill(this.target, {
-                            serialize: this.serialize,
-                            deserialize: this.deserialize
-                        });
-                        this.receiver.onmessage = handler;
-
-                        if (!this.hosted) {
-                            handleMessage = _handleMessage.bind(this);
-                            this.removeListener = LPPostMessageUtilities.addEventListener(root, "message", handleMessage);
-                        }
-
-                        _handshake.call(this);
-                    }
-
-                    this.handshakeAttempts--;
-
-                    LPPostMessageUtilities.delay(function() {
-                        if (!this.hosted && !this.ready) {
-                            _addLoadHandler.call(this, this.target);
-                            this.timer = LPPostMessageUtilities.delay(_handshake.bind(this, this.handshakeInterval), this.handshakeInterval);
-                        }
-                    }.bind(this));
+                    _kickStartHandshake.call(this, handler, handleMessage);
                 }
 
                 this.initialized = true;
@@ -2594,7 +2356,7 @@
                         }
                     }
                     catch(ex) {
-                        LPPostMessageUtilities.log("Error while trying to remove the iframe from the container", "ERROR", "PostMessageChannel");
+                        PostMessageUtilities.log("Error while trying to remove the iframe from the container", "ERROR", "PostMessageChannel");
                     }
                 }
 
@@ -2637,10 +2399,143 @@
                     }
                 }
                 catch(ex) {
-                    LPPostMessageUtilities.log("Error while trying to post the message", "ERROR", "PostMessageChannel");
+                    PostMessageUtilities.log("Error while trying to post the message", "ERROR", "PostMessageChannel");
                     return false;
                 }
             }
+        }
+
+        function _kickStartHandshake(handler, handleMessage) {
+            var initiated;
+            try {
+                initiated = _handshake.call(this);
+            }
+            catch (ex) {
+                initiated = false;
+            }
+
+            if (!initiated) {
+                // Fallback to pure postMessage
+                this.channel = false;
+                this.receiver = new PostMessageChannelPolyfill(this.target, {
+                    serialize: this.serialize,
+                    deserialize: this.deserialize
+                });
+                this.receiver.onmessage = handler;
+
+                if (!this.hosted) {
+                    handleMessage = _getHandleMessage(handler).bind(this);
+                    this.removeListener = PostMessageUtilities.addEventListener(root, "message", handleMessage);
+                }
+
+                _handshake.call(this);
+            }
+
+            this.handshakeAttempts--;
+
+            PostMessageUtilities.delay(function () {
+                if (!this.hosted && !this.ready) {
+                    _addLoadHandler.call(this, this.target);
+                    this.timer = PostMessageUtilities.delay(_handshake.bind(this, this.handshakeInterval), this.handshakeInterval);
+                }
+            }.bind(this));
+        }
+
+        function _initParameters(options, onmessage) {
+            var handler;
+            _simpleParametersInit.call(this, options);
+            handler = _wrapMessageHandler(onmessage).bind(this);
+
+            this.channelFactory = _hookupMessageChannel.call(this, handler);
+
+            // No Iframe - We are inside it (hosted) initialized by the host/container
+            if (!options.target || (options.target !== root || options.target === root.top) && "undefined" !== typeof Window && options.target instanceof Window) {
+                this.hosted = true;
+                this.target = options.target || root.top;
+            }
+            else if (options.target.contentWindow) { // We've got a reference to an "external" iframe
+                this.target = options.target;
+            }
+            else if (options.target.url) { // We've got the needed configuration for creating an iframe
+                this.targetUrl = options.target.url;
+                this.targetOrigin = this.targetOrigin || PostMessageUtilities.getHost(options.target.url);
+            }
+
+            if (!this.hosted) {
+                this.token = PostMessageUtilities.createUniqueSequence(TOKEN_PREFIX + PostMessageUtilities.SEQUENCE_FORMAT);
+            }
+
+            if (this.targetUrl) { // We've got the needed configuration for creating an iframe
+                this.loading = true;
+                this.targetContainer = options.target.container || document.body;
+                this.target = _createIFrame.call(this, options.target, this.targetContainer);
+            }
+            return handler;
+        }
+
+        function _simpleParametersInit(options) {
+            this.serialize = PostMessageUtilities.parseFunction(options.serialize, PostMessageUtilities.stringify);
+            this.deserialize = PostMessageUtilities.parseFunction(options.deserialize, JSON.parse);
+            this.targetOrigin = options.targetOrigin;
+            this.maxConcurrency = PostMessageUtilities.parseNumber(options.maxConcurrency, DEFAULT_CONCURRENCY);
+            this.handshakeInterval = PostMessageUtilities.parseNumber(options.handshakeInterval, DEFAULT_HANDSHAKE_RETRY_INTERVAL);
+            this.handshakeAttempts = PostMessageUtilities.parseNumber(options.handshakeAttempts, DEFAULT_HANDSHAKE_RETRY_ATTEMPTS);
+            this.hostParam = options.hostParam;
+            this.channel = "undefined" !== typeof options.channel ? options.channel : _getChannelUrlIndicator();
+            this.useObjects = options.useObjects;
+            this.onready = _wrapReadyCallback(options.onready, options.target).bind(this);
+            this.removeDispose = options.removeDispose;
+        }
+
+        /**
+         * Method for handling the initial handler binding for needed event listeners
+         * @param {Object} event - the event object on message
+         */
+        function _getHandleMessage(handler) {
+            return function _handleMessage(event) {
+                var handshake;
+                var previous;
+
+                if (event.ports && 0 < event.ports.length) {
+                    this.receiver = event.ports[0];
+
+                    if (_isHandshake.call(this, event)) {
+                        if (!this.token) {
+                            this.token = event.data;
+                        }
+                    }
+
+                    this.receiver.start();
+
+                    // Swap Listeners
+                    previous = this.removeListener.bind(this);
+                    this.removeListener = PostMessageUtilities.addEventListener(this.receiver, "message", handler);
+                    previous();
+
+                    if (this.hosted && !this.ready) {
+                        handshake = true;
+                    }
+                }
+                else {
+                    if (_isHandshake.call(this, event)) {
+                        if (!this.token) {
+                            this.token = event.data;
+                        }
+
+                        if (this.hosted && !this.ready) {
+                            handshake = true;
+                        }
+                    }
+                    else if (this.token) {
+                        this.receiver.receive.call(this.receiver, event);
+                    }
+                }
+
+                if (handshake) {
+                    this.receiver.postMessage(HANSHAKE_PREFIX + this.token);
+                    _onReady.call(this);
+                }
+            };
         }
 
         /**
@@ -2660,7 +2555,7 @@
          * @private
          */
         function _getChannelUrlIndicator() {
-            if ("true" === LPPostMessageUtilities.getURLParameter("lpPMCPolyfill")) {
+            if ("true" === PostMessageUtilities.getURLParameter("lpPMCPolyfill")) {
                 return false;
             }
         }
@@ -2756,7 +2651,7 @@
                         }
                         catch (ex) {
                             msgObject = message.data || message;
-                            LPPostMessageUtilities.log("Error while trying to handle the message", "ERROR", "PostMessageChannel");
+                            PostMessageUtilities.log("Error while trying to handle the message", "ERROR", "PostMessageChannel");
                         }
 
                         return msgObject || message;
@@ -2787,7 +2682,7 @@
 
             if (!this.ready) {
                 if (!_isNativeMessageChannelSupported.call(this)) {
-                    this.targetOrigin = this.targetOrigin || LPPostMessageUtilities.resolveOrigin(this.target) || "*";
+                    this.targetOrigin = this.targetOrigin || PostMessageUtilities.resolveOrigin(this.target) || "*";
                 }
 
                 if (!this.hosted) {
@@ -2812,7 +2707,7 @@
             if (!this.ready && retry) {
                 if (0 < this.handshakeAttempts) {
                     this.handshakeAttempts--;
-                    this.timer = LPPostMessageUtilities.delay(_handshake.bind(this, retry), retry);
+                    this.timer = PostMessageUtilities.delay(_handshake.bind(this, retry), retry);
                 }
                 else {
                     this.onready(new Error("Loading: Operation Timeout!"));
@@ -2832,7 +2727,7 @@
 
                 // Process queued messages if any
                 if (this.messageQueue && this.messageQueue.length) {
-                    LPPostMessageUtilities.delay(function() {
+                    PostMessageUtilities.delay(function() {
                         var message;
                         var parsed;
 
@@ -2844,7 +2739,7 @@
                                     this.receiver.postMessage(parsed);
                                 }
                                 catch(ex) {
-                                    LPPostMessageUtilities.log("Error while trying to post the message from queue", "ERROR", "PostMessageChannel");
+                                    PostMessageUtilities.log("Error while trying to post the message from queue", "ERROR", "PostMessageChannel");
                                 }
                             }
 
@@ -2879,11 +2774,11 @@
                     onready();
                 }
                 else {
-                    LPPostMessageUtilities.delay(_ready, delay || DEFAULT_BODY_LOAD_DELAY);
+                    PostMessageUtilities.delay(_ready, delay || DEFAULT_BODY_LOAD_DELAY);
                 }
             }
 
-            LPPostMessageUtilities.delay(_ready, delay || false);
+            PostMessageUtilities.delay(_ready, delay || false);
         }
 
         /**
@@ -2904,7 +2799,7 @@
          */
         function _createIFrame(options, container) {
             var frame = document.createElement("IFRAME");
-            var name = LPPostMessageUtilities.createUniqueSequence(IFRAME_PREFIX + LPPostMessageUtilities.SEQUENCE_FORMAT);
+            var name = PostMessageUtilities.createUniqueSequence(IFRAME_PREFIX + PostMessageUtilities.SEQUENCE_FORMAT);
             var delay = options.delayLoad;
 
             frame.setAttribute("id", name);
@@ -2949,7 +2844,7 @@
          * @private
          */
         function _addLoadHandler(frame) {
-            LPPostMessageUtilities.addEventListener(frame, "load", function() {
+            PostMessageUtilities.addEventListener(frame, "load", function() {
                 this.loading = false;
 
                 _handshake.call(this, this.handshakeInterval);
@@ -2972,7 +2867,7 @@
                 src += (new Date()).getTime() + "&";
             }
 
-            src += ((this.hostParam ? "hostParam=" + this.hostParam + "&" + this.hostParam + "=" : "lpHost=") + encodeURIComponent(LPPostMessageUtilities.getHost(void 0, frame, true)));
+            src += ((this.hostParam ? "hostParam=" + this.hostParam + "&" + this.hostParam + "=" : "lpHost=") + encodeURIComponent(PostMessageUtilities.getHost(void 0, frame, true)));
 
             if (!_isNativeMessageChannelSupported.call(this)) {
                 src += "&lpPMCPolyfill=true";
@@ -2994,50 +2889,31 @@
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.LPPostMessageChannel = LPPostMessageChannel;
+    exports.PostMessageChannel = PostMessageChannel;
 }));
 
-;(function (root, factory) {
+;(function (root, chronosRoot, factory) {
     "use strict";
 
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    chronosRoot.Chronos = chronosRoot.Chronos || {};
+    //<amd>
     if ("function" === typeof define && define.amd) {
-        // Browser globals
-        namespace = getNamespace();
 
         // AMD. Register as an anonymous module.
-        define("lpPostMessagePromise", ["exports"], function (exports) {
-            if (!namespace.LPPostMessagePromise) {
-                factory(root, namespace);
+        define("Chronos.PostMessagePromise", ["exports"], function () {
+            if (!chronosRoot.Chronos.PostMessagePromise) {
+                factory(root, chronosRoot.Chronos);
             }
 
-            return namespace.LPPostMessagePromise;
+            return chronosRoot.Chronos.PostMessagePromise;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPPostMessagePromise) {
-            factory(root, namespace);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" !== typeof exports) {
-        // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace);
+    //</amd>
+    if ("object" !== typeof exports) {
+        factory(root, chronosRoot.Chronos);
     }
-}(this, function (root, exports) {
+}(this, typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports) {
     "use strict";
 
     /*jshint validthis:true */
@@ -3048,21 +2924,21 @@
     };
 
     /**
-     * LPPostMessagePromise constructor
+     * PostMessagePromise constructor
      * @constructor
-     * @param {Function} [executor] - optional method to be invoked during initialization that will have
+     * @param {Function} [executer] - optional method to be invoked during initialization that will have
      *                   arguments of resolve and reject according to ES6 Promise A+ spec
      */
-    function LPPostMessagePromise(executer) {
+    function PostMessagePromise(executer) {
         // For forcing new keyword
-        if (false === (this instanceof LPPostMessagePromise)) {
-            return new LPPostMessagePromise(executer);
+        if (false === (this instanceof PostMessagePromise)) {
+            return new PostMessagePromise(executer);
         }
 
         this.initialize(executer);
     }
 
-    LPPostMessagePromise.prototype = (function () {
+    PostMessagePromise.prototype = (function () {
         /**
          * Method for initialization
          * @param {Function} [executor] - optional method to be invoked during initialization that will have
@@ -3128,7 +3004,7 @@
 
         /**
          * Method for calling all queued handlers with a specified type to complete the queue
-         * @param {LPPostMessagePromise.ACTION_TYPE} type - the type of handlers to invoke
+         * @param {PostMessagePromise.ACTION_TYPE} type - the type of handlers to invoke
          * @param {Object} [arg] - the arg to pass the handler handler
          * @param {Boolean} empty - a flag to indicate whether the queue should be empty after completion
          * @private
@@ -3152,7 +3028,7 @@
 
         /**
          * Method for completing the promise (resolve/reject)
-         * @param {LPPostMessagePromise.ACTION_TYPE} type - resolve/reject
+         * @param {PostMessagePromise.ACTION_TYPE} type - resolve/reject
          * @param {Object} [arg] - the data to pass the handler
          * @private
          */
@@ -3196,83 +3072,65 @@
     /**
      * Method for polyfilling Promise support if not exist
      */
-    LPPostMessagePromise.polyfill = function() {
+    PostMessagePromise.polyfill = function() {
         if (!root.Promise) {
-            root.Promise = LPPostMessagePromise;
+            root.Promise = PostMessagePromise;
         }
     };
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.LPPostMessagePromise = exports.LPPostMessagePromise || LPPostMessagePromise;
+    exports.PostMessagePromise = exports.PostMessagePromise || PostMessagePromise;
 }));
 
 ;(function (root, factory) {
     "use strict";
 
-    var namespace;
+    root.Chronos = root.Chronos || {};
 
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    //<amd>
     if ("function" === typeof define && define.amd) {
-        // Browser globals
-        namespace = getNamespace();
 
         // AMD. Register as an anonymous module.
-        define("lpPostMessageMapper", ["exports", "lpPostMessageUtilities"], function (exports, LPPostMessageUtilities) {
-            if (!namespace.LPPostMessageMapper) {
-                factory(root, namespace, namespace.LPPostMessageUtilities);
+        define("Chronos.PostMessageMapper", ["exports", "Chronos.PostMessageUtilities"], function () {
+            if (!root.Chronos.PostMessageMapper) {
+                factory(root, root.Chronos, root.Chronos.PostMessageUtilities);
             }
 
-            return namespace.LPPostMessageMapper;
+            return root.Chronos.PostMessageMapper;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPPostMessageMapper) {
-            factory(root, namespace, namespace.LPPostMessageUtilities);
-        }
-        //</lptag>
+        return;
     }
-    else if ("object" !== typeof exports) {
+    //</amd>
+    if ("object" !== typeof exports) {
         /**
-         * @depend ./lpPostMessageUtilities.js
+         * @depend ./PostMessageUtilities.js
          */
-        // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace, namespace.LPPostMessageUtilities);
+        factory(root, root.Chronos, root.Chronos.PostMessageUtilities);
     }
-}(this, function (root, exports, LPPostMessageUtilities) {
+}(typeof ChronosRoot === "undefined" ? this : ChronosRoot, function (root, exports, PostMessageUtilities) {
     "use strict";
 
     /*jshint validthis:true */
 
     /**
-     * LPPostMessageMapper constructor
+     * PostMessageMapper constructor
      * @constructor
-     * @param {LPEventChannel} [eventChannel] - the event channel on which events/commands/requests will be bind/triggered (must implement the LPEventChannel API)
+     * @param {Channels} [eventChannel] - the event channel on which events/commands/requests will be bind/triggered (must implement the Channels API)
      */
-    function LPPostMessageMapper(eventChannel) {
+    function PostMessageMapper(eventChannel) {
         // For forcing new keyword
-        if (false === (this instanceof LPPostMessageMapper)) {
-            return new LPPostMessageMapper(eventChannel);
+        if (false === (this instanceof PostMessageMapper)) {
+            return new PostMessageMapper(eventChannel);
         }
 
         this.initialize(eventChannel);
     }
 
-    LPPostMessageMapper.prototype = (function () {
+    PostMessageMapper.prototype = (function () {
         /**
          * Method for initialization
-         * @param {LPPostMessageChannel} [eventChannel] - the event channel on which events/commands/requests will be bind/triggered (must implement the LPEventChannel API)
+         * @param {Channels} [eventChannel] - the event channel on which events/commands/requests will be bind/triggered (must implement the Channels API)
          */
         function initialize(eventChannel) {
             if (!this.initialized) {
@@ -3290,7 +3148,7 @@
         function toEvent(message) {
             if (message) {
                 if (message.error) {
-                    LPPostMessageUtilities.log("Error on message: " + message.error, "ERROR", "PostMessageMapper");
+                    PostMessageUtilities.log("Error on message: " + message.error, "ERROR", "PostMessageMapper");
                     return function() {
                         return message;
                     };
@@ -3327,7 +3185,6 @@
          */
         function _getMappedMethod(message) {
             var method = message && message.method;
-            var id = method && method.id;
             var name = method && method.name;
             var args = method && method.args;
             var eventChannel = this.eventChannel;
@@ -3337,7 +3194,7 @@
                     return eventChannel[name].apply(eventChannel, args);
                 }
                 else {
-                    LPPostMessageUtilities.log("No channel exists", "ERROR", "PostMessageMapper");
+                    PostMessageUtilities.log("No channel exists", "ERROR", "PostMessageMapper");
                 }
             };
         }
@@ -3351,7 +3208,7 @@
 
     // attach properties to the exports object to define
     // the exported module properties.
-    exports.LPPostMessageMapper = exports.LPPostMessageMapper || LPPostMessageMapper;
+    exports.PostMessageMapper = exports.PostMessageMapper || PostMessageMapper;
 }));
 
 /**
@@ -3370,130 +3227,64 @@
  *    at the iframe side, had also been initialized with a valid targetOrigin option)
  */
 // TODO: Add Support for target management when there is a problem that requires re-initialization of the target
-;(function (root, factory) {
+;(function (root, cacherRoot, circuitRoot, factory) {
     "use strict";
 
-    var namespace;
-
-    function getNamespace() {
-        //<lptag>
-        if (root.lpTag) {
-            root.lpTag.channel = root.lpTag.channel || {};
-
-            return root.lpTag.channel;
-        }
-        //</lptag>
-        return root;
-    }
-
+    root.Chronos = root.Chronos || {};
+    //<amd>
     if ("function" === typeof define && define.amd) {
-        // Browser globals
-        namespace = getNamespace();
 
         // AMD. Register as an anonymous module.
-        define("lpPostMessageCourier", ["exports", "lpPostMessageUtilities", "lpEventChannel", "lpTtlCache", "lpCircuitBreaker", "lpPostMessageChannel", "lpPostMessagePromise", "lpPostMessageMapper"], function (exports, LPPostMessageUtilities, LPEventChannel, LPTtlCache, LPCircuitBreaker, LPPostMessageChannel, LPPostMessagePromise, LPPostMessageMapper) {
-            if (!namespace.LPPostMessageCourier) {
-                factory(root, namespace, namespace.LPPostMessageUtilities, namespace.LPEventChannel, namespace.LPTtlCache, namespace.LPCircuitBreaker, namespace.LPPostMessageChannel, namespace.LPPostMessagePromise, namespace.LPPostMessageMapper);
+        define("Chronos.PostMessageCourier", ["exports", "Chronos.PostMessageUtilities", "Chronos.Channels", "cacher", "CircuitBreaker", "Chronos.PostMessageChannel", "Chronos.PostMessagePromise", "Chronos.PostMessageMapper"], function () {
+            if (!root.Chronos.PostMessageCourier) {
+                factory(root, root.Chronos, root.Chronos.PostMessageUtilities, root.Chronos.Channels,
+                    cacherRoot.Cacher, circuitRoot.CircuitBreaker,
+                    root.Chronos.PostMessageChannel, root.Chronos.PostMessagePromise, root.Chronos.PostMessageMapper);
             }
 
-            return namespace.LPPostMessageCourier;
+            return root.Chronos.PostMessageCourier;
         });
-
-        //<lptag>
-        if (root.lpTag && root.lpTag.taglets && !namespace.LPPostMessageCourier) {
-            factory(root, namespace, namespace.LPPostMessageUtilities, namespace.LPEventChannel, namespace.LPTtlCache, namespace.LPCircuitBreaker, namespace.LPPostMessageChannel, namespace.LPPostMessagePromise, namespace.LPPostMessageMapper);
-        }
-        //</lptag>
+        return;
     }
+    //</amd>
     /**
-     * @depend ../lpEventChannel.js
-     * @depend ./lpCircuitBreaker.js
-     * @depend ../../node_modules/lp-ttl-cache/src/lpTtlCache.js
-     * @depend ./lpPostMessageUtilities.js
-     * @depend ./lpPostMessageChannel.js
-     * @depend ./lpPostMessagePromise.js
-     * @depend ./lpPostMessageMapper.js
+     * @depend ../Channels.js
+     * @depend ../../node_modules/circuit-breakerjs/src/CircuitBreaker.js
+     * @depend ../../node_modules/cacherjs/src/cacher.js
+     * @depend ./PostMessageUtilities.js
+     * @depend ./PostMessageChannel.js
+     * @depend ./PostMessagePromise.js
+     * @depend ./PostMessageMapper.js
      */
-    else if ("object" !== typeof exports) {
-            // Browser globals
-        namespace = getNamespace();
-        factory(root, namespace, namespace.LPPostMessageUtilities, namespace.LPEventChannel, namespace.LPTtlCache, namespace.LPCircuitBreaker, namespace.LPPostMessageChannel, namespace.LPPostMessagePromise, namespace.LPPostMessageMapper);
+    if ("object" !== typeof exports) {
+        factory(root, root.Chronos, root.Chronos.PostMessageUtilities, root.Chronos.Channels,
+            cacherRoot.Cacher,  circuitRoot.CircuitBreaker,
+            root.Chronos.PostMessageChannel, root.Chronos.PostMessagePromise, root.Chronos.PostMessageMapper);
     }
-}(this, function (root, exports, LPPostMessageUtilities, LPEventChannel, LPTtlCache, LPCircuitBreaker, LPPostMessageChannel, LPPostMessagePromise, LPPostMessageMapper) {
-    "use strict";
+}(typeof ChronosRoot === "undefined" ? this : ChronosRoot,
+    typeof CacherRoot === "undefined" ? this : CacherRoot,
+    typeof CircuitRoot === "undefined" ? this : CircuitRoot,
+    function (root, exports, PostMessageUtilities, Channels, Cacher, CircuitBreaker, PostMessageChannel, PostMessagePromise, PostMessageMapper) {
+        "use strict";
 
-    /*jshint validthis:true */
-    var MESSAGE_PREFIX = "LPMSG_";
-    var ACTION_TYPE = {
-        TRIGGER: "trigger",
-        COMMAND: "command",
-        REQUEST: "request",
-        RETURN: "return"
-    };
-    var DEFAULT_TIMEOUT = 30 * 1000;
-    var DEFAULT_CONCURRENCY = 100;
-    var DEFAULT_MESSURE_TIME = 30 * 1000;
-    var DEFAULT_MESSURE_TOLERANCE = 30;
-    var DEFAULT_MESSURE_CALIBRATION = 10;
-    var CACHE_EVICTION_INTERVAL = 1000;
+        /*jshint validthis:true */
+        var MESSAGE_PREFIX = "LPMSG_";
+        var ACTION_TYPE = {
+            TRIGGER: "trigger",
+            COMMAND: "command",
+            REQUEST: "request",
+            RETURN: "return"
+        };
+        var DEFAULT_TIMEOUT = 30 * 1000;
+        var DEFAULT_CONCURRENCY = 100;
+        var DEFAULT_MESSURE_TIME = 30 * 1000;
+        var DEFAULT_MESSURE_TOLERANCE = 30;
+        var DEFAULT_MESSURE_CALIBRATION = 10;
+        var CACHE_EVICTION_INTERVAL = 1000;
 
-    /**
-     * LPPostMessageCourier constructor
-     * @constructor
-     * @param {Object} options - the configuration options for the instance
-     * @param {Object} options.target - the target iframe or iframe configuration
-     * @param {String} [options.target.url] - the url to load
-     * @param {Object} [options.target.container] - the container in which the iframe should be created (if not supplied, document.body will be used)
-     * @param {String} [options.target.style] - the CSS style to apply
-     * @param {String} [options.target.style.width] width of iframe
-     * @param {String} [options.target.style.height] height of iframe
-     *          .....
-     * @param {Boolean} [options.target.bust = true] - optional flag to indicate usage of cache buster when loading the iframe (default to true)
-     * @param {Function} [options.target.callback] - a callback to invoke after the iframe had been loaded
-     * @param {Object} [options.target.context] - optional context for the callback
-     * @param {Function|Object} [options.onready] - optional data for usage when iframe had been loaded
-     * @param {Function} [options.onready.callback] - a callback to invoke after the iframe had been loaded
-     * @param {Object} [options.onready.context] - optional context for the callback
-     * @param {Boolean} [options.removeDispose] - optional flag for removal of the iframe on dispose
-     * @param {Function} [options.serialize = JSON.stringify] - optional serialization method for post message
-     * @param {Function} [options.deserialize = JSON.parse] - optional deserialization method for post message
-     * @param {String} [options.targetOrigin] optional targetOrigin to be used when posting the message (must be supplied in case of external iframe)
-     * @param {Number} [options.maxConcurrency = 100] - optional maximum concurrency that can be managed by the component before dropping
-     * @param {Number} [options.handshakeInterval = 5000] - optional handshake interval for retries
-     * @param {Number} [options.handshakeAttempts = 3] - optional number of retries handshake attempts
-     * @param {String} [options.hostParam] - optional parameter of the host parameter name (default is lpHost)
-     * @param {Function} onmessage - the handler for incoming messages
-     * @param {Object} [options.eventChannel] - optional events channel to be used (if not supplied, a new one will be created OR optional events, optional commands, optional reqres to be used
-     * @param {Number} [options.timeout = 30000] - optional milliseconds parameter for waiting before timeout to responses (default is 30 seconds)
-     * @param {Number} [options.messureTime = 30000] - optional milliseconds parameter for time measurement indicating the time window to apply when implementing the internal fail fast mechanism (default is 30 seconds)
-     * @param {Number} [options.messureTolerance = 30] - optional percentage parameter indicating the tolerance to apply on the measurements when implementing the internal fail fast mechanism (default is 30 percents)
-     * @param {Number} [options.messureCalibration = 10] optional numeric parameter indicating the calibration of minimum calls before starting to validate measurements when implementing the internal fail fast mechanism (default is 10 calls)
-     * @param {Function} [options.ondisconnect] - optional disconnect handler that will be invoked when the fail fast mechanism disconnects the component upon to many failures
-     * @param {Function} [options.onreconnect] - optional reconnect handler that will be invoked when the fail fast mechanism reconnects the component upon back to normal behaviour
-     *
-     * @example
-     * var courier = new lpTag.channel.LPPostMessageCourier({
-     *     target: {
-     *         url: "http://localhost/lpEvents/debug/courier.frame.html",
-     *         style: {
-     *             width: "100px",
-     *             height: "100px"
-     *         }
-     *     }
-     * });
-     */
-    function LPPostMessageCourier(options) {
-        // For forcing new keyword
-        if (false === (this instanceof LPPostMessageCourier)) {
-            return new LPPostMessageCourier(options);
-        }
-
-        this.initialize(options);
-    }
-
-    LPPostMessageCourier.prototype = (function () {
         /**
-         * Method for initialization
+         * PostMessageCourier constructor
+         * @constructor
          * @param {Object} options - the configuration options for the instance
          * @param {Object} options.target - the target iframe or iframe configuration
          * @param {String} [options.target.url] - the url to load
@@ -3524,252 +3315,335 @@
          * @param {Number} [options.messureCalibration = 10] optional numeric parameter indicating the calibration of minimum calls before starting to validate measurements when implementing the internal fail fast mechanism (default is 10 calls)
          * @param {Function} [options.ondisconnect] - optional disconnect handler that will be invoked when the fail fast mechanism disconnects the component upon to many failures
          * @param {Function} [options.onreconnect] - optional reconnect handler that will be invoked when the fail fast mechanism reconnects the component upon back to normal behaviour
-         */
-        function initialize(options) {
-            var mapping;
-            var onmessage;
-            var messureTime;
-
-            if (!this.initialized) {
-                options = options || {};
-
-                this.useObjects = false === options.useObjects ? options.useObjects : _getUseObjectsUrlIndicator();
-                if ("undefined" === typeof this.useObjects) {
-                    // Defaults to true
-                    this.useObjects = true;
-                }
-                options.useObjects = this.useObjects;
-
-                // Define the serialize/deserialize methods to be used
-                if ("function" !== typeof options.serialize || "function" !== typeof options.deserialize) {
-                    if (this.useObjects && LPPostMessageUtilities.hasPostMessageObjectsSupport()) {
-                        this.serialize = _de$serializeDummy;
-                        this.deserialize = _de$serializeDummy;
-                    }
-                    else {
-                        this.serialize = LPPostMessageUtilities.stringify;
-                        this.deserialize = JSON.parse;
-                    }
-
-                    options.serialize = this.serialize;
-                    options.deserialize = this.deserialize;
-                }
-                else {
-                    this.serialize = options.serialize;
-                    this.deserialize = options.deserialize;
-                }
-
-                // Grab the event channel and initialize a new mapper
-                this.eventChannel = options.eventChannel || new LPEventChannel({
-                    events: options.events,
-                    commands: options.commands,
-                    reqres: options.reqres
-                });
-                this.mapper = new LPPostMessageMapper(this.eventChannel);
-
-                // Bind the mapping method to the mapper
-                mapping = this.mapper.toEvent.bind(this.mapper);
-                // Create the message handler which uses the mapping method
-                onmessage = _createMessageHandler(mapping).bind(this);
-
-                // Initialize a message channel with the message handler
-                this.messageChannel = new LPPostMessageChannel(options, onmessage);
-
-                this.callbackCache = new LPTtlCache({
-                    max: LPPostMessageUtilities.parseNumber(options.maxConcurrency, DEFAULT_CONCURRENCY),
-                    ttl: LPPostMessageUtilities.parseNumber(options.timeout, DEFAULT_TIMEOUT),
-                    interval: CACHE_EVICTION_INTERVAL
-                });
-
-                messureTime = LPPostMessageUtilities.parseNumber(options.messureTime, DEFAULT_MESSURE_TIME);
-                this.circuit = new LPCircuitBreaker({
-                    timeWindow: messureTime,
-                    slidesNumber: Math.ceil(messureTime / 100),
-                    tolerance: LPPostMessageUtilities.parseNumber(options.messureTolerance, DEFAULT_MESSURE_TOLERANCE),
-                    calibration: LPPostMessageUtilities.parseNumber(options.messureCalibration, DEFAULT_MESSURE_CALIBRATION),
-                    onopen: LPPostMessageUtilities.parseFunction(options.ondisconnect, true),
-                    onclose: LPPostMessageUtilities.parseFunction(options.onreconnect, true)
-                });
-
-                // Dumb Proxy methods
-                this.once = this.eventChannel.once;
-                this.hasFiredEvents = this.eventChannel.hasFiredEvents;
-                this.bind = this.eventChannel.bind;
-                this.register = this.eventChannel.register;
-                this.unbind = this.eventChannel.unbind;
-                this.unregister = this.eventChannel.unregister;
-                this.hasFiredCommands = this.eventChannel.hasFiredCommands;
-                this.comply = this.eventChannel.comply;
-                this.stopComplying = this.eventChannel.stopComplying;
-                this.hasFiredReqres = this.eventChannel.hasFiredReqres;
-                this.reply = this.eventChannel.reply;
-                this.stopReplying = this.eventChannel.stopReplying;
-                this.initialized = true;
-            }
-        }
-
-        /**
-         * Method to get the member instance of the message channel
-         * @returns {LPPostMessageChannel} the member message channel
-         */
-        function getMessageChannel() {
-            return this.messageChannel;
-        }
-
-        /**
-         * Method to get the member instance of the event channel
-         * @returns {LPEvents} the member event channel
-         */
-        function getEventChannel() {
-            return this.eventChannel;
-        }
-
-        /**
-         * Method to trigger event via post message
-         * @link lpTag.channel.LPEvents#trigger
-         * @param {Object|String} options - Configuration object or app name
-         * @param {String} [options.eventName] - the name of the event triggered
-         * @param {String} [options.appName] - optional specifies the identifier it is bound to
-         * @param {Boolean} [options.passDataByRef = false] - boolean flag whether this callback will get the reference information of the event or a copy (this allows control of data manipulation)
-         * @param {Object} [options.data] - optional event parameters to be passed to the listeners
-         * @param {String|Boolean} [evName] - the name of the event triggered || [noLocal] - optional boolean flag indicating whether to trigger the event on the local event channel too
-         * @param {Object} [data] - optional event parameters to be passed to the listeners
-         * @param {Boolean} [noLocal] - optional boolean flag indicating whether to trigger the event on the local event channel too
-         * @returns {*}
          *
          * @example
-         * courier.trigger({
-         *     appName: "frame",
-         *     eventName: "got_it",
-         *     data: 2
-         * });
-         */
-        function trigger() {
-            if (!this.disposed) {
-                var args = Array.prototype.slice.apply(arguments);
-
-                // We are looking for a "noLocal" param which can only be second or forth
-                // And only if its value is true, we will not trigger the event on the local event channel
-                if (!((2 === arguments.length || 4 === arguments.length) &&
-                    true === arguments[arguments.length - 1])) {
-                    this.eventChannel.trigger.apply(this.eventChannel, args);
-                }
-
-                return _postMessage.call(this, args, ACTION_TYPE.TRIGGER);
-            }
-        }
-
-        /**
-         * Method to trigger a command via post message
-         * @link lpTag.channel.LPCommands#command
-         * @param {Object|String} options - Configuration object or app name
-         * @param {String} [options.cmdName] - the name of the command triggered
-         * @param {String} [options.appName] - optional specifies the identifier it is bound to
-         * @param {Boolean} [options.passDataByRef = false] - boolean flag whether this callback will get the reference information of the event or a copy (this allows control of data manipulation)
-         * @param {Object} [options.data] - optional event parameters to be passed to the listeners
-         * @param {Function} [callback] - optional callback method to be triggered when the command had finished executing
-         * @returns {*}
-         *
-         * @example
-         * courier.command({
-         *     appName: "frame",
-         *     cmdName: "expect",
-         *     data: data
-         * }, function(err) {
-         *     if (err) {
-         *         console.log("Problem invoking command");
+         * var courier = new Chronos.PostMessageCourier({
+         *     target: {
+         *         url: "http://localhost/chronosjs/debug/courier.frame.html",
+         *         style: {
+         *             width: "100px",
+         *             height: "100px"
+         *         }
          *     }
          * });
          */
-        function command() {
-            if (!this.disposed) {
-                var args = Array.prototype.slice.apply(arguments);
-                return _postMessage.call(this, args, ACTION_TYPE.COMMAND);
+        function PostMessageCourier(options) {
+            // For forcing new keyword
+            if (false === (this instanceof PostMessageCourier)) {
+                return new PostMessageCourier(options);
             }
+
+            this.initialize(options);
         }
 
-        /**
-         * Method to trigger a request via post message
-         * @link lpTag.channel.LPReqRes#request
-         * @param {Object|String} options - Configuration object or app name
-         * @param {String} [options.reqName] - the name of the request triggered
-         * @param {String} [options.appName] - optional specifies the identifier it is bound to
-         * @param {Boolean} [options.passDataByRef = false] - boolean flag whether this callback will get the reference information of the event or a copy (this allows control of data manipulation)
-         * @param {Object} [options.data] - optional event parameters to be passed to the listeners
-         * @param {Function} [callback] - optional callback method to be triggered when the command had finished executing
-         * @return {*}
-         *
-         * @example
-         * courier.request({
-         *     appName: "iframe",
-         *     reqName: "Ma Shlomha?",
-         *     data: data
-         * }, function(err, data) {
-         *      if (err) {
-         *          console.log("Problem invoking request");
-	     *          return;
-	     *      }
-         *
-         *      // Do Something with data
-         * });
-         */
-        function request() {
-            if (!this.disposed) {
-                var args = Array.prototype.slice.apply(arguments);
-                return _postMessage.call(this, args, ACTION_TYPE.REQUEST);
+        PostMessageCourier.prototype = (function () {
+            /**
+             * Method for initialization
+             * @param {Object} options - the configuration options for the instance
+             * @param {Object} options.target - the target iframe or iframe configuration
+             * @param {String} [options.target.url] - the url to load
+             * @param {Object} [options.target.container] - the container in which the iframe should be created (if not supplied, document.body will be used)
+             * @param {String} [options.target.style] - the CSS style to apply
+             * @param {String} [options.target.style.width] width of iframe
+             * @param {String} [options.target.style.height] height of iframe
+             *          .....
+             * @param {Boolean} [options.target.bust = true] - optional flag to indicate usage of cache buster when loading the iframe (default to true)
+             * @param {Function} [options.target.callback] - a callback to invoke after the iframe had been loaded
+             * @param {Object} [options.target.context] - optional context for the callback
+             * @param {Function|Object} [options.onready] - optional data for usage when iframe had been loaded
+             * @param {Function} [options.onready.callback] - a callback to invoke after the iframe had been loaded
+             * @param {Object} [options.onready.context] - optional context for the callback
+             * @param {Boolean} [options.removeDispose] - optional flag for removal of the iframe on dispose
+             * @param {Function} [options.serialize = JSON.stringify] - optional serialization method for post message
+             * @param {Function} [options.deserialize = JSON.parse] - optional deserialization method for post message
+             * @param {String} [options.targetOrigin] optional targetOrigin to be used when posting the message (must be supplied in case of external iframe)
+             * @param {Number} [options.maxConcurrency = 100] - optional maximum concurrency that can be managed by the component before dropping
+             * @param {Number} [options.handshakeInterval = 5000] - optional handshake interval for retries
+             * @param {Number} [options.handshakeAttempts = 3] - optional number of retries handshake attempts
+             * @param {String} [options.hostParam] - optional parameter of the host parameter name (default is lpHost)
+             * @param {Function} onmessage - the handler for incoming messages
+             * @param {Object} [options.eventChannel] - optional events channel to be used (if not supplied, a new one will be created OR optional events, optional commands, optional reqres to be used
+             * @param {Number} [options.timeout = 30000] - optional milliseconds parameter for waiting before timeout to responses (default is 30 seconds)
+             * @param {Number} [options.messureTime = 30000] - optional milliseconds parameter for time measurement indicating the time window to apply when implementing the internal fail fast mechanism (default is 30 seconds)
+             * @param {Number} [options.messureTolerance = 30] - optional percentage parameter indicating the tolerance to apply on the measurements when implementing the internal fail fast mechanism (default is 30 percents)
+             * @param {Number} [options.messureCalibration = 10] optional numeric parameter indicating the calibration of minimum calls before starting to validate measurements when implementing the internal fail fast mechanism (default is 10 calls)
+             * @param {Function} [options.ondisconnect] - optional disconnect handler that will be invoked when the fail fast mechanism disconnects the component upon to many failures
+             * @param {Function} [options.onreconnect] - optional reconnect handler that will be invoked when the fail fast mechanism reconnects the component upon back to normal behaviour
+             */
+            function initialize(options) {
+                var mapping;
+                var onmessage;
+                var messureTime;
+
+                if (!this.initialized) {
+                    options = options || {};
+
+                    this.useObjects = false === options.useObjects ? options.useObjects : _getUseObjectsUrlIndicator();
+                    if ("undefined" === typeof this.useObjects) {
+                        // Defaults to true
+                        this.useObjects = true;
+                    }
+                    options.useObjects = this.useObjects;
+
+                    // Define the serialize/deserialize methods to be used
+                    if ("function" !== typeof options.serialize || "function" !== typeof options.deserialize) {
+                        if (this.useObjects && PostMessageUtilities.hasPostMessageObjectsSupport()) {
+                            this.serialize = _de$serializeDummy;
+                            this.deserialize = _de$serializeDummy;
+                        }
+                        else {
+                            this.serialize = PostMessageUtilities.stringify;
+                            this.deserialize = JSON.parse;
+                        }
+
+                        options.serialize = this.serialize;
+                        options.deserialize = this.deserialize;
+                    }
+                    else {
+                        this.serialize = options.serialize;
+                        this.deserialize = options.deserialize;
+                    }
+
+                    // Grab the event channel and initialize a new mapper
+                    this.eventChannel = options.eventChannel || new Channels({
+                            events: options.events,
+                            commands: options.commands,
+                            reqres: options.reqres
+                        });
+                    this.mapper = new PostMessageMapper(this.eventChannel);
+
+                    // Bind the mapping method to the mapper
+                    mapping = this.mapper.toEvent.bind(this.mapper);
+                    // Create the message handler which uses the mapping method
+                    onmessage = _createMessageHandler(mapping).bind(this);
+
+                    // Initialize a message channel with the message handler
+                    this.messageChannel = new PostMessageChannel(options, onmessage);
+
+                    this.callbackCache = new Cacher({
+                        max: PostMessageUtilities.parseNumber(options.maxConcurrency, DEFAULT_CONCURRENCY),
+                        ttl: PostMessageUtilities.parseNumber(options.timeout, DEFAULT_TIMEOUT),
+                        interval: CACHE_EVICTION_INTERVAL
+                    });
+
+                    messureTime = PostMessageUtilities.parseNumber(options.messureTime, DEFAULT_MESSURE_TIME);
+                    this.circuit = new CircuitBreaker({
+                        timeWindow: messureTime,
+                        slidesNumber: Math.ceil(messureTime / 100),
+                        tolerance: PostMessageUtilities.parseNumber(options.messureTolerance, DEFAULT_MESSURE_TOLERANCE),
+                        calibration: PostMessageUtilities.parseNumber(options.messureCalibration, DEFAULT_MESSURE_CALIBRATION),
+                        onopen: PostMessageUtilities.parseFunction(options.ondisconnect, true),
+                        onclose: PostMessageUtilities.parseFunction(options.onreconnect, true)
+                    });
+
+                    // Dumb Proxy methods
+                    this.once = this.eventChannel.once;
+                    this.hasFiredEvents = this.eventChannel.hasFiredEvents;
+                    this.bind = this.eventChannel.bind;
+                    this.register = this.eventChannel.register;
+                    this.unbind = this.eventChannel.unbind;
+                    this.unregister = this.eventChannel.unregister;
+                    this.hasFiredCommands = this.eventChannel.hasFiredCommands;
+                    this.comply = this.eventChannel.comply;
+                    this.stopComplying = this.eventChannel.stopComplying;
+                    this.hasFiredReqres = this.eventChannel.hasFiredReqres;
+                    this.reply = this.eventChannel.reply;
+                    this.stopReplying = this.eventChannel.stopReplying;
+                    this.initialized = true;
+                }
             }
-        }
 
-        /**
-         * Method for disposing the object
-         */
-        function dispose() {
-            if (!this.disposed) {
-                this.messageChannel.dispose();
-                this.messageChannel = void 0;
-                this.eventChannel = void 0;
-                this.mapper = void 0;
-                this.callbackCache = void 0;
-                this.circuit = void 0;
-                this.disposed = true;
+            /**
+             * Method to get the member instance of the message channel
+             * @returns {PostMessageChannel} the member message channel
+             */
+            function getMessageChannel() {
+                return this.messageChannel;
             }
-        }
 
-        /**
-         * Method to get url indication for using serialization/deserialization
-         * @returns {Boolean} indication for serialization/deserialization usage
-         * @private
-         */
-        function _getUseObjectsUrlIndicator() {
-            var deserialize = LPPostMessageUtilities.getURLParameter("lpPMDeSerialize");
-
-            if ("true" === deserialize) {
-                return false;
+            /**
+             * Method to get the member instance of the event channel
+             * @returns {Events} the member event channel
+             */
+            function getEventChannel() {
+                return this.eventChannel;
             }
-        }
 
-        /**
-         * Just a dummy serialization/deserialization method for browsers supporting objects with postMessage API
-         * @param {Object} object - the object to (NOT) serialize/deserialize.
-         * @returns {Object} The same object
-         */
-        function _de$serializeDummy(object) {
-            return object;
-        }
+            /**
+             * Method to trigger event via post message
+             * @link Chronos.Events#trigger
+             * @param {Object|String} options - Configuration object or app name
+             * @param {String} [options.eventName] - the name of the event triggered
+             * @param {String} [options.appName] - optional specifies the identifier it is bound to
+             * @param {Boolean} [options.passDataByRef = false] - boolean flag whether this callback will get the reference information of the event or a copy (this allows control of data manipulation)
+             * @param {Object} [options.data] - optional event parameters to be passed to the listeners
+             * @param {String|Boolean} [evName] - the name of the event triggered || [noLocal] - optional boolean flag indicating whether to trigger the event on the local event channel too
+             * @param {Object} [data] - optional event parameters to be passed to the listeners
+             * @param {Boolean} [noLocal] - optional boolean flag indicating whether to trigger the event on the local event channel too
+             * @returns {*}
+             *
+             * @example
+             * courier.trigger({
+             *     appName: "frame",
+             *     eventName: "got_it",
+             *     data: 2
+             * });
+             */
+            function trigger() {
+                if (!this.disposed) {
+                    var args = Array.prototype.slice.apply(arguments);
 
-        /**
-         * Method for posting the message via the circuit breaker
-         * @param {Array} args - the arguments for the message to be processed.
-         * @param {String} name - name of type of command.
-         * @private
-         */
-        function _postMessage(args, name) {
-            return this.circuit.run(function(success, failure, timeout) {
-                var message = _prepare.call(this, args, name, timeout);
+                    // We are looking for a "noLocal" param which can only be second or forth
+                    // And only if its value is true, we will not trigger the event on the local event channel
+                    if (!((2 === arguments.length || 4 === arguments.length) &&
+                        true === arguments[arguments.length - 1])) {
+                        this.eventChannel.trigger.apply(this.eventChannel, args);
+                    }
 
-                if (message) {
+                    return _postMessage.call(this, args, ACTION_TYPE.TRIGGER);
+                }
+            }
+
+            /**
+             * Method to trigger a command via post message
+             * @link Chronos.Commands#command
+             * @param {Object|String} options - Configuration object or app name
+             * @param {String} [options.cmdName] - the name of the command triggered
+             * @param {String} [options.appName] - optional specifies the identifier it is bound to
+             * @param {Boolean} [options.passDataByRef = false] - boolean flag whether this callback will get the reference information of the event or a copy (this allows control of data manipulation)
+             * @param {Object} [options.data] - optional event parameters to be passed to the listeners
+             * @param {Function} [callback] - optional callback method to be triggered when the command had finished executing
+             * @returns {*}
+             *
+             * @example
+             * courier.command({
+             *     appName: "frame",
+             *     cmdName: "expect",
+             *     data: data
+             * }, function(err) {
+             *     if (err) {
+             *         console.log("Problem invoking command");
+             *     }
+             * });
+             */
+            function command() {
+                if (!this.disposed) {
+                    var args = Array.prototype.slice.apply(arguments);
+                    return _postMessage.call(this, args, ACTION_TYPE.COMMAND);
+                }
+            }
+
+            /**
+             * Method to trigger a request via post message
+             * @link Chronos.ReqRes#request
+             * @param {Object|String} options - Configuration object or app name
+             * @param {String} [options.reqName] - the name of the request triggered
+             * @param {String} [options.appName] - optional specifies the identifier it is bound to
+             * @param {Boolean} [options.passDataByRef = false] - boolean flag whether this callback will get the reference information of the event or a copy (this allows control of data manipulation)
+             * @param {Object} [options.data] - optional event parameters to be passed to the listeners
+             * @param {Function} [callback] - optional callback method to be triggered when the command had finished executing
+             * @return {*}
+             *
+             * @example
+             * courier.request({
+             *     appName: "iframe",
+             *     reqName: "Ma Shlomha?",
+             *     data: data
+             * }, function(err, data) {
+             *      if (err) {
+             *          console.log("Problem invoking request");
+	         *          return;
+	         *      }
+             *
+             *      // Do Something with data
+             * });
+             */
+            function request() {
+                if (!this.disposed) {
+                    var args = Array.prototype.slice.apply(arguments);
+                    return _postMessage.call(this, args, ACTION_TYPE.REQUEST);
+                }
+            }
+
+            /**
+             * Method for disposing the object
+             */
+            function dispose() {
+                if (!this.disposed) {
+                    this.messageChannel.dispose();
+                    this.messageChannel = void 0;
+                    this.eventChannel = void 0;
+                    this.mapper = void 0;
+                    this.callbackCache = void 0;
+                    this.circuit = void 0;
+                    this.disposed = true;
+                }
+            }
+
+            /**
+             * Method to get url indication for using serialization/deserialization
+             * @returns {Boolean} indication for serialization/deserialization usage
+             * @private
+             */
+            function _getUseObjectsUrlIndicator() {
+                var deserialize = PostMessageUtilities.getURLParameter("lpPMDeSerialize");
+
+                if ("true" === deserialize) {
+                    return false;
+                }
+            }
+
+            /**
+             * Just a dummy serialization/deserialization method for browsers supporting objects with postMessage API
+             * @param {Object} object - the object to (NOT) serialize/deserialize.
+             * @returns {Object} The same object
+             */
+            function _de$serializeDummy(object) {
+                return object;
+            }
+
+            /**
+             * Method for posting the message via the circuit breaker
+             * @param {Array} args - the arguments for the message to be processed.
+             * @param {String} name - name of type of command.
+             * @private
+             */
+            function _postMessage(args, name) {
+                return this.circuit.run(function (success, failure, timeout) {
+                    var message = _prepare.call(this, args, name, timeout);
+
+                    if (message) {
+                        try {
+                            var initiated = this.messageChannel.postMessage.call(this.messageChannel, message);
+
+                            if (false === initiated) {
+                                failure();
+                            }
+                            else {
+                                success();
+                            }
+                        }
+                        catch (ex) {
+                            failure();
+                        }
+                    }
+                    else {
+                        // Cache is full, as a fail fast mechanism, we should not continue
+                        failure();
+                    }
+                }.bind(this));
+            }
+
+            /**
+             * Method for posting the returned message via the circuit breaker
+             * @param {Object} message - the message to post.
+             * @param {bject} [target] - optional target for post.
+             * @private
+             */
+            function _returnMessage(message, target) {
+                return this.circuit.run(function (success, failure) {
                     try {
-                        var initiated = this.messageChannel.postMessage.call(this.messageChannel, message);
+                        var initiated = this.messageChannel.postMessage.call(this.messageChannel, message, target);
 
                         if (false === initiated) {
                             failure();
@@ -3781,250 +3655,221 @@
                     catch (ex) {
                         failure();
                     }
-                }
-                else {
-                    // Cache is full, as a fail fast mechanism, we should not continue
-                    failure();
-                }
-            }.bind(this));
-        }
-
-        /**
-         * Method for posting the returned message via the circuit breaker
-         * @param {Object} message - the message to post.
-         * @param {bject} [target] - optional target for post.
-         * @private
-         */
-        function _returnMessage(message, target) {
-            return this.circuit.run(function(success, failure) {
-                try {
-                    var initiated = this.messageChannel.postMessage.call(this.messageChannel, message, target);
-
-                    if (false === initiated) {
-                        failure();
-                    }
-                    else {
-                        success();
-                    }
-                }
-                catch (ex) {
-                    failure();
-                }
-            }.bind(this));
-        }
-
-        /**
-         * Method for preparing the message to be posted via the postmessage and caching the callback to be called if needed
-         * @param {Array} args - the arguments to pass to the message mapper
-         * @param {String} name - the action type name (trigger, command, request)
-         * @param {Function} [ontimeout] - the ontimeout measurement handler
-         * @returns {Function} handler function for messages
-         * @private
-         */
-        function _prepare(args, name, ontimeout) {
-            var method;
-            var ttl;
-            var id = LPPostMessageUtilities.createUniqueSequence(MESSAGE_PREFIX + name + LPPostMessageUtilities.SEQUENCE_FORMAT);
-
-            args.unshift(id, name);
-
-            if (_isTwoWay(name)) {
-                if (1 < args.length && "function" === typeof args[args.length - 1]) {
-                    method = args.pop();
-                }
-                else if (2 < args.length && !isNaN(args[args.length - 1]) && "function" === typeof args[args.length - 2]) {
-                    ttl = parseInt(args.pop(), 10);
-                    method = args.pop();
-                }
-
-                if (method) {
-                    if (!this.callbackCache.set(id, method, ttl, function(id, callback) {
-                        ontimeout();
-                        _handleTimeout.call(this, id, callback);
-                    }.bind(this))) {
-                        // Cache is full, as a fail fast mechanism, we will not continue
-                        return void 0;
-                    }
-                }
+                }.bind(this));
             }
 
-            return this.mapper.toMessage.apply(this.mapper, args);
-        }
+            /**
+             * Method for preparing the message to be posted via the postmessage and caching the callback to be called if needed
+             * @param {Array} args - the arguments to pass to the message mapper
+             * @param {String} name - the action type name (trigger, command, request)
+             * @param {Function} [ontimeout] - the ontimeout measurement handler
+             * @returns {Function} handler function for messages
+             * @private
+             */
+            function _prepare(args, name, ontimeout) {
+                var method;
+                var ttl;
+                var id = PostMessageUtilities.createUniqueSequence(MESSAGE_PREFIX + name + PostMessageUtilities.SEQUENCE_FORMAT);
 
-        /**
-         * Method for checking two way communication for action
-         * @param {LPPostMessageCourier.ACTION_TYPE} action - the action type name
-         * @returns {Boolean} flag to indicate whether the action is two way (had return call)
-         * @private
-         */
-        function _isTwoWay(action) {
-            return ACTION_TYPE.REQUEST === action || ACTION_TYPE.COMMAND === action;
-        }
+                args.unshift(id, name);
 
-        /**
-         * Method for handling timeout of a cached callback
-         * @param {String} id - the id of the timed out callback
-         * @param {Function} callback - the callback object from cache
-         * @private
-         */
-        function _handleTimeout(id, callback) {
-            // Handle timeout
-            if (id && "function" === typeof callback) {
-                try {
-                    callback.call(null, new Error("Callback: Operation Timeout!"));
-                }
-                catch (ex) {
-                    LPPostMessageUtilities.log("Error while trying to handle the timeout using the callback", "ERROR", "PostMessageCourier");
-                }
-            }
-        }
+                if (_isTwoWay(name)) {
+                    if (1 < args.length && "function" === typeof args[args.length - 1]) {
+                        method = args.pop();
+                    }
+                    else if (2 < args.length && !isNaN(args[args.length - 1]) && "function" === typeof args[args.length - 2]) {
+                        ttl = parseInt(args.pop(), 10);
+                        method = args.pop();
+                    }
 
-        /**
-         * Method for wrapping the handler of the postmessage for parsing
-         * @param {Object} mapping - the handler for incoming messages to invoke which maps the message to event
-         * @returns {Function} handler function for messages
-         * @private
-         */
-        function _createMessageHandler(mapping) {
-            return function handle(message) {
-                var handler;
-                var result;
-                var params;
-                var retMsg;
-                var id;
-                var name;
-                var args;
-                var callback;
-
-                if (message) {
-                    id = message.method && message.method.id;
-                    name = message.method && message.method.name;
-                    args = message.method && message.method.args;
-
-                    // In case the message is a return value from a request/response call
-                    // It is marked as a "return" message and we need to call the supplied cached callback
-                    if (ACTION_TYPE.RETURN === name) {
-                        callback = this.callbackCache.get(id, true);
-                        if ("function" === typeof callback) {
-                            // First try to parse the first parameter in case the error is an object
-                            if (args && args.length && args[0] && "Error" === args[0].type && "string" === typeof args[0].message) {
-                                args[0] = new Error(args[0].message);
-                            }
-
-                            try {
-                                callback.apply(null, args);
-                            }
-                            catch (ex) {
-                                LPPostMessageUtilities.log("Error while trying to handle the returned message from request/command", "ERROR", "PostMessageCourier");
-                            }
+                    if (method) {
+                        if (!this.callbackCache.set(id, method, ttl, function (id, callback) {
+                                ontimeout();
+                                _handleTimeout.call(this, id, callback);
+                            }.bind(this))) {
+                            // Cache is full, as a fail fast mechanism, we will not continue
+                            return void 0;
                         }
                     }
-                    else {
-                        // Call the mapping method to receive the handling method on the event channel
-                        // Invoke the handling method
-                        try {
-                            if (_isTwoWay(name)) {
-                                if (args.length) {
-                                    args.push(function (err, result) {
-                                        var error = err;
+                }
 
-                                        // In case of Error Object, create a special object that can be parsed
-                                        if (err instanceof Error) {
-                                            error = {
-                                                type: "Error",
-                                                message: err.message
-                                            };
+                return this.mapper.toMessage.apply(this.mapper, args);
+            }
+
+            /**
+             * Method for checking two way communication for action
+             * @param {LPPostMessageCourier.ACTION_TYPE} action - the action type name
+             * @returns {Boolean} flag to indicate whether the action is two way (had return call)
+             * @private
+             */
+            function _isTwoWay(action) {
+                return ACTION_TYPE.REQUEST === action || ACTION_TYPE.COMMAND === action;
+            }
+
+            /**
+             * Method for handling timeout of a cached callback
+             * @param {String} id - the id of the timed out callback
+             * @param {Function} callback - the callback object from cache
+             * @private
+             */
+            function _handleTimeout(id, callback) {
+                // Handle timeout
+                if (id && "function" === typeof callback) {
+                    try {
+                        callback.call(null, new Error("Callback: Operation Timeout!"));
+                    }
+                    catch (ex) {
+                        PostMessageUtilities.log("Error while trying to handle the timeout using the callback", "ERROR", "PostMessageCourier");
+                    }
+                }
+            }
+
+            /**
+             * Method for wrapping the handler of the postmessage for parsing
+             * @param {Object} mapping - the handler for incoming messages to invoke which maps the message to event
+             * @returns {Function} handler function for messages
+             * @private
+             */
+            function _createMessageHandler(mapping) {
+                return function handle(message) {
+                    var handler;
+                    var result;
+                    var params;
+                    var retMsg;
+                    var id;
+                    var name;
+                    var args;
+                    var callback;
+
+                    if (message) {
+                        id = message.method && message.method.id;
+                        name = message.method && message.method.name;
+                        args = message.method && message.method.args;
+
+                        // In case the message is a return value from a request/response call
+                        // It is marked as a "return" message and we need to call the supplied cached callback
+                        if (ACTION_TYPE.RETURN === name) {
+                            callback = this.callbackCache.get(id, true);
+                            if ("function" === typeof callback) {
+                                // First try to parse the first parameter in case the error is an object
+                                if (args && args.length && args[0] && "Error" === args[0].type && "string" === typeof args[0].message) {
+                                    args[0] = new Error(args[0].message);
+                                }
+
+                                try {
+                                    callback.apply(null, args);
+                                }
+                                catch (ex) {
+                                    PostMessageUtilities.log("Error while trying to handle the returned message from request/command", "ERROR", "PostMessageCourier");
+                                }
+                            }
+                        }
+                        else {
+                            // Call the mapping method to receive the handling method on the event channel
+                            // Invoke the handling method
+                            try {
+                                if (_isTwoWay(name)) {
+                                    if (args.length) {
+                                        args.push(function (err, result) {
+                                            var error = err;
+
+                                            // In case of Error Object, create a special object that can be parsed
+                                            if (err instanceof Error) {
+                                                error = {
+                                                    type: "Error",
+                                                    message: err.message
+                                                };
+                                            }
+
+                                            // Call the mapping method to receive the message structure
+                                            params = [id, ACTION_TYPE.RETURN, error];
+
+                                            if (ACTION_TYPE.REQUEST === name) {
+                                                params.push(result);
+                                            }
+
+                                            retMsg = this.mapper.toMessage.apply(this.mapper, params);
+
+                                            // Post the message
+                                            _returnMessage.call(this, retMsg, message.source);
+                                        }.bind(this));
+                                    }
+                                }
+
+                                handler = mapping(message);
+                                result = handler && handler();
+                            }
+                            catch (ex) {
+                                PostMessageUtilities.log("Error while trying to invoke the handler on the events channel", "ERROR", "PostMessageCourier");
+
+                                if (_isTwoWay(name)) {
+                                    params = [id, ACTION_TYPE.RETURN, {error: ex.toString()}];
+                                    retMsg = this.mapper.toMessage.apply(this.mapper, params);
+                                    _returnMessage.call(this, retMsg, message.source);
+                                }
+                            }
+
+                            // In case the method is two way and returned a result
+                            if (_isTwoWay(name) && "undefined" !== typeof result) {
+                                // If the result is async (promise) we need to defer the execution of the results data
+                                if (("undefined" !== typeof Promise && result instanceof Promise) || result instanceof PostMessagePromise) {
+                                    // Handle async using promises
+                                    result.then(function (data) {
+                                        params = [id, ACTION_TYPE.RETURN, null];
+
+                                        if (ACTION_TYPE.REQUEST === name) {
+                                            params.push(data);
                                         }
 
+                                        retMsg = this.mapper.toMessage.apply(this.mapper, params);
+                                        _returnMessage.call(this, retMsg, message.source);
+                                    }.bind(this), function (data) {
+                                        params = [id, ACTION_TYPE.RETURN, data];
+
+                                        retMsg = this.mapper.toMessage.apply(this.mapper, params);
+                                        _returnMessage.call(this, retMsg, message.source);
+                                    }.bind(this));
+                                }
+                                else {
+                                    if (result.error) {
+                                        params = [id, ACTION_TYPE.RETURN, result];
+
                                         // Call the mapping method to receive the message structure
-                                        params = [id, ACTION_TYPE.RETURN, error];
+                                        retMsg = this.mapper.toMessage.apply(this.mapper, params);
+                                    }
+                                    else {
+                                        params = [id, ACTION_TYPE.RETURN, null];
 
                                         if (ACTION_TYPE.REQUEST === name) {
                                             params.push(result);
                                         }
 
+                                        // Call the mapping method to receive the message structure
                                         retMsg = this.mapper.toMessage.apply(this.mapper, params);
-
-                                        // Post the message
-                                        _returnMessage.call(this, retMsg, message.source);
-                                    }.bind(this));
-                                }
-                            }
-
-                            handler = mapping(message);
-                            result = handler && handler();
-                        }
-                        catch (ex) {
-                            LPPostMessageUtilities.log("Error while trying to invoke the handler on the events channel", "ERROR", "PostMessageCourier");
-
-                            if (_isTwoWay(name)) {
-                                params = [id, ACTION_TYPE.RETURN, { error: ex.toString() }];
-                                retMsg = this.mapper.toMessage.apply(this.mapper, params);
-                                _returnMessage.call(this, retMsg, message.source);
-                            }
-                        }
-
-                        // In case the method is two way and returned a result
-                        if (_isTwoWay(name) && "undefined" !== typeof result) {
-                            // If the result is async (promise) we need to defer the execution of the results data
-                            if (("undefined" !== typeof Promise && result instanceof Promise) || result instanceof LPPostMessagePromise) {
-                                // Handle async using promises
-                                result.then(function(data) {
-                                    params = [id, ACTION_TYPE.RETURN, null];
-
-                                    if (ACTION_TYPE.REQUEST === name) {
-                                        params.push(data);
                                     }
 
-                                    retMsg = this.mapper.toMessage.apply(this.mapper, params);
+                                    // Post the message
                                     _returnMessage.call(this, retMsg, message.source);
-                                }.bind(this), function(data) {
-                                    params = [id, ACTION_TYPE.RETURN, data];
-
-                                    retMsg = this.mapper.toMessage.apply(this.mapper, params);
-                                    _returnMessage.call(this, retMsg, message.source);
-                                }.bind(this));
-                            }
-                            else {
-                                if (result.error) {
-                                    params = [id, ACTION_TYPE.RETURN, result];
-
-                                    // Call the mapping method to receive the message structure
-                                    retMsg = this.mapper.toMessage.apply(this.mapper, params);
                                 }
-                                else {
-                                    params = [id, ACTION_TYPE.RETURN, null];
-
-                                    if (ACTION_TYPE.REQUEST === name) {
-                                        params.push(result);
-                                    }
-
-                                    // Call the mapping method to receive the message structure
-                                    retMsg = this.mapper.toMessage.apply(this.mapper, params);
-                                }
-
-                                // Post the message
-                                _returnMessage.call(this, retMsg, message.source);
                             }
                         }
                     }
-                }
+                };
+            }
+
+            return {
+                initialize: initialize,
+                getMessageChannel: getMessageChannel,
+                getEventChannel: getEventChannel,
+                trigger: trigger,
+                publish: trigger,
+                command: command,
+                request: request,
+                dispose: dispose
             };
-        }
+        }());
 
-        return {
-            initialize: initialize,
-            getMessageChannel: getMessageChannel,
-            getEventChannel: getEventChannel,
-            trigger: trigger,
-            publish: trigger,
-            command: command,
-            request: request,
-            dispose: dispose
-        };
-    }());
-
-    // attach properties to the exports object to define
-    // the exported module properties.
-    exports.LPPostMessageCourier = exports.LPPostMessageCourier || LPPostMessageCourier;
-}));
+        // attach properties to the exports object to define
+        // the exported module properties.
+        exports.PostMessageCourier = exports.PostMessageCourier || PostMessageCourier;
+    }));
