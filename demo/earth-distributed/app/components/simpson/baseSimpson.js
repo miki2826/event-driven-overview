@@ -1,4 +1,4 @@
-var courier = new window.LPPostMessageCourier();
+var courier = new window.Chronos.PostMessageCourier();
 var startPosition;
 var deltaY;
 var deltaX;

@@ -1,6 +1,6 @@
-angular.module('myApp.channels', [])
-    .factory('chronosjsCourierSupervisor', function ($window) {
-        var chronosjsCourierSupervisor = (function() {
+angular.module('myApp.chronos', [])
+    .factory('Chronos.CourierSupervisor', function ($window) {
+        var CourierSupervisor = (function() {
 
             var couriers = {};
 
@@ -43,7 +43,7 @@ angular.module('myApp.channels', [])
                         }
                     }
                 };
-                couriers[options.id] = $window.LPPostMessageCourier({
+                couriers[options.id] = $window.Chronos.PostMessageCourier({
                     target: target
                 });
             }
@@ -69,5 +69,5 @@ angular.module('myApp.channels', [])
         })();
 
 
-        return chronosjsCourierSupervisor;
+        return CourierSupervisor;
     });

@@ -4,7 +4,7 @@
 angular.module('myApp', [
     'ngRoute',
     'myApp.earth',
-    'myApp.channels'
+    'myApp.chronos'
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/earth'});

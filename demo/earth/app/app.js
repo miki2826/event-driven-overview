@@ -4,7 +4,7 @@
 angular.module('myApp', [
     'ngRoute',
     'myApp.earth',
-    'myApp.channels',
+    'myApp.chronos',
     'myApp.ui-homer'
 ]).
     config(['$routeProvider', function ($routeProvider) {

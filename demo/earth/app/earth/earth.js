@@ -9,7 +9,7 @@ angular.module('myApp.earth', ['ngRoute'])
         });
     }])
 
-    .controller('EarthCtrl', ['$scope', 'chronosjsChannel', function ($scope, chronosjsChannel) {
+    .controller('EarthCtrl', ['$scope', 'Chronos.Channels', function ($scope, chronosjsChannel) {
 
         function getAngle(el) {
             var st = window.getComputedStyle(el, null);
