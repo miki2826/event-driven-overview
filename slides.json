@@ -37,7 +37,7 @@
                         "I would like to introduce Miki Dimenstein",
                         "Although not long ago, he was still playing with Java & Maven",
                         "Miki is today working for the LivePerson Frontend Infra team",
-                        ""
+                        "And this is Itai Koren, also known as itkoren, a FED for the LivePerson Infra team"
                     ]
                 },
                 {
@@ -190,6 +190,13 @@
                         "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "Software Components Exchange Information"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: Every Software system is based on multiple software components",
+                        "Those components exchange information between them constantly"
+                    ]
                 }
             ],
             [
@@ -213,6 +220,13 @@
                         "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "Producers Supply Information"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: Information exchanging requires two side",
+                        "One is the producers, which creates, and supply the information"
+                    ]
                 }
             ],
             [
@@ -236,6 +250,12 @@
                         "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "Consumers Receive Information"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Mik: The second is the consumer, which consumes and handle this information"
+                    ]
                 }
             ],
             [
@@ -259,6 +279,12 @@
                         "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "How Does Information Flow?"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: Easy, But how does information flow?"
+                    ]
                 }
             ],
             [
@@ -324,6 +350,14 @@
                             "value": "Request/Response & Direct API Call Model"
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: There are multiple models for this kind of interaction right?",
+                        "One model, is based on Pulling",
+                        "An example for that, can be the request, response Model, Or direct API calls"
+                    ]
                 }
             ],
             [
@@ -371,6 +405,12 @@
                             "value": "Callback Model"
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: Another option, is a Push based model, such as callbacks"
+                    ]
                 }
             ],
             [
@@ -394,6 +434,13 @@
                         "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "The Consumer Needs to Know The Producer"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: Yep, but those requires that the consumer will know the producer",
+                        "This means that the consumer needs to hold a reference to the producer in order to call its API"
+                    ]
                 }
             ],
             [
@@ -423,6 +470,13 @@
                 {
                     "name": "notes",
                     "value": "In order to ensure low coupling, in large scale applications, modules must be entirely independent of one another, and should not communicate directly with one another."
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: When we want to create a scalable architecture, it is better to treat each part as a puzzle piece which should not know the other pieces but only it's part inside the puzzle",
+                        "Miki: Right, Do only one job, but do it well"
+                    ]
                 }
             ],
             [
@@ -455,6 +509,15 @@
                         "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
                     },
                     "value": "Event Driven (Mainly Follows the Pub/Sub - Observer/Mediator Pattern)"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: And this brings us, to a third model, which is the event driven model also referred to as Pub/Sub or Observer",
+                        "So How does event driven works?",
+                        "Both, consumer and producer, know only one entity in the system, the Event Bus",
+                        "Event bus holds all the registered consumers and when triggered by the producer, it will publish an event to all registered consumers"
+                    ]
                 }
             ],
             [
@@ -480,7 +543,7 @@
                                     "name": "li",
                                     "attributes": {
                                         "class": "fragment",
-                                        "data-fragment-index": "1"
+                                        "data-fragment-index": "0"
                                     },
                                     "value": "Extensible"
                                 },
@@ -488,15 +551,7 @@
                                     "name": "li",
                                     "attributes": {
                                         "class": "fragment",
-                                        "data-fragment-index": "2"
-                                    },
-                                    "value": "Efficient"
-                                },
-                                {
-                                    "name": "li",
-                                    "attributes": {
-                                        "class": "fragment",
-                                        "data-fragment-index": "3"
+                                        "data-fragment-index": "1"
                                     },
                                     "value": "Encourages SoC by Reducing Coupling and Increasing Cohesion"
                                 }
@@ -509,6 +564,15 @@
                     "value": [
                         "Behind any structured programing principles, there is structured design with its two main core principles: Coupling & Cohesion",
                         "These two principles, were first introduced by Larry Constantine and Edward Yourdon in their book \"Structured Design: Fundamentals of a Discipline of Computer Program and System Design\" (1976) - http://www.amazon.com/Structured-Design-Fundamentals-Discipline-Computer/dp/0138544719 - and are still valid and relevant today."
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: Amazing! This will allow;",
+                        "Flexibility & Extensibility - since we can add or remove as many consumers as we want without having to change our architecture",
+                        "It is also encourages SoC by reducing the coupling and increasing the cohesion",
+                        "Miki: You cannot just drop buzzwords as Coupling and Cohesion, Please explain"
                     ]
                 }
             ],
@@ -533,6 +597,13 @@
                                 }
                             ]
                         }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: OK, as you all know (probably apart from my friend Miki here), Coupling is the degree of dependency between modules",
+                        "And Cohesion is the degree of relation between a set of function on a module"
                     ]
                 }
             ],
@@ -559,7 +630,7 @@
                                     "name": "li",
                                     "attributes": {
                                         "class": "fragment",
-                                        "data-fragment-index": "1"
+                                        "data-fragment-index": "0"
                                     },
                                     "value": "Control Flow"
                                 },
@@ -567,7 +638,7 @@
                                     "name": "li",
                                     "attributes": {
                                         "class": "fragment",
-                                        "data-fragment-index": "2"
+                                        "data-fragment-index": "0"
                                     },
                                     "value": "Harder to Follow and Debug"
                                 }
@@ -577,13 +648,23 @@
                 },
                 {
                     "name": "notes",
-                    "value": ""
+                    "value": [
+                        "Miki: but there are also a few drawbacks that we should be aware of.",
+                        "Itai: Really?",
+                        "Miki: This adds complexity, by adding an event bus that makes it problematic to follow the control flow and harder to debug and understand"
+                    ]
                 }
             ],
             [
                 {
                     "name": "p",
                     "value": "Javascript is Callback Driven by Nature"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: And coming to javascript, so Javascript is callback driven by nature"
+                    ]
                 }
             ],
             [
@@ -598,12 +679,26 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: If we'll look at a basic example of a javascript DOM button, lets say we have a belly button for example",
+                        "We can interact with it by assigning an handler for the click event - You all know this basic example"
+                    ]
                 }
             ],
             [
                 {
                     "name": "p",
                     "value": "MVC Frameworks, Embraces SoC and Supplies Needed Tools for Using Pub/Sub"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: This was a very basic example for some native javascript code, but usually, we work with frameworks and libraries which abstract many things and allows us to better modularize our code",
+                        "All of those MVC frameworks, embraces SoC and also supplies internal tools for implementing Pub/Sub model as part of the framework."
+                    ]
                 }
             ],
             [
@@ -617,6 +712,12 @@
                                 "style": "top: 250px; width: 916px; height: 292px; max-height: none; max-width: none;"
                             }
                         }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: Backbone, for example, have the Backbone.Events which allows simple consuming and triggering of events"
                     ]
                 }
             ],
@@ -632,6 +733,13 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: Backbone itself uses the Backbone.Events to implement allow changes awareness on the Backbone.Model",
+                        "In this Mario Example, when mario eats, an event is triggered and the view redraws a bigger mario"
+                    ]
                 }
             ],
             [
@@ -646,6 +754,13 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: Another maybe even better example is the scope of Angular JS",
+                        "Angular JS scope controls the awareness of changes out of the box, but we can also use it to implement a generic message service"
+                    ]
                 }
             ],
             [
@@ -659,6 +774,13 @@
                                 "style": "top: 20px; width: 916px; height: 622px; max-height: none; max-width: none;"
                             }
                         }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: In this example, we are using the message service to assemble the avengers across multiple different controllers",
+                        "So this is how we can use event driven concepts with the given tools of the framework we are working with"
                     ]
                 }
             ],
@@ -686,6 +808,13 @@
                         "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 587px; font-weight: bold;"
                     },
                     "value": "Meet <a href=\"https://github.com/LivePersonInc/chronosjs\">chronosjs</a>!"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: But you can never have to many frameworks and I think we can do it better",
+                        "Meet ChronosJS"
+                    ]
                 }
             ],
             [
@@ -756,7 +885,17 @@
                 },
                 {
                     "name": "notes",
-                    "value": ""
+                    "value": [
+                        "Miki: ChronosJS is a native javascript library implementing event channels",
+                        "It is Lightweight",
+                        "with no additional dependencies",
+                        "It allows high level of granularity by using two levels of registration with AppName and EventName, and supporting wildcard",
+                        "ChronosJs provides 3 models of interactions:",
+                        "1) The basic events which allows multiple consumers for a single producer",
+                        "2) Commands which provides a one2one relationship between consumer and the producer",
+                        "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
+                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone"
+                    ]
                 }
             ],
             [
@@ -781,6 +920,15 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: Lets look at an example",
+                        "We have an application, where we want to explain to a 5 years old the cycles of the sun and moon",
+                        "So we have our rotating moon and sun",
+                        "And a small homer, which supposed to be awake when the sun is up, and go to sleep when the moon is shown"
+                    ]
                 }
             ],
             [
@@ -801,6 +949,14 @@
                                 "style": "top: 180px; width: 916px; height: 422px; max-height: none; max-width: none;"
                             }
                         }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: Lets look at the code",
+                        "We are using AngulerJS, since it is for 5 years old - Just kidding",
+                        "And we created our channel service by instantiating a ChronosJs Channels object"
                     ]
                 }
             ],
@@ -823,6 +979,13 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: Next is our Earth controller, where we inject the ChronosJs channels service",
+                        "We do some weired calculation on the angle of the sun and trigger an event with the calculation result each 200 millis"
+                    ]
                 }
             ],
             [
@@ -843,6 +1006,13 @@
                                 "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
                             }
                         }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: We are using a directive for representing the Homer image,",
+                        "and its listenning on the rotation event in order to calculate whether it should sleep or be awake"
                     ]
                 }
             ],
@@ -871,6 +1041,14 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: Very Cool, But what if we would like to make it a platform",
+                        "Miki: WAT? What do you mean?",
+                        "Itai: I am a developer, and I would like to create my own Homer widget on your platform"
+                    ]
                 }
             ],
             [
@@ -894,28 +1072,25 @@
                                         "data-fragment-index": "0"
                                     },
                                     "value": "And How Would We Communicate with Them?"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "div",
-                    "value": [
-                        {
-                            "name": "ul",
-                            "attributes": {
-                                "style": "list-style-type: none;"
-                            },
-                            "value": [
+                                },
                                 {
                                     "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "1"
+                                    },
                                     "value": "What About the Same Origin Policy (Cross Domain Limit)"
                                 }
                             ]
                         }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: You'll probably need to use iframes to load my widget",
+                        "And how would you communicate with them?",
+                        "What about the same origin policy of the browser?"
                     ]
                 }
             ],
@@ -978,7 +1153,10 @@
                 },
                 {
                     "name": "notes",
-                    "value": ""
+                    "value": [
+                        "Miki: For that, we have a courier",
+                        "Courier allows us to use all the functionality of ChronosJS Channels, cross domain, over post message"
+                    ]
                 }
             ],
             [
@@ -1000,6 +1178,14 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: You want a platform, so I'll give you one - Lets enhance our example",
+                        "Miki: ",
+                        "Itai: "
+                    ]
                 }
             ],
             [
@@ -1017,7 +1203,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_earth_controller.js",
-                                "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 916px; height: 622px; max-height: none; max-width: none;"
                             }
                         }
                     ]
