@@ -1182,9 +1182,12 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Miki: You want a platform, so I'll give you one - Lets enhance our example",
-                        "Miki: ",
-                        "Itai: "
+                        "Miki: You want a platform, so I'll give you one - Lets enhance our example.",
+                        "Our ChronosJS channels service, will now become a ChronosJS Courier Supervisor.",
+                        "For each widget, we need an iframe, and for every iframe, we will instantiate a Courier object,",
+                        "The Supervisor, will handle instantiation of Couriers, and allow triggering an event via all the available Couriers.",
+                        "Since our widget is an iframe, and it is not aware of its location on the page.",
+                        "The Supervisor will trigger an event with the position for the created widget, upon initialization"
                     ]
                 }
             ],
@@ -1207,6 +1210,12 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: Our earth controller, will now have to create the widgets via the Supervisor, and trigger the rotation event using the supervisor"
+                    ]
                 }
             ],
             [
@@ -1227,6 +1236,16 @@
                                 "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
                             }
                         }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: We no longer use a directive for a widget, since we cannot assume that all developer use AngularJS for implementing their widgets",
+                        "So for this example, we chose to use vanilla JS for creating our widgets.",
+                        "The widget logic is the same",
+                        "The only difference is the ChronosJS Courier instantiation, instead of the basic ChronosJS Channels",
+                        "And binding to the initial position event for calculations"
                     ]
                 }
             ],
@@ -1251,6 +1270,13 @@
                                 "style": "top: 2px; width: 100%; height: 100%; max-height: none; max-width: none; background-color: white"
                             }
                         }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: And this is the result",
+                        "Itai: Impressive indeed, and it is even nicer, since everyone can now use it!"
                     ]
                 }
             ],
@@ -1286,6 +1312,13 @@
                             "name": "p",
                             "value": "@GitHub - <a href=\"https://github.com/LivePersonInc/chronosjs\">https://github.com/LivePersonInc/chronosjs</a>"
                         }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: ChronosJS can be found in NPM and in GitHub",
+                        "Feel free to use, fork us and contribute more features"
                     ]
                 }
             ],
@@ -1344,6 +1377,12 @@
                             "value": "peoplejobs@liveperson.com"
                         }
                     ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki & Itai: We are also hiring, you can contact us on our emails or directly to HR"
+                    ]
                 }
             ],
             [
@@ -1361,6 +1400,12 @@
                                 "class": "absolute-element"
                             }
                         }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki & Itai: Thank you"
                     ]
                 }
             ]
