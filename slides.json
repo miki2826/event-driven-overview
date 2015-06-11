@@ -529,7 +529,7 @@
                     "name": "img",
                     "attributes": {
                         "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
-                        "style": "width: 60px;"
+                        "style": "width: 120px;"
                     }
                 },
                 {
@@ -626,7 +626,7 @@
                     "name": "img",
                     "attributes": {
                         "src": "https://cloud.githubusercontent.com/assets/3624786/8115636/6c4e8ba6-1085-11e5-806d-ed916000f6e8.png",
-                        "style": "width: 60px;"
+                        "style": "width: 120px;"
                     }
                 },
                 {
