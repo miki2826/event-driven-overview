@@ -59,14 +59,14 @@ angular.module('myApp.earth', ['ngRoute'])
 
 function createWidgets(chronosjsCourierSupervisor) {
     var widgetUrl = getCrossDomainWidgetUrl();
-    chronosjsCourierSupervisor.createCourier({
+    chronosjsCourierSupervisor.createWidget({
         id: "homer1",
         url: widgetUrl + "homer_frame.html",
         top: "0px",
         left: "0px"
     });
 
-    chronosjsCourierSupervisor.createCourier({
+    chronosjsCourierSupervisor.createWidget({
         id: "marge",
         url: widgetUrl  + "marge_frame.html",
         top: "50%",
@@ -74,14 +74,14 @@ function createWidgets(chronosjsCourierSupervisor) {
         marginTop: "-50px"
     });
 
-    chronosjsCourierSupervisor.createCourier({
+    chronosjsCourierSupervisor.createWidget({
         id: "bart",
         url: widgetUrl + "bart_frame.html",
         bottom: "0px",
         left: "0px"
     });
 
-    chronosjsCourierSupervisor.createCourier({
+    chronosjsCourierSupervisor.createWidget({
         id: "maggie",
         url: widgetUrl + "maggie_frame.html",
         top: "0px",
@@ -89,7 +89,7 @@ function createWidgets(chronosjsCourierSupervisor) {
         marginLeft: "-50px"
     });
 
-    chronosjsCourierSupervisor.createCourier({
+    chronosjsCourierSupervisor.createWidget({
         id: "lisa",
         url: widgetUrl + "lisa_frame.html",
         bottom: "0px",
@@ -97,14 +97,14 @@ function createWidgets(chronosjsCourierSupervisor) {
         marginLeft: "-50px"
     });
 
-    chronosjsCourierSupervisor.createCourier({
+    chronosjsCourierSupervisor.createWidget({
         id: "willie",
         url: widgetUrl + "willie_frame.html",
         top: "0px",
         right: "0px"
     });
 
-    chronosjsCourierSupervisor.createCourier({
+    chronosjsCourierSupervisor.createWidget({
         id: "barney",
         url: widgetUrl + "barney_frame.html",
         top: "50%",
@@ -112,7 +112,7 @@ function createWidgets(chronosjsCourierSupervisor) {
         marginTop: "-50px"
     });
 
-    chronosjsCourierSupervisor.createCourier({
+    chronosjsCourierSupervisor.createWidget({
         id: "grampa",
         url: widgetUrl + "grampa_frame.html",
         bottom: "0px",

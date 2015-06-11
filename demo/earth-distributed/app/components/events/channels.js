@@ -4,7 +4,7 @@ angular.module('myApp.chronos', [])
 
             var couriers = {};
 
-            function createCourier(options) {
+            function createWidget(options) {
                 var target = {
                     url: options.url,
                     bust: false,
@@ -61,7 +61,7 @@ angular.module('myApp.chronos', [])
             }
 
             return {
-                createCourier: createCourier,
+                createWidget: createWidget,
                 getCourier: getCourier,
                 applyAll: applyAll
             };
