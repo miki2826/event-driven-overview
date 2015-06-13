@@ -295,7 +295,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7784315/1bf6ee84-016a-11e5-95e8-ddf1824f4221.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         },
@@ -303,7 +303,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7784190/44581678-0165-11e5-980b-77a6f6d6b0cf.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
                             }
@@ -312,7 +312,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7784194/62ff7698-0165-11e5-9896-123c304d3df6.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "1"
                             }
@@ -321,7 +321,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7784198/7f7eaf3c-0165-11e5-8907-0128be94e5b1.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "2"
                             }
@@ -332,7 +332,7 @@
                     "name": "div",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                        "style": "position: absolute; width: 586px; height: 300px; z-index: 4; left: 200px; top: 400px;"
                     },
                     "value": [
                         {
@@ -368,7 +368,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7784378/889c9e42-016c-11e5-8400-788aa1f3075a.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         },
@@ -376,7 +376,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7750603/da33b55a-ffdd-11e4-9109-3c7c68c7cb1e.gif",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
                             }
@@ -387,7 +387,7 @@
                     "name": "div",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                        "style": "position: absolute; width: 586px; height: 300px; z-index: 4; left: 200px; top: 400px;"
                     },
                     "value": [
                         {
@@ -421,7 +421,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7652512/00810f72-fb16-11e4-8773-f123daa53986.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
@@ -431,7 +431,7 @@
                     "name": "h4",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
+                        "style": "position: absolute; width: 586px; height: 300px; z-index: 4; left: 200px; top: 400px; font-weight: bold;"
                     },
                     "value": "The Consumer Needs to Know The Producer"
                 },
@@ -487,7 +487,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7653368/039489a2-fb1e-11e4-801c-8197019ad6a8.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         },
@@ -495,7 +495,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7784412/737d11da-016d-11e5-8f7f-c74a421f059f.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
                             }
@@ -506,7 +506,7 @@
                     "name": "h4",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
+                        "style": "position: absolute; width: 586px; height: 300px; z-index: 4; left: 200px; top: 400px; font-weight: bold;"
                     },
                     "value": "Event Driven (Mainly Follows the Pub/Sub - Observer/Mediator Pattern)"
                 },
@@ -526,7 +526,17 @@
                     "value": "Pros"
                 },
                 {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
+                        "style": "width: 120px;"
+                    }
+                },
+                {
                     "name": "div",
+                    "attributes": {
+                        "style": "height: 800px;"
+                    },
                     "value": [
                         {
                             "name": "ul",
@@ -613,19 +623,21 @@
                     "value": "Cons"
                 },
                 {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115636/6c4e8ba6-1085-11e5-806d-ed916000f6e8.png",
+                        "style": "width: 120px;"
+                    }
+                },
+                {
                     "name": "div",
+                    "attributes": {
+                        "style": "height: 800px;"
+                    },
                     "value": [
                         {
                             "name": "ul",
                             "value": [
-                                {
-                                    "name": "li",
-                                    "attributes": {
-                                        "class": "fragment",
-                                        "data-fragment-index": "0"
-                                    },
-                                    "value": "Complexity"
-                                },
                                 {
                                     "name": "li",
                                     "attributes": {
@@ -640,7 +652,7 @@
                                         "class": "fragment",
                                         "data-fragment-index": "0"
                                     },
-                                    "value": "Harder to Follow and Debug"
+                                    "value": "Complexity - Harder to Follow and Debug"
                                 }
                             ]
                         }
@@ -653,6 +665,21 @@
                         "Itai: Really?",
                         "Miki: Using an event bus makes it problematic to follow the control flow, which makes it harder to debug and understand, ",
                         "This is because you cannot know or rely on the triggered listeners order"
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
+                        "style": "width: 600px;"
+                    }
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: Seems Good After all"
                     ]
                 }
             ],
@@ -1320,6 +1347,30 @@
                     "value": [
                         "Itai: ChronosJS can be found in NPM and in GitHub",
                         "Feel free to use, fork us and contribute more features"
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "width: 100%; height: 550px; max-height: none; max-width: none;"
+                    },
+                    "value": [
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/8115606/29a0c620-1085-11e5-8894-bb0d6110a681.png",
+                                "style": "width: 400px; height: 583px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 289px; top: 6px;",
+                                "class": "absolute-element"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki & Itai: Meanwhile, Keep calm and JS ON"
                     ]
                 }
             ],
