@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Native Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="theme.css">
+    <script type="text/javascript" src="rainbow-custom.min.js"></script>
+</head>
+<body>
+<pre><code data-language="javascript">app.controller("EarthCtrl", ["$scope", "chronosjsChannel", function ($scope, chronosjsChannel) {
+    var sunImage = document.querySelector(".sun");
+    $scope.deg = getAngle(sunImage);
+
+    function publishAngle() {
+        clearTimeout(intervalId);
+        var data = getAngle(sunImage);
+        $scope.deg = data;
+        $scope.$apply();
+        chronosjsChannel.trigger({
+            appName: "EarthCtrl",
+            eventName: "rotation",
+            data: data
+        });
+    }
+    setInterval(publishAngle, 200);
+}]);</code></pre>
+</body>
+</html>

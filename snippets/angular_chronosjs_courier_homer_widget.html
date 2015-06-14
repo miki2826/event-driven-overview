@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Native Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="theme.css">
+    <script type="text/javascript" src="rainbow-custom.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var code = [];
+    code[0] = "<!DOCTYPE html><html><head><title>Homer</title>\n\
+    <style> .homer { width: 120px; height: 120px; } </style>\n\
+    <script type=\"text\/javascript\" src=\"..\/events\/PostMessageCourier.js\"><\/script>\n\
+    </head><body><script type=\"text\/javascript\">\n\
+        var courier = new window.Chronos.PostMessageCourier();\n";
+    code[1] = "        //...\n\
+        //...\n\
+        courier.bind({\n\
+            appName: \"CourierSupervisor\",\n\
+            eventName: \"position\",\n\
+            func: initPosition,\n\
+            async: true\n\
+        });\n\
+        courier.bind({\n\
+            appName: \"EarthCtrl\",\n\
+            eventName: \"rotation\",\n\
+            func: understandAngle,\n\
+            async: true\n\
+        });\n\
+    <\/script>\n\
+    <img src=\"..\/..\/img\/homer_awake.jpg\" class=\"homer\">\n\
+</body>\n\
+</html>";
+</script>
+<script type="text/javascript">
+    var index = code.length;
+    document.onclick = function() {
+        if (0 < index) {
+            Rainbow.color(code[(code.length - (index--))], "html", function(highlighted_code) {
+                document.getElementById("code").innerHTML += highlighted_code;
+            });
+        }
+    };
+</script>
+<pre><code id="code" data-language="javascript"></code></pre>
+</body>
+</html>

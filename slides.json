@@ -23,7 +23,11 @@
                     },
                     "value": "Choose Your Channels"
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h2",
@@ -168,7 +172,11 @@
                         }
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "p",
@@ -198,7 +206,11 @@
                         "Those components exchange information between them constantly"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "p",
@@ -228,7 +240,11 @@
                         "One is the producers, which creates, and supply the information"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "p",
@@ -257,7 +273,11 @@
                         "Mik: The second is the consumer, which consumes and handle this information"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "p",
@@ -286,7 +306,11 @@
                         "Itai: Easy, But how does information flow?"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "p",
@@ -341,7 +365,11 @@
                         "An example for that, can be the request, response Model, Or direct API calls"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "p",
@@ -394,7 +422,11 @@
                         "Miki: Another option, is a Push based model, such as callbacks"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "p",
@@ -424,7 +456,11 @@
                         "This means that the consumer needs to hold a reference to the producer in order to call its API"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -460,7 +496,11 @@
                         "Miki: Right, Do only one job, but do it well"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "p",
@@ -501,7 +541,11 @@
                         "Event bus holds all the registered consumers and when triggered by the producer, it will publish an event to all registered consumers"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h2",
@@ -560,7 +604,11 @@
                         "Miki: You cannot just drop buzzwords as Coupling and Cohesion, Please explain"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -592,7 +640,11 @@
                         "And Cohesion is the degree of relation between a set of function on a module"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h2",
@@ -644,7 +696,11 @@
                         "However, when your application design follows the event driven practices, and you maintain SoC and modularity, the order of the events should not have any effect on the flow"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "img",
@@ -659,7 +715,11 @@
                         "Itai: Seems Good After all"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "p",
@@ -671,7 +731,11 @@
                         "Itai: And coming to javascript, so Javascript is callback driven by nature"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -679,7 +743,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=native_events.js",
+                                "src": "./snippets/native_events.js.html",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -692,7 +756,11 @@
                         "We can interact with it by assigning an handler for the click event - You all know this basic example"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "p",
@@ -705,7 +773,11 @@
                         "All of those MVC frameworks, embraces SoC and also supplies internal tools for implementing Pub/Sub model as part of the framework."
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -713,7 +785,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=backbone_message_service.js",
+                                "src": "./snippets/backbone_message_service.js.html",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -725,7 +797,11 @@
                         "Itai: Backbone, for example, have the Backbone.Events which allows simple consuming and triggering of events"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -733,7 +809,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=backbone_model.js&amp;data-gist-highlight-line=6-8,20,27",
+                                "src": "./snippets/backbone_model.js.html?&amp;data-gist-highlight-line=6-8,20,27",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -746,7 +822,11 @@
                         "In this Mario Example, when mario eats, an event is triggered and the view redraws a bigger mario"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -754,7 +834,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_message_service.js",
+                                "src": "./snippets/angular_message_service.js.html",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -767,7 +847,11 @@
                         "Angular JS scope controls the awareness of changes out of the box, but we can also use it to implement a generic message service"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -775,7 +859,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_scope.js&amp;data-gist-highlight-line=5-8,12-15,19-22",
+                                "src": "./snippets/angular_scope.js.html?&amp;data-gist-highlight-line=5-8,12-15,19-22",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -788,7 +872,11 @@
                         "So this is how we can use event driven concepts with the given tools of the framework we are working with"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -821,7 +909,179 @@
                         "Meet ChronosJS"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
+            [
+                {
+                    "name": "p",
+                    "value": "A Native Javascript Event Channels (Pub/Sub) Implementation"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: ChronosJS is a native javascript library implementing event channels",
+                        "It allows high level of granularity by using two levels of registration with AppName and EventName, and supporting wildcard",
+                        "ChronosJs provides 3 models of interactions:",
+                        "1) The basic events which allows multiple consumers for a single producer",
+                        "2) Commands which provides a one2one relationship between consumer and the producer",
+                        "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
+                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone",
+                        "It is Lightweight",
+                        "with no additional dependencies"
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "steps": [
+            [
+                {
+                    "name": "p",
+                    "value": "Allows High Level of Granularity with AppName & EventName"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: ChronosJS is a native javascript library implementing event channels",
+                        "It allows high level of granularity by using two levels of registration with AppName and EventName, and supporting wildcard",
+                        "ChronosJs provides 3 models of interactions:",
+                        "1) The basic events which allows multiple consumers for a single producer",
+                        "2) Commands which provides a one2one relationship between consumer and the producer",
+                        "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
+                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone",
+                        "It is Lightweight",
+                        "with no additional dependencies"
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "steps": [
+            [
+                {
+                    "name": "p",
+                    "value": "Supports 3 Models of Interaction while Keeping Producer/Consumer Low Coupling (Events, Commands, Request/Response)"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: ChronosJS is a native javascript library implementing event channels",
+                        "It allows high level of granularity by using two levels of registration with AppName and EventName, and supporting wildcard",
+                        "ChronosJs provides 3 models of interactions:",
+                        "1) The basic events which allows multiple consumers for a single producer",
+                        "2) Commands which provides a one2one relationship between consumer and the producer",
+                        "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
+                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone",
+                        "It is Lightweight",
+                        "with no additional dependencies"
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "steps": [
+            [
+                {
+                    "name": "p",
+                    "value": "Supports Synchronous and Asynchronous Binding"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: ChronosJS is a native javascript library implementing event channels",
+                        "It allows high level of granularity by using two levels of registration with AppName and EventName, and supporting wildcard",
+                        "ChronosJs provides 3 models of interactions:",
+                        "1) The basic events which allows multiple consumers for a single producer",
+                        "2) Commands which provides a one2one relationship between consumer and the producer",
+                        "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
+                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone",
+                        "It is Lightweight",
+                        "with no additional dependencies"
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "steps": [
+            [
+                {
+                    "name": "p",
+                    "value": "Allows Data to Be Passed by Reference and By Value"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: ChronosJS is a native javascript library implementing event channels",
+                        "It allows high level of granularity by using two levels of registration with AppName and EventName, and supporting wildcard",
+                        "ChronosJs provides 3 models of interactions:",
+                        "1) The basic events which allows multiple consumers for a single producer",
+                        "2) Commands which provides a one2one relationship between consumer and the producer",
+                        "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
+                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone",
+                        "It is Lightweight",
+                        "with no additional dependencies"
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "steps": [
+            [
+                {
+                    "name": "p",
+                    "value": "Small Size"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: ChronosJS is a native javascript library implementing event channels",
+                        "It allows high level of granularity by using two levels of registration with AppName and EventName, and supporting wildcard",
+                        "ChronosJs provides 3 models of interactions:",
+                        "1) The basic events which allows multiple consumers for a single producer",
+                        "2) Commands which provides a one2one relationship between consumer and the producer",
+                        "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
+                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone",
+                        "It is Lightweight",
+                        "with no additional dependencies"
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "steps": [
+            [
+                {
+                    "name": "p",
+                    "value": "No Additional Dependencies"
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: ChronosJS is a native javascript library implementing event channels",
+                        "It allows high level of granularity by using two levels of registration with AppName and EventName, and supporting wildcard",
+                        "ChronosJs provides 3 models of interactions:",
+                        "1) The basic events which allows multiple consumers for a single producer",
+                        "2) Commands which provides a one2one relationship between consumer and the producer",
+                        "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
+                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone",
+                        "It is Lightweight",
+                        "with no additional dependencies"
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h4",
@@ -838,51 +1098,27 @@
                             "value": [
                                 {
                                     "name": "li",
-                                    "attributes": {
-                                        "class": "fragment",
-                                        "data-fragment-index": "0"
-                                    },
-                                    "value": "Small Size"
-                                },
-                                {
-                                    "name": "li",
-                                    "attributes": {
-                                        "class": "fragment",
-                                        "data-fragment-index": "1"
-                                    },
-                                    "value": "No Additional Dependencies"
-                                },
-                                {
-                                    "name": "li",
-                                    "attributes": {
-                                        "class": "fragment",
-                                        "data-fragment-index": "2"
-                                    },
                                     "value": "Allows High Level of Granularity with AppName & EventName"
                                 },
                                 {
                                     "name": "li",
-                                    "attributes": {
-                                        "class": "fragment",
-                                        "data-fragment-index": "3"
-                                    },
                                     "value": "Supports 3 Models of Interaction while Keeping Producer/Consumer Low Coupling (Events, Commands, Request/Response)"
                                 },
                                 {
                                     "name": "li",
-                                    "attributes": {
-                                        "class": "fragment",
-                                        "data-fragment-index": "4"
-                                    },
                                     "value": "Supports Synchronous and Asynchronous Binding"
                                 },
                                 {
                                     "name": "li",
-                                    "attributes": {
-                                        "class": "fragment",
-                                        "data-fragment-index": "5"
-                                    },
                                     "value": "Allows Data to Be Passed by Reference and By Value"
+                                },
+                                {
+                                    "name": "li",
+                                    "value": "Small Size"
+                                },
+                                {
+                                    "name": "li",
+                                    "value": "No Additional Dependencies"
                                 }
                             ]
                         }
@@ -892,17 +1128,21 @@
                     "name": "notes",
                     "value": [
                         "Miki: ChronosJS is a native javascript library implementing event channels",
-                        "It is Lightweight",
-                        "with no additional dependencies",
                         "It allows high level of granularity by using two levels of registration with AppName and EventName, and supporting wildcard",
                         "ChronosJs provides 3 models of interactions:",
                         "1) The basic events which allows multiple consumers for a single producer",
                         "2) Commands which provides a one2one relationship between consumer and the producer",
                         "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
-                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone"
+                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone",
+                        "It is Lightweight",
+                        "with no additional dependencies"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h3",
@@ -925,7 +1165,11 @@
                         "Itai: ChronosJS is is a core infrastructure for almost any application @LivePerson and it is highly tested in our production systems"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h4",
@@ -958,7 +1202,11 @@
                         "And a small homer, which supposed to be awake when the sun is up, and go to sleep when the moon is shown"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h4",
@@ -973,7 +1221,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_channel.js",
+                                "src": "./snippets/angular_chronosjs_channel.js.html",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -987,7 +1235,11 @@
                         "And we created our channel service by instantiating a ChronosJs Channels object"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h4",
@@ -1002,7 +1254,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_earth_controller.js&amp;data-gist-highlight-line=18-22",
+                                "src": "./snippets/angular_chronosjs_earth_controller.js.html?&amp;data-gist-highlight-line=10-14",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -1015,7 +1267,11 @@
                         "We do some weired calculation on the angle of the sun and trigger an event with the calculation result each 200 millis"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h4",
@@ -1030,7 +1286,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_homer_directive.js&amp;data-gist-highlight-line=14-19",
+                                "src": "./snippets/angular_chronosjs_homer_directive.js.html?&amp;data-gist-highlight-line=9-14",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -1043,7 +1299,11 @@
                         "and its listenning on the rotation event in order to calculate whether it should sleep or be awake"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -1078,7 +1338,11 @@
                         "Itai: I am a developer, and I would like to create my own Homer widget on your platform"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -1121,7 +1385,11 @@
                         "What about the same origin policy of the browser?"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -1186,7 +1454,11 @@
                         "Courier allows us to use all the functionality of ChronosJS Channels, cross domain, over post message"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h4",
@@ -1201,7 +1473,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_supervisor.js&amp;data-gist-highlight-line=5,9-13,20-26",
+                                "src": "./snippets/angular_chronosjs_courier_supervisor.js.html?&amp;data-gist-highlight-line=5,9-13,17-23",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -1218,7 +1490,11 @@
                         "The Supervisor will trigger an event with the position for the created widget, upon initialization"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h4",
@@ -1233,7 +1509,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_earth_controller.js&amp;data-gist-highlight-line=6-7,24-28",
+                                "src": "./snippets/angular_chronosjs_courier_earth_controller.js.html?&amp;data-gist-highlight-line=6-10,17-21",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -1245,7 +1521,11 @@
                         "Miki: Our earth controller, will now have to create the widgets via the Supervisor, and trigger the rotation event using the supervisor"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h4",
@@ -1260,7 +1540,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_homer_widget.html&amp;data-gist-highlight-line=6,14-19,20-25",
+                                "src": "./snippets/angular_chronosjs_courier_homer_widget.html?&amp;data-gist-highlight-line=6,9-20",
                                 "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
@@ -1276,7 +1556,11 @@
                         "And binding to the initial position event for calculations"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h4",
@@ -1308,7 +1592,11 @@
                         "Itai: Impressive indeed, and it is even nicer, since everyone can now use it!"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -1366,7 +1654,11 @@
                         "Feel free to use, fork us and contribute more features"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -1390,7 +1682,11 @@
                         "Miki & Itai: Meanwhile, Keep calm and JS ON"
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -1408,52 +1704,11 @@
                         }
                     ]
                 }
-            ],
-            [
-                {
-                    "name": "p",
-                    "value": [
-                        {
-                            "name": "img",
-                            "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7897307/0c7d4090-06e0-11e5-873a-803c5bcdbff4.png",
-                                "style": "width: 479px; height: 293px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 229px; top: 6px;",
-                                "class": "absolute-element"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "div",
-                    "attributes": {
-                        "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 170px; top: 327px;"
-                    },
-                    "value": [
-                        {
-                            "name": "h3",
-                            "attributes": {
-                                "style": "font-weight: bold;"
-                            },
-                            "value": "We Are Hiring!"
-                        },
-                        {
-                            "name": "a",
-                            "attributes": {
-                                "href": "mailto:peoplejobs@liveperson.com",
-                                "target": "_blank"
-                            },
-                            "value": "peoplejobs@liveperson.com"
-                        }
-                    ]
-                },
-                {
-                    "name": "notes",
-                    "value": [
-                        "Miki & Itai: We are also hiring, you can contact us on our emails or directly to HR"
-                    ]
-                }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",

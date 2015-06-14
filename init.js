@@ -56,7 +56,7 @@ Reveal.initialize({
     // Opens links in an iframe preview overlay
     previewLinks: false,
 
-    theme: queryHash.theme || "sky", //"solarized", //"beige", // available themes are in /css/theme
+    theme: queryHash.theme || "simple", //"sky", //"solarized", //"beige", // available themes are in /css/theme
 
     // Transition style
     transition: queryHash.transition || "linear", // default/cube/page/concave/zoom/linear/fade/none
