@@ -572,13 +572,6 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Behind any structured programing principles, there is structured design with its two main core principles: Coupling & Cohesion",
-                        "These two principles, were first introduced by Larry Constantine and Edward Yourdon in their book \"Structured Design: Fundamentals of a Discipline of Computer Program and System Design\" (1976) - http://www.amazon.com/Structured-Design-Fundamentals-Discipline-Computer/dp/0138544719 - and are still valid and relevant today."
-                    ]
-                },
-                {
-                    "name": "notes",
-                    "value": [
                         "Itai: Amazing! This will allow;",
                         "Flexibility & Extensibility - since we can add or remove as many consumers as we want without having to change our architecture",
                         "It is also encourages SoC by reducing the coupling and increasing the cohesion",
@@ -612,7 +605,9 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Itai: OK, as you all know (probably apart from my friend Miki here), Coupling is the degree of dependency between modules",
+                        "Itai: OK, Behind any structured programing principles, there is structured design with its two main core principles: Coupling & Cohesion",
+                        "These two principles, were first introduced by Larry Constantine and Edward Yourdon in their book \"Structured Design: Fundamentals of a Discipline of Computer Program and System Design\" (1976) - http://www.amazon.com/Structured-Design-Fundamentals-Discipline-Computer/dp/0138544719 - and are still valid and relevant today."
+                        "As you all know (probably apart from my friend Miki here), Coupling is the degree of dependency between modules",
                         "And Cohesion is the degree of relation between a set of function on a module"
                     ]
                 }
