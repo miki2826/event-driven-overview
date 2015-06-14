@@ -658,7 +658,8 @@
                     "value": [
                         "Miki: but there are also a few drawbacks that we should be aware of.",
                         "Itai: Really?",
-                        "Miki: This adds complexity, by adding an event bus that makes it problematic to follow the control flow and harder to debug and understand"
+                        "Miki: Using an event bus makes it problematic to follow the control flow, which makes it harder to debug and understand, ",
+                        "This is because you cannot know or rely on the triggered listeners order"
                     ]
                 }
             ],
