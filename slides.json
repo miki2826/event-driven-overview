@@ -680,7 +680,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=native_events.js",
-                                "style": "top: 250px; width: 916px; height: 292px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
@@ -714,7 +714,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=backbone_message_service.js",
-                                "style": "top: 250px; width: 916px; height: 292px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
@@ -734,7 +734,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=backbone_model.js&amp;data-gist-highlight-line=6-8,20,27",
-                                "style": "top: 20px; width: 916px; height: 622px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
@@ -755,7 +755,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_message_service.js",
-                                "style": "top: 100px; width: 916px; height: 422px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
@@ -776,7 +776,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_scope.js&amp;data-gist-highlight-line=5-8,12-15,19-22",
-                                "style": "top: 20px; width: 916px; height: 622px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
@@ -974,7 +974,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_channel.js",
-                                "style": "top: 180px; width: 916px; height: 422px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
@@ -1003,7 +1003,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_earth_controller.js&amp;data-gist-highlight-line=18-22",
-                                "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
@@ -1031,7 +1031,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_homer_directive.js&amp;data-gist-highlight-line=14-19",
-                                "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
@@ -1202,7 +1202,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_supervisor.js&amp;data-gist-highlight-line=5,9-13,20-26",
-                                "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
@@ -1234,7 +1234,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_earth_controller.js&amp;data-gist-highlight-line=6-7,24-28",
-                                "style": "top: 20px; width: 916px; height: 622px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
@@ -1261,7 +1261,7 @@
                             "name": "iframe",
                             "attributes": {
                                 "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_homer_widget.html&amp;data-gist-highlight-line=6,14-19,20-25",
-                                "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
+                                "style": "top: 20px; width: 986px; height: 752px; max-height: none; max-width: none;"
                             }
                         }
                     ]
