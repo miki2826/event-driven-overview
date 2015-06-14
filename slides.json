@@ -606,7 +606,7 @@
                     "name": "notes",
                     "value": [
                         "Itai: OK, Behind any structured programing principles, there is structured design with its two main core principles: Coupling & Cohesion",
-                        "These two principles, were first introduced by Larry Constantine and Edward Yourdon in their book \"Structured Design: Fundamentals of a Discipline of Computer Program and System Design\" (1976) - http://www.amazon.com/Structured-Design-Fundamentals-Discipline-Computer/dp/0138544719 - and are still valid and relevant today."
+                        "These two principles, were first introduced by Larry Constantine and Edward Yourdon in their book \"Structured Design: Fundamentals of a Discipline of Computer Program and System Design\" (1976) - http://www.amazon.com/Structured-Design-Fundamentals-Discipline-Computer/dp/0138544719 - and are still valid and relevant today.",
                         "As you all know (probably apart from my friend Miki here), Coupling is the degree of dependency between modules",
                         "And Cohesion is the degree of relation between a set of function on a module"
                     ]
@@ -658,8 +658,9 @@
                     "value": [
                         "Miki: but there are also a few drawbacks that we should be aware of.",
                         "Itai: Really?",
-                        "Miki: Using an event bus makes it problematic to follow the control flow, which makes it harder to debug and understand, ",
-                        "This is because you cannot know or rely on the triggered listeners order"
+                        "Miki: Using an event bus makes it problematic to follow the control flow, which makes it harder to debug and understand,",
+                        "Multiple entities can have listeners which consume the same event and since the order is unknown, it can make the flow hard to follow.",
+                        "However, when your application design follows the event driven practices, and you maintain SoC and modularity, the order of the events should not have any effect on the flow"
                     ]
                 }
             ],
@@ -818,7 +819,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7838918/4b35aa74-0498-11e5-9bc6-e82a09d06b85.png",
-                                "style": "width: 389px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
+                                "style": "border: none; box-shadow: none; width: 389px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
                                 "class": "absolute-element"
                             }
                         }
@@ -918,6 +919,29 @@
                         "2) Commands which provides a one2one relationship between consumer and the producer",
                         "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
                         "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone"
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "h3",
+                    "attributes": {
+                        "style": "font-weight: bold;"
+                    },
+                    "value": "Eat Your Own Dog Food"
+                },
+                {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8147552/00d007ce-1279-11e5-9d5c-20b84d2741d7.png",
+                        "style": "width: 790px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 80px; top: 6;",
+                        "class": "absolute-element"
+                    }
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: ChronosJS is is a core infrastructure for almost any application @LivePerson and it is highly tested in our production systems"
                     ]
                 }
             ],
@@ -1299,6 +1323,7 @@
                     "name": "notes",
                     "value": [
                         "Miki: And this is the result",
+                        "@LivePerson, we provide our customers with the ability to embed their own custom widgets in our WebAgent application using Courier",
                         "Itai: Impressive indeed, and it is even nicer, since everyone can now use it!"
                     ]
                 }
@@ -1314,7 +1339,23 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7838918/4b35aa74-0498-11e5-9bc6-e82a09d06b85.png",
-                                "style": "width: 309px; height: 470px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
+                                "style": "border: none; box-shadow: none; width: 319px; height: 470px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
+                                "class": "absolute-element"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://travis-ci.org/LivePersonInc/chronosjs.svg",
+                                "style": "border: none; box-shadow: none; max-height: none; max-width: none; position: absolute; z-index: 4; left: 360px; top: 496px;",
+                                "class": "absolute-element"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://codeclimate.com/github/LivePersonInc/chronosjs/badges/coverage.svg",
+                                "style": "border: none; box-shadow: none; max-height: none; max-width: none; position: absolute; z-index: 4; left: 460px; top: 496px;",
                                 "class": "absolute-element"
                             }
                         }
@@ -1324,7 +1365,7 @@
                     "name": "div",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 936px; height: 125px; z-index: 4; left: 10px; top: 517px;"
+                        "style": "position: absolute; width: 936px; height: 125px; z-index: 4; left: 10px; top: 540px;"
                     },
                     "value": [
                         {
