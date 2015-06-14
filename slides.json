@@ -1360,8 +1360,8 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/8115606/29a0c620-1085-11e5-8894-bb0d6110a681.png",
-                                "style": "width: 400px; height: 583px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 289px; top: 6px;",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8147842/3ca245a6-1287-11e5-8b14-3fa6559eaba6.png",
+                                "style": "width: 500px; height: 583px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 189px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
