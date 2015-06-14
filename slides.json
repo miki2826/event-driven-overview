@@ -887,7 +887,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7838918/4b35aa74-0498-11e5-9bc6-e82a09d06b85.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8149032/bda7608c-12be-11e5-9bba-a4be4d7e56e2.png",
                                 "style": "border: none; box-shadow: none; width: 389px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
                                 "class": "absolute-element"
                             }
@@ -1461,6 +1461,142 @@
         "steps": [
             [
                 {
+                    "name": "div",
+                    "attributes": {
+                        "style": "width: 100%; height: 600px; position: absolute; z-index: 4; left: 0; top: 6px;"
+                    },
+                    "value": [
+                        {
+                            "name": "div",
+                            "attributes": {
+                                "style": "width: 100%; height: 550px; max-height: none; max-width: none;"
+                            },
+                            "value": [
+                                {
+                                    "name": "img",
+                                    "attributes": {
+                                        "src": "https://cloud.githubusercontent.com/assets/5138735/8149645/eaf26a54-12d3-11e5-80b4-4e1d2c30b4ba.png",
+                                        "style": "border: none; box-shadow: none; width: 389px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
+                                        "class": "absolute-element"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: How does courier acctually works,",
+                        "We have the host, which hold a courier instance.",
+                        "Inside, courier holds his own, cheonosjs channels instance."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "width: 100%; height: 600px; position: absolute; z-index: 4; left: 0; top: 6px;"
+                    },
+                    "value": [
+                        {
+                            "name": "div",
+                            "attributes": {
+                                "style": "width: 100%; height: 550px; max-height: none; max-width: none;"
+                            },
+                            "value": [
+                                {
+                                    "name": "img",
+                                    "attributes": {
+                                        "src": "https://cloud.githubusercontent.com/assets/5138735/8149646/eaf8b904-12d3-11e5-8e09-7e9360467bd0.png",
+                                        "style": "border: none; box-shadow: none; width: 389px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
+                                        "class": "absolute-element"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: and we have th iFrame which is basically the same.",
+                        "On the iframe creation there is a handshake protocol between the host and iframe.",
+                        "Only after the handshake is done, there is a secure channel between both parties and events can be passed back and forth.",
+                        "The handshake is an internal process that hapens in the background and as a user of the library you do not need to be worried about it."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "width: 100%; height: 600px; position: absolute; z-index: 4; left: 0; top: 6px;"
+                    },
+                    "value": [
+                        {
+                            "name": "div",
+                            "attributes": {
+                                "style": "width: 100%; height: 550px; max-height: none; max-width: none;"
+                            },
+                            "value": [
+                                {
+                                    "name": "img",
+                                    "attributes": {
+                                        "src": "https://cloud.githubusercontent.com/assets/5138735/8149647/eafb22b6-12d3-11e5-9160-90d29fc0b99b.png",
+                                        "style": "border: none; box-shadow: none; width: 389px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
+                                        "class": "absolute-element"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: When the iframe has a component that decides to bind to an event via courier",
+                        "Courier will proxy the binding through it's internal chronos channels."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "width: 100%; height: 600px; position: absolute; z-index: 4; left: 0; top: 6px;"
+                    },
+                    "value": [
+                        {
+                            "name": "div",
+                            "attributes": {
+                                "style": "width: 100%; height: 550px; max-height: none; max-width: none;"
+                            },
+                            "value": [
+                                {
+                                    "name": "img",
+                                    "attributes": {
+                                        "src": "https://cloud.githubusercontent.com/assets/5138735/8149644/eadac9b2-12d3-11e5-8390-8d7bd9725ea6.png",
+                                        "style": "border: none; box-shadow: none; width: 889px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6;",
+                                        "class": "absolute-element"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Miki: When a component inside the host will trigger an event, courier will send a message via post message,",
+                        "indicating there is a trigger from the host.",
+                        "The iframe will then translate the message into an event and proxy it to the channels, which will trigger the event as a proxy through courier."
+                    ]
+                }
+            ],
+            [
+                {
                     "name": "h4",
                     "attributes": {
                         "style": "font-weight: bold;"
@@ -1607,7 +1743,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7838918/4b35aa74-0498-11e5-9bc6-e82a09d06b85.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8149032/bda7608c-12be-11e5-9bba-a4be4d7e56e2.png",
                                 "style": "border: none; box-shadow: none; width: 319px; height: 470px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6;",
                                 "class": "absolute-element"
                             }
