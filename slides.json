@@ -302,28 +302,10 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784190/44581678-0165-11e5-980b-77a6f6d6b0cf.png",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/8147869/e8f88508-1288-11e5-83e7-0453ab273d35.gif",
                                 "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
-                            }
-                        },
-                        {
-                            "name": "img",
-                            "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784194/62ff7698-0165-11e5-9896-123c304d3df6.png",
-                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "1"
-                            }
-                        },
-                        {
-                            "name": "img",
-                            "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784198/7f7eaf3c-0165-11e5-8907-0128be94e5b1.png",
-                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "2"
                             }
                         }
                     ]
@@ -606,7 +588,6 @@
                     "name": "notes",
                     "value": [
                         "Itai: OK, Behind any structured programing principles, there is structured design with its two main core principles: Coupling & Cohesion",
-                        "These two principles, were first introduced by Larry Constantine and Edward Yourdon in their book \"Structured Design: Fundamentals of a Discipline of Computer Program and System Design\" (1976) - http://www.amazon.com/Structured-Design-Fundamentals-Discipline-Computer/dp/0138544719 - and are still valid and relevant today.",
                         "As you all know (probably apart from my friend Miki here), Coupling is the degree of dependency between modules",
                         "And Cohesion is the degree of relation between a set of function on a module"
                     ]
@@ -668,7 +649,7 @@
                 {
                     "name": "img",
                     "attributes": {
-                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8147890/fe536c64-1289-11e5-8934-3033943ef0bd.png",
                         "style": "width: 600px;"
                     }
                 },
@@ -1396,8 +1377,8 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8147842/3ca245a6-1287-11e5-8b14-3fa6559eaba6.png",
-                                "style": "width: 500px; height: 583px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 189px; top: 6px;",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/8115606/29a0c620-1085-11e5-8894-bb0d6110a681.png",
+                                "style": "width: 400px; height: 583px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 289px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
