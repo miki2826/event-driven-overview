@@ -1492,7 +1492,11 @@
                         "Inside, courier holds his own, cheonosjs channels instance."
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -1527,7 +1531,11 @@
                         "The handshake is an internal process that hapens in the background and as a user of the library you do not need to be worried about it."
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -1560,7 +1568,11 @@
                         "Courier will proxy the binding through it's internal chronos channels."
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "div",
@@ -1594,7 +1606,11 @@
                         "The iframe will then translate the message into an event and proxy it to the channels, which will trigger the event as a proxy through courier."
                     ]
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "steps": [
             [
                 {
                     "name": "h4",
