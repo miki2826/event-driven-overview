@@ -733,7 +733,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=backbone_model.js&amp;data-gist-highlight-line=6,20,27",
+                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=backbone_model.js&amp;data-gist-highlight-line=6-8,20,27",
                                 "style": "top: 20px; width: 916px; height: 622px; max-height: none; max-width: none;"
                             }
                         }
@@ -775,7 +775,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_scope.js&amp;data-gist-highlight-line=5,7,12,14,19,22",
+                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_scope.js&amp;data-gist-highlight-line=5-8,12-15,19-22",
                                 "style": "top: 20px; width: 916px; height: 622px; max-height: none; max-width: none;"
                             }
                         }
@@ -1002,7 +1002,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_earth_controller.js&amp;data-gist-highlight-line=23",
+                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_earth_controller.js&amp;data-gist-highlight-line=18-22",
                                 "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
                             }
                         }
@@ -1030,7 +1030,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_homer_directive.js&amp;data-gist-highlight-line=15",
+                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_homer_directive.js&amp;data-gist-highlight-line=14-19",
                                 "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
                             }
                         }
@@ -1201,7 +1201,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_supervisor.js&amp;data-gist-highlight-line=5,6,14,26",
+                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_supervisor.js&amp;data-gist-highlight-line=5,9-13,20-26",
                                 "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
                             }
                         }
@@ -1233,7 +1233,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_earth_controller.js&amp;data-gist-highlight-line=10,11,29",
+                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_earth_controller.js&amp;data-gist-highlight-line=6-7,24-28",
                                 "style": "top: 20px; width: 916px; height: 622px; max-height: none; max-width: none;"
                             }
                         }
@@ -1260,7 +1260,7 @@
                         {
                             "name": "iframe",
                             "attributes": {
-                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_homer_widget.html&amp;data-gist-highlight-line=8,17,23",
+                                "src": "//gh.itkoren.com/egist/?data-gist-id=5960cb7a47b84524ff86&amp;data-gist-file=angular_chronosjs_courier_homer_widget.html&amp;data-gist-highlight-line=6,14-19,20-25",
                                 "style": "top: 20px; width: 916px; height: 582px; max-height: none; max-width: none;"
                             }
                         }
@@ -1377,7 +1377,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/8115606/29a0c620-1085-11e5-8894-bb0d6110a681.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8147842/3ca245a6-1287-11e5-8b14-3fa6559eaba6.png",
                                 "style": "width: 400px; height: 583px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 289px; top: 6px;",
                                 "class": "absolute-element"
                             }
