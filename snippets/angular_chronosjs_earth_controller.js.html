@@ -9,14 +9,8 @@
 </head>
 <body>
 <pre><code data-language="javascript">app.controller("EarthCtrl", ["$scope", "chronosjsChannel", function ($scope, chronosjsChannel) {
-    var sunImage = document.querySelector(".sun");
-    $scope.deg = getAngle(sunImage);
-
     function publishAngle() {
-        clearTimeout(intervalId);
         var data = getAngle(sunImage);
-        $scope.deg = data;
-        $scope.$apply();
         chronosjsChannel.trigger({
             appName: "EarthCtrl",
             eventName: "rotation",
