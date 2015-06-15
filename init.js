@@ -9,7 +9,7 @@ Reveal.initialize({
     progress: true,
 
     // Display the page number of the current slide
-    slideNumber: true,
+    slideNumber: "c / t",
 
     // Push each slide change to the browser history
     history: true,

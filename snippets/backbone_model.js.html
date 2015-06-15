@@ -2,46 +2,40 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Native Events</title>
+    <title>Code</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="theme.css">
     <script type="text/javascript" src="rainbow-custom.min.js"></script>
 </head>
 <body>
-<script type="text/javascript">
-    var code = [];
-    code[0] = "var MarioModel = Backbone.Model.extend({});\n\n";
-    code[1] = "var marioCtrl = {\n\
-    initialize: function() {\n\
-        this.model = new MarioModel({ height: 5 });\n\
-        this.view = new MarioView({ model: this.model });\n\
-    },\n\
-    eat: function(mushroom) {\n\
-        if (mushroom && mushroom.weight) {\n\
-            var height = this.model.get(\"height\");\n\
-            this.model.set(\"height\", height + mushroom.weight / height * 100);\n\
-        }\n\
-    }\n\
-};\n\n";
-    code[2] = "var MarioView = Backbone.View.extend({\n\
-    initialize: function(options) {\n\
-        this.model = options.model;\n\
-        this.listenTo(this.model, \"change:height\", function() {\n\
-            drawBiggerMario();\n\
-        });\n\
-    }\n\
-});";
+<script type="text/template" name="source" lang="javascript">
+    var MarioModel = Backbone.Model.extend({});
 </script>
-<script type="text/javascript">
-    var index = code.length;
-    document.onclick = function() {
-        if (0 < index) {
-            Rainbow.color(code[(code.length - (index--))], "javascript", function(highlighted_code) {
-                document.getElementById("code").innerHTML += highlighted_code;
-            });
+<script type="text/template" name="source" lang="javascript">
+    var marioCtrl = {
+        initialize: function() {
+            this.model = new MarioModel({ height: 5 });
+            this.view = new MarioView({ model: this.model });
+        },
+        eat: function(mushroom) {
+            if (mushroom && mushroom.weight) {
+                var height = this.model.get("height");
+                this.model.set("height", height + mushroom.weight / height * 100);
+            }
         }
     };
 </script>
+<script type="text/template" name="source" lang="javascript">
+    var MarioView = Backbone.View.extend({
+        initialize: function(options) {
+            this.model = options.model;
+            this.listenTo(this.model, "change:height", function() {
+                drawBiggerMario();
+            });
+        }
+    });
+</script>
 <pre><code id="code" data-language="javascript"></code></pre>
+<script type="text/javascript" src="code-control.js"></script>
 </body>
 </html>

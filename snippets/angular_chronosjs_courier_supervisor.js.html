@@ -2,51 +2,43 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Native Events</title>
+    <title>Code</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="theme.css">
     <script type="text/javascript" src="rainbow-custom.min.js"></script>
 </head>
 <body>
-<script type="text/javascript">
-    var code = [];
-    code[0] = "var app = angular.module(\"App.channels\", []).factory(\"chronosjsCourierSupervisor\", function ($window) {\n\
-    var chronosjsCourierSupervisor = {\n\
-        couriers: {},\n\
-        createWidget: function(options) {\n\
-            couriers[options.id] = $window.Chronos.PostMessageCourier({ target: {\n";
-    code[1] = "                url: options.url,\n\
-                style: {/*...*/},\n\
-                callback: function () {\n\
-                    couriers[options.id].trigger({\n\
-                        appName: \"CourierSupervisor\",\n\
-                        eventName: \"position\",\n\
-                        data: {/*...*/}\n\
-                    });\n\
-                }\n\
-            }});\n\
-        },\n";
-    code[2] = "        applyAll: function(fnName, options) {\n\
-            for (var courier in couriers) {\n\
-                if (courier && couriers.hasOwnProperty(courier)) {\n\
-                        couriers[courier][fnName](options);\n\
-                    }\n\
-                }\n\
-            }\n\
-        };\n\
-        return chronosjsCourierSupervisor;\n\
-    });";
+<script type="text/template" name="source" lang="javascript">var app = angular.module("App.channels", []).factory("chronosjsCourierSupervisor", function ($window) {
+        var chronosjsCourierSupervisor = {
+            couriers: {},
+            createWidget: function(options) {
+                couriers[options.id] = $window.Chronos.PostMessageCourier({ target: {
 </script>
-<script type="text/javascript">
-    var index = code.length;
-    document.onclick = function() {
-        if (0 < index) {
-            Rainbow.color(code[(code.length - (index--))], "javascript", function(highlighted_code) {
-                document.getElementById("code").innerHTML += highlighted_code;
-            });
-        }
-    };
+<script type="text/template" name="source" lang="javascript">                    url: options.url,
+                    style: {/*...*/},
+                    callback: function () {
+                        couriers[options.id].trigger({
+                            appName: "CourierSupervisor",
+                            eventName: "position",
+                            data: {/*...*/}
+                        });
+                    }
+                }});
+            },
+</script>
+<script type="text/template" name="source" lang="javascript">
+            applyAll: function(fnName, options) {
+                for (var courier in couriers) {
+                    if (courier && couriers.hasOwnProperty(courier)) {
+                        couriers[courier][fnName](options);
+                    }
+                }
+            }
+       };
+       return chronosjsCourierSupervisor;
+   });
 </script>
 <pre><code id="code" data-language="javascript"></code></pre>
+<script type="text/javascript" src="code-control.js"></script>
 </body>
 </html>

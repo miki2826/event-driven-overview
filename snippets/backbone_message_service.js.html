@@ -2,34 +2,26 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Native Events</title>
+    <title>Code</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="theme.css">
     <script type="text/javascript" src="rainbow-custom.min.js"></script>
 </head>
 <body>
-<script type="text/javascript">
-    var code = [];
-    code[0] = "    // Backbone\n\
-    var MessageService = {};\n\
-    _.extend(MessageService.prototype, Backbone.Events);\n\n";
-    code[1] = "    // Usage\n\
-    var channel = new MessageService();\n\
-    channel.trigger(\"eventName\", { data: data });\n\
-    channel.on(\"eventName\", function(data) {\n\
-        // Handle Event\n\
-    });\n\n";
+<script type="text/template" name="source" lang="javascript">
+    // Backbone
+    var MessageService = {};
+    _.extend(MessageService.prototype, Backbone.Events);
 </script>
-<script type="text/javascript">
-    var index = code.length;
-    document.onclick = function() {
-        if (0 < index) {
-            Rainbow.color(code[(code.length - (index--))], "javascript", function(highlighted_code) {
-                document.getElementById("code").innerHTML += highlighted_code;
-            });
-        }
-    };
+<script type="text/template" name="source" lang="javascript">
+    // Usage
+    var channel = new MessageService();
+    channel.trigger("eventName", { data: data });
+    channel.on("eventName", function(data) {
+        // Handle Event
+    });
 </script>
 <pre><code id="code" data-language="javascript"></code></pre>
+<script type="text/javascript" src="code-control.js"></script>
 </body>
 </html>
