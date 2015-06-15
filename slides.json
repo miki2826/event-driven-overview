@@ -916,6 +916,13 @@
         "steps": [
             [
                 {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
+                        "style": "width: 120px;"
+                    }
+                },
+                {
                     "name": "p",
                     "value": "A Native Javascript Event Channels (Pub/Sub) Implementation"
                 },
@@ -939,6 +946,13 @@
     {
         "steps": [
             [
+                {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
+                        "style": "width: 120px;"
+                    }
+                },
                 {
                     "name": "p",
                     "value": "Allows High Level of Granularity with AppName & EventName"
@@ -964,6 +978,13 @@
         "steps": [
             [
                 {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
+                        "style": "width: 120px;"
+                    }
+                },
+                {
                     "name": "p",
                     "value": "Supports 3 Models of Interaction while Keeping Producer/Consumer Low Coupling (Events, Commands, Request/Response)"
                 },
@@ -987,6 +1008,13 @@
     {
         "steps": [
             [
+                {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
+                        "style": "width: 120px;"
+                    }
+                },
                 {
                     "name": "p",
                     "value": "Supports Synchronous and Asynchronous Binding"
@@ -1012,6 +1040,13 @@
         "steps": [
             [
                 {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
+                        "style": "width: 120px;"
+                    }
+                },
+                {
                     "name": "p",
                     "value": "Allows Data to Be Passed by Reference and By Value"
                 },
@@ -1035,6 +1070,13 @@
     {
         "steps": [
             [
+                {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
+                        "style": "width: 120px;"
+                    }
+                },
                 {
                     "name": "p",
                     "value": "Small Size"
@@ -1060,6 +1102,13 @@
         "steps": [
             [
                 {
+                    "name": "img",
+                    "attributes": {
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8115653/8bc14802-1085-11e5-9372-962cc31afae6.png",
+                        "style": "width: 120px;"
+                    }
+                },
+                {
                     "name": "p",
                     "value": "No Additional Dependencies"
                 },
@@ -1084,58 +1133,16 @@
         "steps": [
             [
                 {
-                    "name": "h4",
+                    "name": "img",
                     "attributes": {
-                        "style": "font-weight: bold;"
-                    },
-                    "value": "A Native Javascript Event Channels (Pub/Sub) Implementation"
-                },
-                {
-                    "name": "div",
-                    "value": [
-                        {
-                            "name": "ul",
-                            "value": [
-                                {
-                                    "name": "li",
-                                    "value": "Allows High Level of Granularity with AppName & EventName"
-                                },
-                                {
-                                    "name": "li",
-                                    "value": "Supports 3 Models of Interaction while Keeping Producer/Consumer Low Coupling (Events, Commands, Request/Response)"
-                                },
-                                {
-                                    "name": "li",
-                                    "value": "Supports Synchronous and Asynchronous Binding"
-                                },
-                                {
-                                    "name": "li",
-                                    "value": "Allows Data to Be Passed by Reference and By Value"
-                                },
-                                {
-                                    "name": "li",
-                                    "value": "Small Size"
-                                },
-                                {
-                                    "name": "li",
-                                    "value": "No Additional Dependencies"
-                                }
-                            ]
-                        }
-                    ]
+                        "src": "https://cloud.githubusercontent.com/assets/3624786/8147890/fe536c64-1289-11e5-8934-3033943ef0bd.png",
+                        "style": "width: 600px;"
+                    }
                 },
                 {
                     "name": "notes",
                     "value": [
-                        "Miki: ChronosJS is a native javascript library implementing event channels",
-                        "It allows high level of granularity by using two levels of registration with AppName and EventName, and supporting wildcard",
-                        "ChronosJs provides 3 models of interactions:",
-                        "1) The basic events which allows multiple consumers for a single producer",
-                        "2) Commands which provides a one2one relationship between consumer and the producer",
-                        "3) And Request/Response which extends the commands model by also allowing a return value from the producer",
-                        "Chronos is good for sync and async bindings while the data, can be passed by reference or by value as a clone",
-                        "It is Lightweight",
-                        "with no additional dependencies"
+                        "Miki: Overall, we provide an extended functionality over existing frameworks"
                     ]
                 }
             ]
