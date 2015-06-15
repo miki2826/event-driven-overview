@@ -9,22 +9,15 @@
 </head>
 <body>
 <script type="text/template" name="source" lang="javascript">app.controller("EarthCtrl", ["$scope", "chronosjsCourierSupervisor", function ($scope, chronosjsCourierSupervisor) {
-    var sunImage = document.querySelector(".sun");
-    $scope.deg = getAngle(sunImage);
-    var intervalId;
-
     (function createWidgets() {
         chronosjsCourierSupervisor.createWidget({ id:"w1",top:"0px",left:"0px",url:"http://127.0.0.1/../widget_frame.html" });
         chronosjsCourierSupervisor.createWidget({ id:"w2",top:"35px",left:"0px",url:"http://127.0.0.1/../widget_frame.html" });
-    // More Widgets
+        // More Widgets
     })();
 </script>
 <script type="text/template" name="source" lang="javascript">
     function publishAngle() {
-        clearTimeout(intervalId);
         var data = getAngle(sunImage);
-        $scope.deg = data;
-        $scope.$apply();
         chronosjsCourierSupervisor.applyAll("trigger", {
             appName: "EarthCtrl",
             eventName: "rotation",
