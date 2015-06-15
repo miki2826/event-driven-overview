@@ -9,28 +9,28 @@
 </head>
 <body>
 <script type="text/template" name="source" lang="javascript">
-    var MarioModel = Backbone.Model.extend({});
+    var HomerModel = Backbone.Model.extend({});
 </script>
 <script type="text/template" name="source" lang="javascript">
-    var marioCtrl = {
+    var homerCtrl = {
         initialize: function() {
-            this.model = new MarioModel({ height: 5 });
-            this.view = new MarioView({ model: this.model });
+            this.model = new HomerModel({ height: 5 });
+            this.view = new HomerView({ model: this.model });
         },
-        eat: function(mushroom) {
-            if (mushroom && mushroom.weight) {
+        eat: function(doughnut) {
+            if (doughnut && doughnut.weight) {
                 var height = this.model.get("height");
-                this.model.set("height", height + mushroom.weight / height * 100);
+                this.model.set("height", height + doughnut.weight / height * 100);
             }
         }
     };
 </script>
 <script type="text/template" name="source" lang="javascript">
-    var MarioView = Backbone.View.extend({
+    var HomerView = Backbone.View.extend({
         initialize: function(options) {
             this.model = options.model;
             this.listenTo(this.model, "change:height", function() {
-                drawBiggerMario();
+                drawFatterHomer();
             });
         }
     });

@@ -12,27 +12,27 @@
     var app = angular.module("App", []);
 </script>
 <script type="text/template" name="source" lang="javascript">
-    app.controller("AvengersCtrl", function($scope, MessageService) {
+    app.controller("MargeCtrl", function($scope, MessageService) {
         var channel = MessageService.getMessageChannel($scope);
-            channel.on("assembled", function(events, data) {
-            console.log("assembled " + data.text);
+        channel.on("here", function(events, data) {
+            feed(data);
         });
-        channel.trigger("avengers:assemble");
+        channel.trigger("kids:food");
     });
 </script>
 <script type="text/template" name="source" lang="javascript">
-    app.controller("IronManCtrl", function($scope, MessageService) {
+    app.controller("BartCtrl", function($scope, MessageService) {
         var channel = MessageService.getMessageChannel($scope);
-        channel.on("avengers:assemble", function(events, data) {
-            SuiteUpIronMan();
-            channel.trigger("assembled", { text: "IronMan" });
+        channel.on("kids:food", function(events, data) {
+            rollerBlaid2("KITCHEN");
+            channel.trigger("here", { name: "Bart" });
         });
     });
-    app.controller("CaptainAmericaCtrl", function($scope, MessageService) {
+    app.controller("LisaCtrl", function($scope, MessageService) {
         var channel = MessageService.getMessageChannel($scope);
-        channel.on("avengers:assemble", function(events, data) {
-            DriveCaptainAmerica();
-            channel.trigger("assembled", { text: "CaptainAmerica" });
+        channel.on("kids:food", function(events, data) {
+            walkWhilePlayingSax2("KITCHEN");
+            channel.trigger("here", { name: "Lisa" });
         });
     });
 </script>
