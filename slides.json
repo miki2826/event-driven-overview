@@ -185,17 +185,17 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7648881/690fc784-faf0-11e4-99fe-f1c17e0e8d6f.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
                     ]
                 },
                 {
-                    "name": "h4",
+                    "name": "h3",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
+                        "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
                     "value": "Software Components Exchange Information"
                 },
@@ -219,17 +219,17 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7649107/713f847e-faf2-11e4-99b9-d21ced1f63c5.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
                     ]
                 },
                 {
-                    "name": "h4",
+                    "name": "h3",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
+                        "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
                     "value": "Producers Supply Information"
                 },
@@ -253,17 +253,17 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7649158/f4dc74c2-faf2-11e4-8623-57793d635569.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
                     ]
                 },
                 {
-                    "name": "h4",
+                    "name": "h3",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
+                        "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
                     "value": "Consumers Receive Information"
                 },
@@ -286,17 +286,17 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7649629/72809512-faf7-11e4-83e1-155d6b1b804c.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
                     ]
                 },
                 {
-                    "name": "h4",
+                    "name": "h3",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px; font-weight: bold;"
+                        "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
                     "value": "How Does Information Flow?"
                 },
@@ -319,7 +319,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7784315/1bf6ee84-016a-11e5-95e8-ddf1824f4221.png",
-                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         },
@@ -327,7 +327,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/8147869/e8f88508-1288-11e5-83e7-0453ab273d35.gif",
-                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
                             }
@@ -338,21 +338,15 @@
                     "name": "div",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 300px; z-index: 4; left: 200px; top: 400px;"
+                        "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
                     "value": [
                         {
-                            "name": "h4",
-                            "attributes": {
-                                "style": "font-weight: bold;"
-                            },
+                            "name": "h3",
                             "value": "Pull:"
                         },
                         {
-                            "name": "h4",
-                            "attributes": {
-                                "style": "font-weight: bold;"
-                            },
+                            "name": "h3",
                             "value": "Request/Response & Direct API Call Model"
                         }
                     ]
@@ -378,7 +372,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7784378/889c9e42-016c-11e5-8400-788aa1f3075a.png",
-                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         },
@@ -386,7 +380,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7750603/da33b55a-ffdd-11e4-9109-3c7c68c7cb1e.gif",
-                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
                             }
@@ -397,21 +391,15 @@
                     "name": "div",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 300px; z-index: 4; left: 200px; top: 400px;"
+                        "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
                     "value": [
                         {
-                            "name": "h4",
-                            "attributes": {
-                                "style": "font-weight: bold;"
-                            },
+                            "name": "h3",
                             "value": "Push:"
                         },
                         {
-                            "name": "h4",
-                            "attributes": {
-                                "style": "font-weight: bold;"
-                            },
+                            "name": "h3",
                             "value": "Callback Model"
                         }
                     ]
@@ -435,17 +423,17 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7652512/00810f72-fb16-11e4-8773-f123daa53986.png",
-                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
                     ]
                 },
                 {
-                    "name": "h4",
+                    "name": "h3",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 300px; z-index: 4; left: 200px; top: 400px; font-weight: bold;"
+                        "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
                     "value": "The Consumer Needs to Know The Producer"
                 },
@@ -468,9 +456,9 @@
                         {
                             "name": "span",
                             "attributes": {
-                                "style": "font-style: italic; font-weight: bold;"
+                                "style": "font-style: italic; font-weight: bold; font-size: 50px;"
                             },
-                            "value": "\"Each part of the architecture is like a puzzle piece No single piece needs to know what the picture is, All that matters is that the piece does its own job correctly\""
+                            "value": "\"Each part of the architecture is like a puzzle, No single piece needs to know what the picture is, All that matters is that the piece does its own job correctly\""
                         },
                         {
                             "name": "span",
@@ -509,7 +497,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7653368/039489a2-fb1e-11e4-801c-8197019ad6a8.png",
-                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         },
@@ -517,7 +505,7 @@
                             "name": "img",
                             "attributes": {
                                 "src": "https://cloud.githubusercontent.com/assets/3624786/7784412/737d11da-016d-11e5-8f7f-c74a421f059f.png",
-                                "style": "width: 550px; height: 350px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 220px; top: 6px;",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
                             }
@@ -525,10 +513,10 @@
                     ]
                 },
                 {
-                    "name": "h4",
+                    "name": "h3",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 300px; z-index: 4; left: 200px; top: 400px; font-weight: bold;"
+                        "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
                     "value": "Event Driven (Mainly Follows the Pub/Sub - Observer/Mediator Pattern)"
                 },
