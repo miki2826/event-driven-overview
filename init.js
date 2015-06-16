@@ -97,3 +97,17 @@ Reveal.initialize({
         { src: "//gh.itkoren.com/revealular/js/console-notes.js", async: true, condition: function() { return !!document.body.classList; } }
     ]
 });
+
+setTimeout(function() {
+    var style = document.getElementById("dynamic-style");
+    style.textContent = "\
+.reveal,\
+.reveal h1,\
+.reveal h2,\
+.reveal h3,\
+.reveal h4,\
+.reveal h5,\
+.reveal h6 { \
+    font-family: Courier, \"Lucida Console\", monospace;\
+}";
+}, 1000);

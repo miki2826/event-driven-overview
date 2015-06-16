@@ -318,7 +318,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784315/1bf6ee84-016a-11e5-95e8-ddf1824f4221.png",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/8147869/e8f88508-1288-11e5-83e7-0453ab273d35.gif",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
@@ -326,7 +326,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/8147869/e8f88508-1288-11e5-83e7-0453ab273d35.gif",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784315/1bf6ee84-016a-11e5-95e8-ddf1824f4221.png",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
@@ -371,7 +371,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784378/889c9e42-016c-11e5-8400-788aa1f3075a.png",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7750603/da33b55a-ffdd-11e4-9109-3c7c68c7cb1e.gif",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
@@ -379,7 +379,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7750603/da33b55a-ffdd-11e4-9109-3c7c68c7cb1e.gif",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784378/889c9e42-016c-11e5-8400-788aa1f3075a.png",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
@@ -456,18 +456,22 @@
                         {
                             "name": "span",
                             "attributes": {
-                                "style": "font-style: italic; font-weight: bold; font-size: 50px;"
+                                "style": "font-style: italic; font-weight: bold; font-size: 52px; line-height: 70px;"
                             },
-                            "value": "\"Each part of the architecture is like a puzzle, No single piece needs to know what the picture is, All that matters is that the piece does its own job correctly\""
+                            "value": "\"Each part of the architecture is like a puzzle, No single piece needs to know what the picture is, All that matters is that the piece does its own job correctly\"<br><br>"
                         },
                         {
                             "name": "span",
+                            "attributes": {
+                                "style": "font-size: 20px;"
+                            },
                             "value": " - Nicholas Zakas, "
                         },
                         {
                             "name": "a",
                             "attributes": {
-                                "href": "http://www.slideshare.net/nzakas/scalable-javascript-application-architecture"
+                                "href": "http://www.slideshare.net/nzakas/scalable-javascript-application-architecture",
+                                "style": "font-size: 20px; text-decoration: none; color: black;"
                             },
                             "value": "Scalable JavaScript Application Architecture"
                         }
@@ -518,7 +522,7 @@
                         "class": "absolute-element",
                         "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
-                    "value": "Event Driven (Mainly Follows the Pub/Sub - Observer/Mediator Pattern)"
+                    "value": "Event Driven (Mainly Follows the Pub/Sub Pattern)"
                 },
                 {
                     "name": "notes",
@@ -559,7 +563,8 @@
                                     "name": "li",
                                     "attributes": {
                                         "class": "fragment",
-                                        "data-fragment-index": "0"
+                                        "data-fragment-index": "0",
+                                        "style": "line-height: 80px;"
                                     },
                                     "value": "Flexible"
                                 },
@@ -567,7 +572,8 @@
                                     "name": "li",
                                     "attributes": {
                                         "class": "fragment",
-                                        "data-fragment-index": "0"
+                                        "data-fragment-index": "0",
+                                        "style": "line-height: 90px;"
                                     },
                                     "value": "Extensible"
                                 },
@@ -575,7 +581,8 @@
                                     "name": "li",
                                     "attributes": {
                                         "class": "fragment",
-                                        "data-fragment-index": "1"
+                                        "data-fragment-index": "1",
+                                        "style": "line-height: 60px;"
                                     },
                                     "value": "Encourages SoC by Reducing Coupling and Increasing Cohesion"
                                 }
@@ -606,13 +613,17 @@
                             "value": [
                                 {
                                     "name": "li",
-                                    "value": "Coupling: The Degree of Dependency Between Modules"
+                                    "attributes": {
+                                        "style": "line-height: 50px;"
+                                    },
+                                    "value": "Coupling: The Degree of Dependency Between Modules<br><br>"
                                 },
                                 {
                                     "name": "li",
                                     "attributes": {
                                         "class": "fragment",
-                                        "data-fragment-index": "0"
+                                        "data-fragment-index": "0",
+                                        "style": "line-height: 50px;"
                                     },
                                     "value": "Cohesion: The Measure of How Strongly-Related is the Set of Functions Performed by a Module"
                                 }
@@ -658,7 +669,8 @@
                                     "name": "li",
                                     "attributes": {
                                         "class": "fragment",
-                                        "data-fragment-index": "0"
+                                        "data-fragment-index": "0",
+                                        "style": "line-height: 90px;"
                                     },
                                     "value": "Control Flow"
                                 },
@@ -710,7 +722,7 @@
         "steps": [
             [
                 {
-                    "name": "p",
+                    "name": "h3",
                     "value": "Javascript is Callback Driven by Nature"
                 },
                 {
@@ -755,7 +767,10 @@
         "steps": [
             [
                 {
-                    "name": "p",
+                    "name": "h3",
+                    "attributes": {
+                        "style": "line-height: 70px;"
+                    },
                     "value": "MVC Frameworks, Embraces SoC and Supplies Needed Tools for Using Pub/Sub"
                 },
                 {
@@ -976,7 +991,10 @@
                     }
                 },
                 {
-                    "name": "p",
+                    "name": "h3",
+                    "attributes": {
+                        "style": "line-height: 70px;"
+                    },
                     "value": "A Native Javascript Event Channels (Pub/Sub) Implementation"
                 },
                 {
@@ -1007,7 +1025,10 @@
                     }
                 },
                 {
-                    "name": "p",
+                    "name": "h3",
+                    "attributes": {
+                        "style": "line-height: 70px;"
+                    },
                     "value": "Allows High Level of Granularity with AppName & EventName"
                 },
                 {
@@ -1038,8 +1059,11 @@
                     }
                 },
                 {
-                    "name": "p",
-                    "value": "Supports 3 Models of Interaction while Keeping Producer/Consumer Low Coupling (Events, Commands, Request/Response)"
+                    "name": "h3",
+                    "attributes": {
+                        "style": "line-height: 70px;"
+                    },
+                    "value": "Supports 3 Models of Interaction while Keeping Low Coupling (Events, Commands, Request/Response)"
                 },
                 {
                     "name": "notes",
@@ -1069,7 +1093,10 @@
                     }
                 },
                 {
-                    "name": "p",
+                    "name": "h3",
+                    "attributes": {
+                        "style": "line-height: 70px;"
+                    },
                     "value": "Supports Synchronous and Asynchronous Binding"
                 },
                 {
@@ -1100,7 +1127,10 @@
                     }
                 },
                 {
-                    "name": "p",
+                    "name": "h3",
+                    "attributes": {
+                        "style": "line-height: 70px;"
+                    },
                     "value": "Allows Data to Be Passed by Reference and By Value"
                 },
                 {
@@ -1131,7 +1161,10 @@
                     }
                 },
                 {
-                    "name": "p",
+                    "name": "h3",
+                    "attributes": {
+                        "style": "line-height: 70px;"
+                    },
                     "value": "Small Size"
                 },
                 {
@@ -1162,7 +1195,10 @@
                     }
                 },
                 {
-                    "name": "p",
+                    "name": "h3",
+                    "attributes": {
+                        "style": "line-height: 70px;"
+                    },
                     "value": "No Additional Dependencies"
                 },
                 {
@@ -1383,7 +1419,7 @@
                         {
                             "name": "ul",
                             "attributes": {
-                                "style": "list-style-type: none;"
+                                "style": "list-style-type: none; height: 500px;"
                             },
                             "value": [
                                 {
@@ -1422,7 +1458,7 @@
                         {
                             "name": "ul",
                             "attributes": {
-                                "style": "list-style-type: none;"
+                                "style": "list-style-type: none; height: 500px;"
                             },
                             "value": [
                                 {
@@ -1435,7 +1471,7 @@
                                         "class": "fragment",
                                         "data-fragment-index": "0"
                                     },
-                                    "value": "And How Would We Communicate with Them?"
+                                    "value": "And How Would We Communicate with Them?<br><br>"
                                 },
                                 {
                                     "name": "li",
@@ -1906,15 +1942,21 @@
                     "name": "div",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 936px; height: 125px; z-index: 4; left: 10px; top: 540px;"
+                        "style": "position: absolute; width: 936px; height: 125px; z-index: 4; left: 2px; top: 540px;"
                     },
                     "value": [
                         {
                             "name": "p",
+                            "attributes": {
+                                "style": "font-size: 31px;"
+                            },
                             "value": "@Npm - <a href=\"https://www.npmjs.com/package/chronosjs\">https://www.npmjs.com/package/chronosjs</a>"
                         },
                         {
                             "name": "p",
+                            "attributes": {
+                                "style": "font-size: 31px;"
+                            },
                             "value": "@GitHub - <a href=\"https://github.com/LivePersonInc/chronosjs\">https://github.com/LivePersonInc/chronosjs</a>"
                         }
                     ]
