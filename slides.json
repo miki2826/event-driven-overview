@@ -1321,7 +1321,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163711/788d89c0-138d-11e5-9733-a9d80e48677c.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8179343/af165fc6-141e-11e5-9e27-ce3221dfc60b.png",
                                 "style": "width: 800px; height: 200px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 60px;",
                                 "class": "absolute-element"
                             }
@@ -1559,7 +1559,7 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Miki: How does courier acctually works,",
+                        "Miki: How does courier actually works,",
                         "We have the host, which hold a courier instance.",
                         "Inside, courier holds his own, cheonosjs channels instance."
                     ]
@@ -1597,7 +1597,7 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Miki: and we have th iFrame which is basically the same.",
+                        "Miki: and we have the iFrame which is basically the same.",
                         "On the iframe creation there is a handshake protocol between the host and iframe.",
                         "Only after the handshake is done, there is a secure channel between both parties and events can be passed back and forth.",
                         "The handshake is an internal process that hapens in the background and as a user of the library you do not need to be worried about it."
@@ -1661,7 +1661,7 @@
                                 {
                                     "name": "img",
                                     "attributes": {
-                                        "src": "https://cloud.githubusercontent.com/assets/5138735/8162869/a255013e-1388-11e5-8340-af4e998562d7.png",
+                                        "src": "https://cloud.githubusercontent.com/assets/5138735/8179347/b3dd9f60-141e-11e5-93ab-204dbe0e51e8.png",
                                         "style": "border: none; box-shadow: none; width: 889px; height: 543px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6;",
                                         "class": "absolute-element"
                                     }
@@ -1758,7 +1758,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163714/78a2ae90-138d-11e5-9cf1-563faa8d3f35.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8179344/af33fafe-141e-11e5-84ce-e2776372ba4e.png",
                                 "style": "width: 900px; height: 110px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 60px;",
                                 "class": "absolute-element"
                             }
@@ -1766,7 +1766,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163717/78adf458-138d-11e5-9c61-f2696dfb9357.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8179345/af45bef6-141e-11e5-938f-508c9d20cc2f.png",
                                 "style": "width: 900px; height: 310px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 60px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
