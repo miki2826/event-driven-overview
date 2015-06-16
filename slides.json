@@ -825,7 +825,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163702/786bd53c-138d-11e5-9d92-d54258d87212.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8183110/5c92c94a-143e-11e5-8cec-b4f639d40118.png",
                                 "style": "width: 900px; height: 360px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
@@ -834,7 +834,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163705/786e8138-138d-11e5-8ca8-312cc0ad4092.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8183109/5c8c89cc-143e-11e5-993d-252b0a309d7b.png",
                                 "style": "width: 900px; height: 600px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "1"
