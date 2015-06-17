@@ -1,4 +1,7 @@
 /* app css stylesheet */
+body {
+    overflow: hidden;
+}
 
 .menu {
   list-style: none;
@@ -29,17 +32,17 @@
   padding: 0;
 }
 .homer {
-  width: 120px;
-  height: 120px;
+  width: 250px;
+  height: 250px;
 }
 .sun {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 200px;
-  height: 200px;
-  margin-left:-100px;
-  margin-top:-100px;
+  width: 600px;
+  height: 600px;
+  margin-left:-300px;
+  margin-top:-300px;
   -webkit-animation:spin 10s linear infinite;
   -moz-animation:spin 10s linear infinite;
   animation:spin 10s linear infinite;

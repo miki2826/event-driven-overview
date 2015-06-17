@@ -49,7 +49,7 @@ angular.module('myApp.earth', ['ngRoute'])
                 data: data
             });
 
-            intervalId = setTimeout(publishAngle, 100);
+            intervalId = setTimeout(publishAngle, 50);
         }
 
         intervalId = setTimeout(publishAngle, 100);
@@ -71,7 +71,7 @@ function createWidgets(chronosjsCourierSupervisor) {
         url: widgetUrl  + "marge_frame.html",
         top: "50%",
         left: "0px",
-        marginTop: "-50px"
+        marginTop: "-100px"
     });
 
     chronosjsCourierSupervisor.createWidget({
@@ -86,7 +86,7 @@ function createWidgets(chronosjsCourierSupervisor) {
         url: widgetUrl + "maggie_frame.html",
         top: "0px",
         left: "50%",
-        marginLeft: "-50px"
+        marginLeft: "-100px"
     });
 
     chronosjsCourierSupervisor.createWidget({
@@ -94,7 +94,7 @@ function createWidgets(chronosjsCourierSupervisor) {
         url: widgetUrl + "lisa_frame.html",
         bottom: "0px",
         left: "50%",
-        marginLeft: "-50px"
+        marginLeft: "-100px"
     });
 
     chronosjsCourierSupervisor.createWidget({
@@ -109,7 +109,7 @@ function createWidgets(chronosjsCourierSupervisor) {
         url: widgetUrl + "barney_frame.html",
         top: "50%",
         right: "0px",
-        marginTop: "-50px"
+        marginTop: "-100px"
     });
 
     chronosjsCourierSupervisor.createWidget({

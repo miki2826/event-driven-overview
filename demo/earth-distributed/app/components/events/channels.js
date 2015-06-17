@@ -9,10 +9,10 @@ angular.module('myApp.chronos', [])
                     url: options.url,
                     bust: false,
                     style: {
-                        width: "100px",
-                        height: "100px",
+                        width: "200px",
+                        height: "200px",
                         position: "fixed",
-                        border: "0",
+                        border: "1",
                         top: options.top,
                         left: options.left,
                         right: options.right,

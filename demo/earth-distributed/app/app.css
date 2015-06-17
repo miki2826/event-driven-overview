@@ -1,4 +1,8 @@
 /* app css stylesheet */
+body {
+    overflow: hidden;
+}
+
 
 .menu {
   list-style: none;
@@ -36,10 +40,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 140px;
-  height: 140px;
-  margin-left:-70px;
-  margin-top:-70px;
+  width: 500px;
+  height: 500px;
+  margin-left:-250px;
+  margin-top:-250px;
   -webkit-animation:spin 15s linear infinite;
   -moz-animation:spin 15s linear infinite;
   animation:spin 15s linear infinite;
