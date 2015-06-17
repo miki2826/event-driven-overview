@@ -8,7 +8,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7565262/56c85948-f7f7-11e4-8986-fb31f35c1c6d.png",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/8218985/86da2664-154f-11e5-8aa8-f5b10cf02cd4.png",
                                 "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
                                 "class": "absolute-element"
                             }
@@ -184,7 +184,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7648881/690fc784-faf0-11e4-99fe-f1c17e0e8d6f.png",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/8219081/3da1f80e-1550-11e5-9975-d03a7e6f713d.png",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
@@ -218,8 +218,8 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7649107/713f847e-faf2-11e4-99b9-d21ced1f63c5.png",
-                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/8219309/c5d3f136-1551-11e5-8236-38af7b84c381.png",
+                                "style": "width: 600px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 200px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
@@ -252,7 +252,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7649158/f4dc74c2-faf2-11e4-8623-57793d635569.png",
+                                "src": "https://cloud.githubusercontent.com/assets/3624786/8219235/3913b90c-1551-11e5-979d-43e3a268d00b.png",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
@@ -744,12 +744,14 @@
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163701/786832f6-138d-11e5-8a1f-a644eeb36ac8.png",
-                                "style": "width: 900px; height: 140px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 100px;",
-                                "class": "absolute-element"
-                            }
+                                "id": "native_events_snippet",
+                                "class": "code absolute-element",
+                                "mode": "javascript",
+                                "style": "width: 900px; height: 140px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 100px;"
+                            },
+                            "value": ""
                         }
                     ]
                 },
@@ -787,27 +789,41 @@
         "steps": [
             [
                 {
-                    "name": "p",
+                    "name": "div",
                     "attributes": {
-                        "style": "height: 600px;"
+                        "style": "height: 120px;",
+                        "class": "fragment",
+                        "data-fragment-index": "0"
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163703/786c16aa-138d-11e5-8c56-5ba4f66ba52f.png",
-                                "style": "width: 900px; height: 140px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
-                                "class": "absolute-element"
-                            }
-                        },
+                                "id": "backbone_message_service_snippet.0",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 400px;",
+                        "class": "fragment",
+                        "data-fragment-index": "1"
+
+                    },
+                    "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163700/7867e364-138d-11e5-8703-96547a76e4be.png",
-                                "style": "width: 900px; height: 360px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "0"
-                            }
+                                "id": "backbone_message_service_snippet.1",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
                         }
                     ]
                 },
@@ -824,44 +840,68 @@
         "steps": [
             [
                 {
-                    "name": "p",
+                    "name": "div",
                     "attributes": {
-                        "style": "height: 600px;"
+                        "style": "height: 35px;",
+                        "class": "fragment",
+                        "data-fragment-index": "0"
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163704/786d5542-138d-11e5-9438-ac046e0835f5.png",
-                                "style": "width: 900px; height: 37px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
-                                "class": "absolute-element"
-                            }
-                        },
+                                "id": "backbone_model_snippet.0",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 290px;",
+                        "class": "fragment",
+                        "data-fragment-index": "1"
+
+                    },
+                    "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8183110/5c92c94a-143e-11e5-8cec-b4f639d40118.png",
-                                "style": "width: 900px; height: 360px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "0"
-                            }
-                        },
+                                "id": "backbone_model_snippet.1",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 300px;",
+                        "class": "fragment",
+                        "data-fragment-index": "2"
+
+                    },
+                    "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8183109/5c8c89cc-143e-11e5-993d-252b0a309d7b.png",
-                                "style": "width: 900px; height: 600px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "1"
-                            }
+                                "id": "backbone_model_snippet.2",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
                         }
                     ]
                 },
                 {
                     "name": "notes",
                     "value": [
-                        "Itai: Backbone itself uses the Backbone.Events to implement allow changes awareness on the Backbone.Model",
-                        "In this Mario Example, when mario eats, an event is triggered and the view redraws a bigger mario"
+                        "Itai: Backbone, for example, have the Backbone.Events which allows simple consuming and triggering of events"
                     ]
                 }
             ]
@@ -871,27 +911,41 @@
         "steps": [
             [
                 {
-                    "name": "p",
+                    "name": "div",
                     "attributes": {
-                        "style": "height: 600px;"
+                        "style": "height: 460px;",
+                        "class": "fragment",
+                        "data-fragment-index": "0"
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163706/78830bf8-138d-11e5-9eec-3d9d31326c12.png",
-                                "style": "width: 900px; height: 400px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
-                                "class": "absolute-element"
-                            }
-                        },
+                                "id": "angular_message_service_snippet.0",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 600px;",
+                        "class": "fragment",
+                        "data-fragment-index": "1"
+
+                    },
+                    "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163707/7884c9fc-138d-11e5-90cb-70840ecf5abc.png",
-                                "style": "width: 900px; height: 600px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "0"
-                            }
+                                "id": "angular_message_service_snippet.1",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
                         }
                     ]
                 },
@@ -909,35 +963,69 @@
         "steps": [
             [
                 {
-                    "name": "p",
+                    "name": "div",
                     "attributes": {
-                        "style": "height: 600px;"
+                        "style": "height: 30px;",
+                        "class": "fragment",
+                        "data-fragment-index": "0"
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163710/78887674-138d-11e5-8123-d8a7d8aaf2fc.png",
-                                "style": "width: 900px; height: 260px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
-                                "class": "absolute-element"
-                            }
-                        },
+                                "id": "angular_scope_snippet.0",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 220px;",
+                        "class": "fragment",
+                        "data-fragment-index": "1"
+
+                    },
+                    "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163708/7886e886-138d-11e5-9cbc-e951a3c13adb.png",
-                                "style": "width: 900px; height: 60  0px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 6px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "0"
-                            }
+                                "id": "angular_scope_snippet.1",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 300px;",
+                        "class": "fragment",
+                        "data-fragment-index": "2"
+
+                    },
+                    "value": [
+                        {
+                            "name": "textarea",
+                            "attributes": {
+                                "id": "angular_scope_snippet.2",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
                         }
                     ]
                 },
                 {
                     "name": "notes",
                     "value": [
-                        "Itai: In this example, we are using the message service to assemble the avengers across multiple different controllers",
-                        "So this is how we can use event driven concepts with the given tools of the framework we are working with"
+                        "Itai: Another maybe even better example is the scope of Angular JS",
+                        "Angular JS scope controls the awareness of changes out of the box, but we can also use it to implement a generic message service"
                     ]
                 }
             ]
@@ -1305,6 +1393,78 @@
         "steps": [
             [
                 {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 30px;",
+                        "class": "fragment",
+                        "data-fragment-index": "0"
+                    },
+                    "value": [
+                        {
+                            "name": "textarea",
+                            "attributes": {
+                                "id": "angular_scope_snippet.0",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 220px;",
+                        "class": "fragment",
+                        "data-fragment-index": "1"
+
+                    },
+                    "value": [
+                        {
+                            "name": "textarea",
+                            "attributes": {
+                                "id": "angular_scope_snippet.1",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 300px;",
+                        "class": "fragment",
+                        "data-fragment-index": "2"
+
+                    },
+                    "value": [
+                        {
+                            "name": "textarea",
+                            "attributes": {
+                                "id": "angular_scope_snippet.2",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "Itai: Another maybe even better example is the scope of Angular JS",
+                        "Angular JS scope controls the awareness of changes out of the box, but we can also use it to implement a generic message service"
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "steps": [
+            [
+                {
                     "name": "h4",
                     "attributes": {
                         "style": "font-weight: bold;"
@@ -1318,12 +1478,13 @@
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163709/78882228-138d-11e5-89c3-07398560b0a1.png",
-                                "style": "width: 900px; height: 157px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 60px;",
-                                "class": "absolute-element"
-                            }
+                                "id": "angular_chronosjs_channel",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
                         }
                     ]
                 },
@@ -1355,12 +1516,13 @@
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8179343/af165fc6-141e-11e5-9e27-ce3221dfc60b.png",
-                                "style": "width: 900px; height: 300px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 60px;",
-                                "class": "absolute-element"
-                            }
+                                "id": "angular_chronosjs_earth_controller",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
                         }
                     ]
                 },
@@ -1387,16 +1549,17 @@
                 {
                     "name": "p",
                     "attributes": {
-                        "style": "height: 600px;"
+                        "style": "height: 700px;"
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163713/78a0c97c-138d-11e5-811e-99ba2a67bfa4.png",
-                                "style": "width: 900px; height: 427px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 60px;",
-                                "class": "absolute-element"
-                            }
+                                "id": "angular_chronosjs_homer_directive",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
                         }
                     ]
                 },
@@ -1728,36 +1891,61 @@
                     "value": "ChronosJS Courier (Supervisor)"
                 },
                 {
-                    "name": "p",
+                    "name": "div",
                     "attributes": {
-                        "style": "height: 600px;"
+                        "style": "height: 180px;",
+                        "class": "fragment",
+                        "data-fragment-index": "0"
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163712/789e7b7c-138d-11e5-82b1-0c44a58cb9d8.png",
-                                "style": "width: 900px; height: 120px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 60px;",
-                                "class": "absolute-element"
-                            }
-                        },
+                                "id": "angular_chronosjs_courier_supervisor.0",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 280px;",
+                        "class": "fragment",
+                        "data-fragment-index": "1"
+
+                    },
+                    "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163715/78a3d3ec-138d-11e5-9974-4ca8fd6dd8f4.png",
-                                "style": "width: 900px; height: 370px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 60px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "0"
-                            }
-                        },
+                                "id": "angular_chronosjs_courier_supervisor.1",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 200px;",
+                        "class": "fragment",
+                        "data-fragment-index": "2"
+
+                    },
+                    "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163716/78a4dcc4-138d-11e5-88ce-d77049107857.png",
-                                "style": "width: 900px; height: 600px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 60px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "1"
-                            }
+                                "id": "angular_chronosjs_courier_supervisor.2",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
                         }
                     ]
                 },
@@ -1786,27 +1974,41 @@
                     "value": "Earth Controller"
                 },
                 {
-                    "name": "p",
+                    "name": "div",
                     "attributes": {
-                        "style": "height: 600px;"
+                        "style": "height: 280px;",
+                        "class": "fragment",
+                        "data-fragment-index": "0"
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8179344/af33fafe-141e-11e5-84ce-e2776372ba4e.png",
-                                "style": "width: 900px; height: 140px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 60px;",
-                                "class": "absolute-element"
-                            }
-                        },
+                                "id": "angular_chronosjs_courier_earth_controller_snippet.0",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 390px;",
+                        "class": "fragment",
+                        "data-fragment-index": "1"
+
+                    },
+                    "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8179345/af45bef6-141e-11e5-938f-508c9d20cc2f.png",
-                                "style": "width: 900px; height: 390px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 60px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "0"
-                            }
+                                "id": "angular_chronosjs_courier_earth_controller_snippet.1",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
                         }
                     ]
                 },
@@ -1830,27 +2032,41 @@
                     "value": "Simpsons Widget (Cross Domain)"
                 },
                 {
-                    "name": "p",
+                    "name": "div",
                     "attributes": {
-                        "style": "height: 600px;"
+                        "style": "height: 30px;",
+                        "class": "fragment",
+                        "data-fragment-index": "0"
                     },
                     "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163718/78b84444-138d-11e5-82d3-8e497df5fd6f.png",
-                                "style": "width: 900px; height: 140px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 60px;",
-                                "class": "absolute-element"
-                            }
-                        },
+                                "id": "angular_chronosjs_courier_homer_widget_snippet.0",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 460px;",
+                        "class": "fragment",
+                        "data-fragment-index": "1"
+
+                    },
+                    "value": [
                         {
-                            "name": "img",
+                            "name": "textarea",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8163719/78bd09fc-138d-11e5-8d00-7ea8370087b5.png",
-                                "style": "width: 900px; height: 540px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 50px; top: 60px;",
-                                "class": "absolute-element fragment",
-                                "data-fragment-index": "0"
-                            }
+                                "id": "angular_chronosjs_courier_homer_widget_snippet.1",
+                                "class": "code absolute-element",
+                                "mode": "javascript"
+                            },
+                            "value": ""
                         }
                     ]
                 },

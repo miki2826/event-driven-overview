@@ -1,11 +1,187 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Choose Your Channels - JSIL 2015</title>
+    <link rel="stylesheet" href="codemirror/codemirror.css"/>
+    <link rel="stylesheet" href="codemirror/xq-dark.css"/>
 </head>
 <body>
     <style id="dynamic-style"></style>
     <div class="logo">&nbsp;</div>
+    <script type="text/template" id="native_events">var bellyButton = document.getElementsByTagName("button")[0];
+bellyButton.onclick = function(e) {
+    alert("(• ◡•)");
+};
+    </script>
+    <script type="text/template" id="backbone_message_service.0">// Backbone
+var MessageService = {};
+_.extend(MessageService.prototype, Backbone.Events);
+    </script>
+    <script type="text/template" id="backbone_message_service.1">// Usage
+var channel = new MessageService();
+channel.trigger("eventName", { data: data });
+channel.on("eventName", function(data) {
+    // Handle Event
+});
+    </script>
+    <script type="text/template" id="backbone_model.0">var HomerModel = Backbone.Model.extend({});</script>
+    <script type="text/template" id="backbone_model.1">var homerCtrl = {
+    eat: function(doughnut) {
+        if (doughnut && doughnut.weight) {
+            var weight = this.model.get("weight");
+            this.model.set("weight", weight + doughnut.weight);
+        }
+    }
+};
+    </script>
+    <script type="text/template" id="backbone_model.2">var HomerView = Backbone.View.extend({
+    initialize: function(options) {
+        this.listenTo(this.model, "change:weight", function() {
+            drawFatterHomer();
+        });
+    }
+});
+    </script>
+    <script type="text/template" id="angular_message_service.0">// AngularJS
+var app = angular.module("App", [])
+    .service("MessageService", function ($rootScope) {
+        this.getMessageChannel = function(scope) {
+            return {
+                trigger: function (text, data) {
+                    $rootScope.$broadcast(text, data);
+                },
+                on: function(name, callback) {
+                    scope.$on(name, callback);
+                }
+            };
+    };
+});
+    </script>
+    <script type="text/template" id="angular_message_service.1">// Usage
+var channel = MessageService.getMessageChannel($scope);
+channel.trigger("eventName", { data: data });
+channel.on("eventName", function(data) {
+    // Handle Event
+});
+    </script>
+    <script type="text/template" id="angular_scope.0">var app = angular.module("App", []);</script>
+    <script type="text/template" id="angular_scope.1">app.controller("MargeCtrl", function($scope, MessageService) {
+    var channel = MessageService.getMessageChannel($scope);
+    channel.on("here", function(events, data) {
+        feed(data);
+    });
+    channel.trigger("food:ready");
+});
+    </script>
+    <script type="text/template" id="angular_scope.2">app.controller("BartCtrl", function($scope, MessageService) {
+    var channel = MessageService.getMessageChannel($scope);
+    channel.on("food:ready", function(events, data) {
+        rollerBlaid2("KITCHEN");
+        channel.trigger("here", { name: "Bart" });
+    });
+});
+app.controller("LisaCtrl", function($scope, MessageService) {
+...
+    </script>
+    <script type="text/template" id="angular_chronosjs_channel">var app = angular.module("App.channels", [])
+    .factory("chronosjsChannel", function ($window) {
+        var chronosjsChannel = new $window.Chronos.Channels();
+        return chronosjsChannel;
+    });
+    </script>
+    <script type="text/template" id="angular_chronosjs_earth_controller">app.controller("EarthCtrl", ["$scope", "chronosjsChannel", function ($scope, chronosjsChannel) {
+    function publishAngle() {
+        var data = getAngle(sunImage);
+        chronosjsChannel.trigger({
+            appName: "EarthCtrl",
+            eventName: "rotation",
+            data: data
+        });
+    }
+    setInterval(publishAngle, 200);
+}]);
+    </script>
+    <script type="text/template" id="angular_chronosjs_homer_directive">angular.module("App.ui-homer", [])
+ .directive("homerImage", ["chronosjsChannel", function (chronosjsChannel) {
+     return {
+       template: "<image ng-src=\"img/{{src}}.jpg\" class=\"homer\"></image>",
+       restrict: "EAC",
+       link: function (scope, elm, attrs) {
+          //...
+          //...
+          chronosjsChannel.bind({
+              appName: "EarthCtrl",
+              eventName: "rotation",
+              func: understandAngle,
+              async: true
+          });
+          scope.src = attrs.default;
+         }
+     };
+}]);
+    </script>
+    <script type="text/template" id="angular_chronosjs_courier_supervisor.0">var app = angular.module("App.channels", []).factory("chronosjsCourierSupervisor", function ($window) {
+  var supervisor = {
+    couriers: {},
+    createWidget: function(opt) {
+      this.couriers[opt.id] = $window.Chronos.PostMessageCourier({ target: {
+    </script>
+    <script type="text/template" id="angular_chronosjs_courier_supervisor.1">        url: opt.url,
+        style: {/*...*/},
+        callback: function () {
+          this.couriers[options.id].trigger({
+            appName: "CourierSupervisor",
+            eventName: "position",
+            data: {/*...*/}
+          });}}});
+    },
+    </script>
+    <script type="text/template" id="angular_chronosjs_courier_supervisor.2">    applyAll: function(fnName, options) {
+      // Iterate over all couriers and invoke function
+    };
+    return supervisor;
+});
+    </script>
+    <script type="text/template" id="angular_chronosjs_courier_earth_controller.0">app.controller("EarthCtrl", ["$scope", "chronosjsCourierSupervisor", function ($scope, chronosjsCourierSupervisor) {
+    (function createWidgets() {
+        chronosjsCourierSupervisor.createWidget({ id:"w1",top:"0px",left:"0px",url:"http://127.0.0.1/../widget_frame.html" });
+        chronosjsCourierSupervisor.createWidget({ id:"w2",top:"35px",left:"0px",url:"http://127.0.0.1/../widget_frame.html" });
+        // More Widgets
+    })();
+    </script>
+    <script type="text/template" id="angular_chronosjs_courier_earth_controller.1">app.controller("EarthCtrl", ["$scope", "chronosjsCourierSupervisor", function ($scope, chronosjsCourierSupervisor) {
+    function publishAngle() {
+        var data = getAngle(sunImage);
+        chronosjsCourierSupervisor.applyAll("trigger", {
+            appName: "EarthCtrl",
+            eventName: "rotation",
+            data: data
+        });
+    }
+    setInterval(publishAngle, 200);
+}]);
+    </script>
+    <script type="text/template" id="angular_chronosjs_courier_homer_widget.0">var courier = new window.Chronos.PostMessageCourier();</script>
+    <script type="text/template" id="angular_chronosjs_courier_homer_widget.1">//...
+//...
+courier.bind({
+    appName: "CourierSupervisor",
+    eventName: "position",
+    func: initPosition,
+    async: true
+});
+courier.bind({
+    appName: "EarthCtrl",
+    eventName: "rotation",
+    func: understandAngle,
+    async: true
+});
+    </script>
+    <script src="codemirror/codemirror.js"></script>
+    <script src="codemirror/javascript.js"></script>
+    <script src="codemirror/q.js"></script>
+    <script src="codemirror/revealjs-codemirror-core.js"></script>
     <!-- Get the RevealularJS lib -->
     <script type="text/javascript" src="//gh.itkoren.com/revealular/initializer.js" data-slides="slides"></script>
 </body>

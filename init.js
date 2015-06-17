@@ -68,7 +68,7 @@ Reveal.initialize({
     backgroundTransition: "slide", // default/none/slide/concave/convex/zoom
 
     // Number of slides away from the current that are visible
-    viewDistance: 3,
+    viewDistance: 50,
 
     // Parallax scrolling
     //parallaxBackgroundImage: "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg",
@@ -109,5 +109,22 @@ setTimeout(function() {
 .reveal h5,\
 .reveal h6 { \
     font-family: Courier, \"Lucida Console\", monospace;\
+}\
+\
+.reveal pre {\
+    margin: 3px;\
+    padding: 3px;\
 }";
 }, 1000);
+
+var codes = document.getElementsByClassName("code");
+for (var i = 0; i < codes.length; i++) {
+    codes[i].innerText = document.getElementById(codes[i].id.replace("_snippet", "")).innerHTML;
+}
+
+revealjscodemirror.codemirrorify({
+    lineNumbers: false,
+    styleActiveLine: true,
+    matchBrackets: true,
+    theme: "xq-dark"
+});
