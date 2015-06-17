@@ -1281,9 +1281,11 @@
                     },
                     "value": [
                         {
-                            "name": "iframe",
+                            "name": "video",
                             "attributes": {
-                                "src": "./demo/earth/app/index.html",
+                                "src": "./homer.mov",
+                                "autoplay": "true",
+                                "loop": "true",
                                 "style": "top: 10px; width: 100%; height: 100%; max-height: none; max-width: none; background-color: white"
                             }
                         }
@@ -1884,10 +1886,13 @@
                     },
                     "value": [
                         {
-                            "name": "iframe",
+                            "name": "video",
                             "attributes": {
-                                "src": "./demo/earth-distributed/app/index.html",
+                                "src": "./platform.mov",
+                                "autoplay": "true",
+                                "loop": "true",
                                 "style": "top: 2px; width: 100%; height: 100%; max-height: none; max-width: none; background-color: white"
+
                             }
                         }
                     ]
