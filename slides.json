@@ -326,10 +326,19 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/5138735/8225635/b7d30664-159f-11e5-941f-407d24c2e514.jpg",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8226612/e08821da-15a8-11e5-90dd-513a04e7cdc7.jpg",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8226578/a2d88df2-15a8-11e5-89a0-592cb89a57d2.jpg",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "1"
                             }
                         }
                     ]
