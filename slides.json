@@ -8,8 +8,8 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/8218985/86da2664-154f-11e5-8aa8-f5b10cf02cd4.png",
-                                "style": "width: 429px; height: 283px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 269px; top: 6px;",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8224683/6bf74d38-1593-11e5-9dac-a94892e13cbc.jpg",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
@@ -19,7 +19,7 @@
                     "name": "h2",
                     "attributes": {
                         "class": "absolute-element",
-                        "style": "position: absolute; width: 586px; height: 65px; z-index: 4; left: 200px; top: 327px;"
+                        "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
                     "value": "Choose Your Channels"
                 }
@@ -184,7 +184,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/8219081/3da1f80e-1550-11e5-9975-d03a7e6f713d.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8225468/aa893d86-159d-11e5-9687-4cedaacfb151.jpg",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
@@ -218,8 +218,8 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/8219309/c5d3f136-1551-11e5-8236-38af7b84c381.png",
-                                "style": "width: 600px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 200px; top: 6px;",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8224774/0a14213e-1595-11e5-9f6a-24aa8bc43660.jpg",
+                                "style": "width: 400px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 300px; top: 6px;",
                                 "class": "absolute-element"
                             }
                         }
@@ -326,7 +326,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784315/1bf6ee84-016a-11e5-95e8-ddf1824f4221.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8225635/b7d30664-159f-11e5-941f-407d24c2e514.jpg",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
@@ -379,10 +379,28 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784378/889c9e42-016c-11e5-8400-788aa1f3075a.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8225921/b90f5b88-15a2-11e5-9bc0-b44bfd412497.jpg",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8225910/88b26bb0-15a2-11e5-9097-5d27f619422a.jpg",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "1"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8225890/52b11052-15a2-11e5-9c8e-2b2a64a99aad.jpg",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "2"
                             }
                         }
                     ]
@@ -508,10 +526,37 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7784412/737d11da-016d-11e5-8f7f-c74a421f059f.png",
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8226313/3484f428-15a6-11e5-8123-d62bbd3a291c.jpg",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element fragment",
                                 "data-fragment-index": "0"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8226289/030237a8-15a6-11e5-9dfa-0943fddd9c11.jpg",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "1"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8226279/f2a92fc4-15a5-11e5-99cb-cdc0860a959e.jpg",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "2"
+                            }
+                        },
+                        {
+                            "name": "img",
+                            "attributes": {
+                                "src": "https://cloud.githubusercontent.com/assets/5138735/8226126/8eada276-15a4-11e5-84e6-16b3656a8459.jpg",
+                                "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
+                                "class": "absolute-element fragment",
+                                "data-fragment-index": "3"
                             }
                         }
                     ]
