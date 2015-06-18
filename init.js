@@ -113,7 +113,7 @@ setTimeout(function() {
 \
 .reveal pre {\
     margin: 1px;\
-    padding: 1px;\
+    padding: 1px 20px;\
 }";
 }, 1000);
 

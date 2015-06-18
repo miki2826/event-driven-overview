@@ -38,7 +38,7 @@ channel.on("eventName", function(data) {
     </script>
     <script type="text/template" id="backbone_model.2">var HomerView = Backbone.View.extend({
     initialize: function(options) {
-        this.listenTo(this.model, "change:weight", function() {
+        this.model.on("change:weight", function() {
             drawFatterHomer();
         });
     }
@@ -92,8 +92,8 @@ app.controller("LisaCtrl", function($scope, MessageService) {
         return chronosjsChannel;
     });
     </script>
-    <script type="text/template" id="angular_chronosjs_earth_controller">app.controller("EarthCtrl", ["$scope", "chronosjsChannel",
-  function ($scope, chronosjsChannel) {
+    <script type="text/template" id="angular_chronosjs_earth_controller">app.controller("EarthCtrl", ["chronosjsChannel",
+  function (chronosjsChannel) {
     function publishAngle() {
         var data = getAngle(sunImage);
         chronosjsChannel.trigger({
@@ -151,9 +151,9 @@ app.controller("LisaCtrl", function($scope, MessageService) {
   function (chronosjsCourierSupervisor) {
 
     (function createWidgets() {
-        chronosjsCourierSupervisor.createWidget({ id:"w1",top:"0px",left:"0px",url:"http://domain-x.com/..." });
-        chronosjsCourierSupervisor.createWidget({ id:"w2",top:"35px",left:"0px",url:"http://domain-y.com/..." });
-        // More Widgets
+      chronosjsCourierSupervisor.createWidget({ id:"w1",top:"0px",left:"0px",url:"http://domain-x.com/..." });
+      chronosjsCourierSupervisor.createWidget({ id:"w2",top:"35px",left:"0px",url:"http://domain-y.com/..." });
+      // More Widgets
     })();
     </script>
     <script type="text/template" id="angular_chronosjs_courier_earth_controller.1">   function publishAngle() {
