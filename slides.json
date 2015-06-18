@@ -861,7 +861,7 @@
                 {
                     "name": "div",
                     "attributes": {
-                        "style": "height: 290px;",
+                        "style": "height: 270px;",
                         "class": "fragment",
                         "data-fragment-index": "1"
 
@@ -901,7 +901,8 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Itai: Backbone, for example, have the Backbone.Events which allows simple consuming and triggering of events"
+                        "Itai: Backbone itself uses the Backbone.Events to implement allow changes awareness on the Backbone.Model",
+                        "In this Homer Example, when Homer eats a doughnut, an event is triggered and the view redraws a fatter homer"
                     ]
                 }
             ]
@@ -913,7 +914,7 @@
                 {
                     "name": "div",
                     "attributes": {
-                        "style": "height: 460px;",
+                        "style": "height: 380px;",
                         "class": "fragment",
                         "data-fragment-index": "0"
                     },
@@ -1024,8 +1025,8 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Itai: Another maybe even better example is the scope of Angular JS",
-                        "Angular JS scope controls the awareness of changes out of the box, but we can also use it to implement a generic message service"
+                        "Itai: In this example, we are using the message service to assemble the avengers across multiple different controllers",
+                        "So this is how we can use event driven concepts with the given tools of the framework we are working with"
                     ]
                 }
             ]
@@ -1395,78 +1396,6 @@
         "steps": [
             [
                 {
-                    "name": "div",
-                    "attributes": {
-                        "style": "height: 30px;",
-                        "class": "fragment",
-                        "data-fragment-index": "0"
-                    },
-                    "value": [
-                        {
-                            "name": "textarea",
-                            "attributes": {
-                                "id": "angular_scope_snippet.0",
-                                "class": "code absolute-element",
-                                "mode": "javascript"
-                            },
-                            "value": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "div",
-                    "attributes": {
-                        "style": "height: 220px;",
-                        "class": "fragment",
-                        "data-fragment-index": "1"
-
-                    },
-                    "value": [
-                        {
-                            "name": "textarea",
-                            "attributes": {
-                                "id": "angular_scope_snippet.1",
-                                "class": "code absolute-element",
-                                "mode": "javascript"
-                            },
-                            "value": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "div",
-                    "attributes": {
-                        "style": "height: 300px;",
-                        "class": "fragment",
-                        "data-fragment-index": "2"
-
-                    },
-                    "value": [
-                        {
-                            "name": "textarea",
-                            "attributes": {
-                                "id": "angular_scope_snippet.2",
-                                "class": "code absolute-element",
-                                "mode": "javascript"
-                            },
-                            "value": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "notes",
-                    "value": [
-                        "Itai: Another maybe even better example is the scope of Angular JS",
-                        "Angular JS scope controls the awareness of changes out of the box, but we can also use it to implement a generic message service"
-                    ]
-                }
-            ]
-        ]
-    },
-    {
-        "steps": [
-            [
-                {
                     "name": "h4",
                     "attributes": {
                         "style": "font-weight: bold;"
@@ -1482,7 +1411,7 @@
                         {
                             "name": "textarea",
                             "attributes": {
-                                "id": "angular_chronosjs_channel",
+                                "id": "angular_chronosjs_channel_snippet",
                                 "class": "code absolute-element",
                                 "mode": "javascript"
                             },
@@ -1520,7 +1449,7 @@
                         {
                             "name": "textarea",
                             "attributes": {
-                                "id": "angular_chronosjs_earth_controller",
+                                "id": "angular_chronosjs_earth_controller_snippet",
                                 "class": "code absolute-element",
                                 "mode": "javascript"
                             },
@@ -1557,7 +1486,7 @@
                         {
                             "name": "textarea",
                             "attributes": {
-                                "id": "angular_chronosjs_homer_directive",
+                                "id": "angular_chronosjs_homer_directive_snippet",
                                 "class": "code absolute-element",
                                 "mode": "javascript"
                             },
@@ -1762,7 +1691,7 @@
                     "value": [
                         "Miki: How does courier actually works,",
                         "We have the host, which hold a courier instance.",
-                        "Inside, courier holds his own, cheonosjs channels instance."
+                        "Inside, courier holds his own, chronosjs channels instance."
                     ]
                 }
             ]
@@ -1915,7 +1844,7 @@
                 {
                     "name": "div",
                     "attributes": {
-                        "style": "height: 180px;",
+                        "style": "height: 154px;",
                         "class": "fragment",
                         "data-fragment-index": "0"
                     },
@@ -1923,7 +1852,7 @@
                         {
                             "name": "textarea",
                             "attributes": {
-                                "id": "angular_chronosjs_courier_supervisor.0",
+                                "id": "angular_chronosjs_courier_supervisor_snippet.0",
                                 "class": "code absolute-element",
                                 "mode": "javascript"
                             },
@@ -1934,7 +1863,7 @@
                 {
                     "name": "div",
                     "attributes": {
-                        "style": "height: 280px;",
+                        "style": "height: 250px;",
                         "class": "fragment",
                         "data-fragment-index": "1"
 
@@ -1943,7 +1872,7 @@
                         {
                             "name": "textarea",
                             "attributes": {
-                                "id": "angular_chronosjs_courier_supervisor.1",
+                                "id": "angular_chronosjs_courier_supervisor_snippet.1",
                                 "class": "code absolute-element",
                                 "mode": "javascript"
                             },
@@ -1963,7 +1892,7 @@
                         {
                             "name": "textarea",
                             "attributes": {
-                                "id": "angular_chronosjs_courier_supervisor.2",
+                                "id": "angular_chronosjs_courier_supervisor_snippet.2",
                                 "class": "code absolute-element",
                                 "mode": "javascript"
                             },

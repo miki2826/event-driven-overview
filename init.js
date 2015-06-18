@@ -112,8 +112,8 @@ setTimeout(function() {
 }\
 \
 .reveal pre {\
-    margin: 3px;\
-    padding: 3px;\
+    margin: 1px;\
+    padding: 1px;\
 }";
 }, 1000);
 
@@ -126,5 +126,6 @@ revealjscodemirror.codemirrorify({
     lineNumbers: false,
     styleActiveLine: true,
     matchBrackets: true,
+    scrollbarStyle: "null",
     theme: "xq-dark"
 });

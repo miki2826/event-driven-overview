@@ -4,12 +4,13 @@
     /* Set height, width, borders, and global font properties here */
     font-family: monospace;
     color: black;
+    height: 490px;
 }
 
 /* PADDING */
 
 .CodeMirror-lines {
-    padding: 4px 0 10px 0; /* Vertical padding around content */
+    padding: 4px 0 4px 0; /* Vertical padding around content */
 }
 .CodeMirror pre {
     padding: 0 4px; /* Horizontal padding of content */

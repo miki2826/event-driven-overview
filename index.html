@@ -90,7 +90,8 @@ app.controller("LisaCtrl", function($scope, MessageService) {
         return chronosjsChannel;
     });
     </script>
-    <script type="text/template" id="angular_chronosjs_earth_controller">app.controller("EarthCtrl", ["$scope", "chronosjsChannel", function ($scope, chronosjsChannel) {
+    <script type="text/template" id="angular_chronosjs_earth_controller">app.controller("EarthCtrl", ["$scope", "chronosjsChannel",
+  function ($scope, chronosjsChannel) {
     function publishAngle() {
         var data = getAngle(sunImage);
         chronosjsChannel.trigger({
@@ -104,24 +105,25 @@ app.controller("LisaCtrl", function($scope, MessageService) {
     </script>
     <script type="text/template" id="angular_chronosjs_homer_directive">angular.module("App.ui-homer", [])
  .directive("homerImage", ["chronosjsChannel", function (chronosjsChannel) {
-     return {
-       template: "<image ng-src=\"img/{{src}}.jpg\" class=\"homer\"></image>",
-       restrict: "EAC",
-       link: function (scope, elm, attrs) {
-          //...
-          //...
-          chronosjsChannel.bind({
-              appName: "EarthCtrl",
-              eventName: "rotation",
-              func: understandAngle,
-              async: true
-          });
-          scope.src = attrs.default;
-         }
-     };
+   return {
+     template: "<image ng-src=\"img/{{src}}.jpg\" class=\"homer\"></image>",
+     restrict: "EAC",
+     link: function (scope, elm, attrs) {
+       //...
+       //...
+       chronosjsChannel.bind({
+         appName: "EarthCtrl",
+         eventName: "rotation",
+         func: understandAngle,
+         async: true
+       });
+       scope.src = attrs.default;
+     }
+   };
 }]);
     </script>
-    <script type="text/template" id="angular_chronosjs_courier_supervisor.0">var app = angular.module("App.channels", []).factory("chronosjsCourierSupervisor", function ($window) {
+    <script type="text/template" id="angular_chronosjs_courier_supervisor.0">var app = angular.module("App.channels", [])
+ .factory("chronosjsCourierSupervisor", function ($window) {
   var supervisor = {
     couriers: {},
     createWidget: function(opt) {
@@ -143,15 +145,16 @@ app.controller("LisaCtrl", function($scope, MessageService) {
     return supervisor;
 });
     </script>
-    <script type="text/template" id="angular_chronosjs_courier_earth_controller.0">app.controller("EarthCtrl", ["$scope", "chronosjsCourierSupervisor", function ($scope, chronosjsCourierSupervisor) {
+    <script type="text/template" id="angular_chronosjs_courier_earth_controller.0">app.controller("EarthCtrl", ["chronosjsCourierSupervisor",
+  function (chronosjsCourierSupervisor) {
+
     (function createWidgets() {
-        chronosjsCourierSupervisor.createWidget({ id:"w1",top:"0px",left:"0px",url:"http://127.0.0.1/../widget_frame.html" });
-        chronosjsCourierSupervisor.createWidget({ id:"w2",top:"35px",left:"0px",url:"http://127.0.0.1/../widget_frame.html" });
+        chronosjsCourierSupervisor.createWidget({ id:"w1",top:"0px",left:"0px",url:"http://domain-x.com/..." });
+        chronosjsCourierSupervisor.createWidget({ id:"w2",top:"35px",left:"0px",url:"http://domain-y.com/..." });
         // More Widgets
     })();
     </script>
-    <script type="text/template" id="angular_chronosjs_courier_earth_controller.1">app.controller("EarthCtrl", ["$scope", "chronosjsCourierSupervisor", function ($scope, chronosjsCourierSupervisor) {
-    function publishAngle() {
+    <script type="text/template" id="angular_chronosjs_courier_earth_controller.1">   function publishAngle() {
         var data = getAngle(sunImage);
         chronosjsCourierSupervisor.applyAll("trigger", {
             appName: "EarthCtrl",
