@@ -1485,9 +1485,10 @@
                         {
                             "name": "video",
                             "attributes": {
+                                "class": "video",
                                 "src": "./demo/homer.mov",
-                                "autoplay": "true",
-                                "loop": "true",
+                                "autoplay": "autoplay",
+                                "loop": "loop",
                                 "style": "top: 10px; width: 100%; height: 100%; max-height: none; max-width: none; background-color: white"
                             }
                         }
@@ -2160,11 +2161,11 @@
                         {
                             "name": "video",
                             "attributes": {
+                                "class": "video",
                                 "src": "./demo/platform.mov",
-                                "autoplay": "true",
-                                "loop": "true",
+                                "autoplay": "autoplay",
+                                "loop": "loop",
                                 "style": "top: 2px; width: 100%; height: 100%; max-height: none; max-width: none; background-color: white"
-
                             }
                         }
                     ]

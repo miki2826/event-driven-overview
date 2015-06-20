@@ -129,3 +129,17 @@ revealjscodemirror.codemirrorify({
     scrollbarStyle: "null",
     theme: "xq-dark"
 });
+
+//
+var dateThrottler = (new Date()).getTime();
+window.addEventListener("click", function() {
+    if (4000 < (((new Date()).getTime() - dateThrottler))) {
+        var videos = document.getElementsByClassName("video");
+        for (var i = 0; i < videos.length; i++) {
+            videos[i].pause();
+            videos[i].currentTime = "0";
+            videos[i].play();
+        }
+        dateThrottler = (new Date()).getTime();
+    }
+}, false);
