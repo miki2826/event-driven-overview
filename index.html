@@ -20,10 +20,14 @@ _.extend(MessageService.prototype, Backbone.Events);
     </script>
     <script type="text/template" id="backbone_message_service.1">// Usage
 var channel = new MessageService();
-channel.trigger("eventName", { data: data });
+// Bind
 channel.on("eventName", function(data) {
     // Handle Event
 });
+//...
+//...
+// Trigger
+channel.trigger("eventName", { data: data });
     </script>
     <script type="text/template" id="backbone_model.0">var HomerModel = Backbone.Model.extend({});
     </script>
@@ -61,10 +65,14 @@ var app = angular.module("App", [])
     </script>
     <script type="text/template" id="angular_message_service.1">// Usage
 var channel = MessageService.getMessageChannel($scope);
-channel.trigger("eventName", { data: data });
+// Bind
 channel.on("eventName", function(data) {
     // Handle Event
 });
+//...
+//...
+// Trigger
+channel.trigger("eventName", { data: data });
     </script>
     <script type="text/template" id="angular_scope.0">var app = angular.module("App", []);
     </script>
@@ -92,17 +100,16 @@ app.controller("LisaCtrl", function($scope, MessageService) {
         return chronosjsChannel;
     });
     </script>
-    <script type="text/template" id="angular_chronosjs_earth_controller">app.controller("EarthCtrl", ["chronosjsChannel",
-  function (chronosjsChannel) {
-    function publishAngle() {
-        var data = getAngle(sunImage);
-        chronosjsChannel.trigger({
-            appName: "EarthCtrl",
-            eventName: "rotation",
-            data: data
-        });
-    }
-    setInterval(publishAngle, 200);
+    <script type="text/template" id="angular_chronosjs_earth_controller">app.controller("EarthCtrl", ["chronosjsChannel", function(chronosjsChannel) {
+  function publishAngle() {
+    var data = getAngle(sunImage);
+    chronosjsChannel.trigger({
+      appName: "earth",
+      eventName: "rotation",
+      data: data
+    });
+  }
+  setInterval(publishAngle, 200);
 }]);
     </script>
     <script type="text/template" id="angular_chronosjs_homer_directive">angular.module("App.ui-homer", [])
@@ -114,7 +121,7 @@ app.controller("LisaCtrl", function($scope, MessageService) {
        //...
        //...
        chronosjsChannel.bind({
-         appName: "EarthCtrl",
+         appName: "earth",
          eventName: "rotation",
          func: understandAngle,
          async: true
@@ -135,7 +142,7 @@ app.controller("LisaCtrl", function($scope, MessageService) {
         style: {/*...*/},
         callback: function () {
           this.couriers[options.id].trigger({
-            appName: "CourierSupervisor",
+            appName: "configure",
             eventName: "position",
             data: {/*...*/}
           });}}});
@@ -148,7 +155,7 @@ app.controller("LisaCtrl", function($scope, MessageService) {
 });
     </script>
     <script type="text/template" id="angular_chronosjs_courier_earth_controller.0">app.controller("EarthCtrl", ["chronosjsCourierSupervisor",
-  function (chronosjsCourierSupervisor) {
+  function(chronosjsCourierSupervisor) {
 
     (function createWidgets() {
       chronosjsCourierSupervisor.createWidget({ id:"w1",top:"0px",left:"0px",url:"http://domain-x.com/..." });
@@ -156,13 +163,13 @@ app.controller("LisaCtrl", function($scope, MessageService) {
       // More Widgets
     })();
     </script>
-    <script type="text/template" id="angular_chronosjs_courier_earth_controller.1">   function publishAngle() {
-        var data = getAngle(sunImage);
-        chronosjsCourierSupervisor.applyAll("trigger", {
-            appName: "EarthCtrl",
-            eventName: "rotation",
-            data: data
-        });
+    <script type="text/template" id="angular_chronosjs_courier_earth_controller.1">    function publishAngle() {
+      var data = getAngle(sunImage);
+      chronosjsCourierSupervisor.applyAll("trigger", {
+        appName: "earth",
+        eventName: "rotation",
+        data: data
+      });
     }
     setInterval(publishAngle, 200);
 }]);
@@ -172,13 +179,13 @@ app.controller("LisaCtrl", function($scope, MessageService) {
     <script type="text/template" id="angular_chronosjs_courier_homer_widget.1">//...
 //...
 courier.bind({
-    appName: "CourierSupervisor",
+    appName: "configure",
     eventName: "position",
     func: initPosition,
     async: true
 });
 courier.bind({
-    appName: "EarthCtrl",
+    appName: "earth",
     eventName: "rotation",
     func: understandAngle,
     async: true
