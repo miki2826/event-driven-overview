@@ -86,19 +86,41 @@ Reveal.initialize({
     // Optional libraries used to extend on reveal.js
     dependencies: [
         // and if you want speaker notes
-        { src: "//gh.itkoren.com/revealular/reveal.js/lib/js/classList.js", condition: function() { return !document.body.classList; } },
+        {
+            src: "//gh.itkoren.com/revealular/reveal.js/lib/js/classList.js", condition: function () {
+            return !document.body.classList;
+        }
+        },
 
-        { src: "//gh.itkoren.com/revealular/reveal.js/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: "//gh.itkoren.com/revealular/reveal.js/plugin/zoom-js/zoom.js", async: true, condition: function() { return !!document.body.classList; } },
+        {
+            src: "//gh.itkoren.com/revealular/reveal.js/plugin/highlight/highlight.js",
+            async: true,
+            callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+        },
+        {
+            src: "//gh.itkoren.com/revealular/reveal.js/plugin/zoom-js/zoom.js", async: true, condition: function () {
+            return !!document.body.classList;
+        }
+        },
         // { src: "//gh.itkoren.com/revealular/reveal.js/plugin/search/search.js", async: true, condition: function() { return !!document.body.classList; } },
-        { src: "./plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } },
+        {
+            src: "./plugin/notes/notes.js", async: true, condition: function () {
+            return !!document.body.classList;
+        }
+        },
 
         // Browser Console Speaker Notes
-        { src: "//gh.itkoren.com/revealular/js/console-notes.js", async: true, condition: function() { return !!document.body.classList; } }
+        {
+            src: "//gh.itkoren.com/revealular/js/console-notes.js", async: true, condition: function () {
+            return !!document.body.classList;
+        }
+        }
     ]
 });
 
-setTimeout(function() {
+setTimeout(function () {
     var style = document.getElementById("dynamic-style");
     style.textContent = "\
 .reveal,\
@@ -132,14 +154,16 @@ revealjscodemirror.codemirrorify({
 
 //
 var dateThrottler = (new Date()).getTime();
-window.addEventListener("click", function() {
+window.addEventListener("keyup", function () {
     if (4000 < (((new Date()).getTime() - dateThrottler))) {
         var videos = document.getElementsByClassName("video");
-        for (var i = 0; i < videos.length; i++) {
-            videos[i].pause();
-            videos[i].currentTime = "0";
-            videos[i].play();
-        }
-        dateThrottler = (new Date()).getTime();
+        setTimeout(function () {
+            for (var i = 0; i < videos.length; i++) {
+                videos[i].pause();
+                videos[i].currentTime = "0";
+                videos[i].play();
+            }
+            dateThrottler = (new Date()).getTime();
+        }, 500);
     }
 }, false);
