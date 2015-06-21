@@ -44,7 +44,7 @@ angular.module('myApp.ui-homer', [])
                 }
 
                 chronosChannels.bind({
-                    appName: "EarthCtrl",
+                    appName: "earth",
                     eventName: "rotation",
                     func: understandAngle,
                     async: true

@@ -12,7 +12,7 @@
     function publishAngle() {
         var data = getAngle(sunImage);
         chronosjsChannel.trigger({
-            appName: "EarthCtrl",
+            appName: "earth",
             eventName: "rotation",
             data: data
         });

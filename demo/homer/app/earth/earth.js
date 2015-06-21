@@ -43,7 +43,7 @@ angular.module('myApp.earth', ['ngRoute'])
             $scope.deg = data;
             $scope.$apply();
             chronosjsChannel.trigger({
-                appName: "EarthCtrl",
+                appName: "earth",
                 eventName: "rotation",
                 data: data
             });

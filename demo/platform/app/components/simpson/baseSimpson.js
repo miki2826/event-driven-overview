@@ -45,14 +45,14 @@ function inRange(limitA, limitB, num) {
 }
 
 courier.bind({
-    appName: "CourierSupervisor",
+    appName: "configure",
     eventName: "position",
     func: initPosition,
     async: true
 });
 
 courier.bind({
-    appName: "EarthCtrl",
+    appName: "earth",
     eventName: "rotation",
     func: understandAngle,
     async: true

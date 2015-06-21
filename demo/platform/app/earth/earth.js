@@ -44,7 +44,7 @@ angular.module('myApp.earth', ['ngRoute'])
             $scope.deg = data;
             $scope.$apply();
             chronosCourierSupervisor.applyAll("trigger", {
-                appName: "EarthCtrl",
+                appName: "earth",
                 eventName: "rotation",
                 data: data
             });
@@ -143,5 +143,5 @@ function getCrossDomainWidgetUrl() {
         different = window.location.protocol + "//" + current;
     }
 
-    return different + (0 < window.location.port.length ? ":" + window.location.port : "") + (-1 !== (parts[1] && parts[1].indexOf("app")) ? "/app" : "/" + parts[1] + "/demo/earth-distributed/app") + "/components/simpson/";
+    return different + (0 < window.location.port.length ? ":" + window.location.port : "") + (-1 !== (parts[1] && parts[1].indexOf("app")) ? "/app" : "/" + parts[1] + "/demo/platform/app") + "/components/simpson/";
 }

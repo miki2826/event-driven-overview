@@ -27,7 +27,7 @@ angular.module('myApp.chronos', [])
                         } else {
                             var rec = iframe.getBoundingClientRect();
                             couriers[options.id].trigger({
-                                appName: "CourierSupervisor",
+                                appName: "configure",
                                 eventName: "position",
                                 data: {
                                     start: {
