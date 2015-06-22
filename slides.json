@@ -434,7 +434,8 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Miki: Another option, is a Push based model, such as callbacks"
+                        "Miki: Another option, is a Push based model, such as callbacks",
+                        "Example: reading a file in NodeJS providing callback for when the file is ready."
                     ]
                 }
             ]
@@ -743,11 +744,8 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Miki: but there are also a few drawbacks that we should be aware of.",
-                        "Itai: Really?",
-                        "Miki: Using an event bus makes it problematic to follow the control flow, which makes it harder to debug and understand,",
-                        "Multiple entities can have listeners which consume the same event and since the order is unknown, it can make the flow hard to follow.",
-                        "However, when your application design follows the event driven practices, and you maintain SoC and modularity, the order of the events should not have any effect on the flow"
+                        "יש הטוענים כי שימוש באיבנטים ואיבנט באס מביאים איתם מספר חסרונות: קונטרול פלו בעייתי ומורכבות מכיוון שסדר האיבנטים אינו ידוע וסדר הקריאה להנדלרים לא ידוע וגם יכול להשתנות.",
+                        "מכאן שגם קיים קושי לדבג את הפלו. לכן כאשר האפליקציה שלנו היא איבנט דריבן ואנחנו משתמשים באיבנטים אנחנו לעולם לא נסתמך על הסדר שלהם. "
                     ]
                 }
             ]
@@ -1433,7 +1431,7 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Miki: Overall, we provide an extended functionality over existing frameworks"
+                        "Miki: Overall, we provide an extended functionality over existing frameworks, and it is a good addition to our toolbox"
                     ]
                 }
             ]
