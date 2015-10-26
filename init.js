@@ -125,6 +125,26 @@ setTimeout(function () {
     var style = document.getElementById("dynamic-style");
     style.textContent = "\
 \
+@font-face {\
+    font-family: opensans;\
+    src: url(OpenSans-Regular.ttf);\
+}\
+body {\
+ background:#2ba056;\
+ background-color:#2ba056;\
+}\
+\.reveal {\
+    font-family: opensans;\
+    color: white; \
+}\
+\.reveal h1,\
+    .reveal h2,\
+    .reveal h3,\
+    .reveal h4,\
+    .reveal h5,\
+    .reveal h6 {\
+        color: white;\
+        font-family: opensans;}\
 .reveal pre {\
     margin: 1px;\
     padding: 1px 20px;\
