@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Choose Your Channels - JSIL 2015</title>
+    <title>Event Driven Overview</title>
     <link rel="stylesheet" href="codemirror/codemirror.css"/>
     <link rel="stylesheet" href="codemirror/xq-dark.css"/>
 </head>
@@ -48,51 +48,40 @@ channel.trigger("eventName", { data: data });
     }
 });
     </script>
-    <script type="text/template" id="angular_message_service.0">// AngularJS
-var app = angular.module("App", [])
-    .service("MessageService", function ($rootScope) {
-        this.getMessageChannel = function(scope) {
-            return {
-                trigger: function (text, data) {
-                    $rootScope.$broadcast(text, data);
-                },
-                on: function(name, callback) {
-                    scope.$on(name, callback);
-                }
-            };
-    };
-});
+    <script type="text/template" id="angular_message_service.0">@implementation SimpsonCharacter
+- (id) init
+{
+    //...
+    [[NSNotificationCenter defaultCenter] addObserver:self
+    selector:@selector(comeToEat:) name:@"FoodIsReady"
+    object:nil];
+}
+- (void) comeToEat:(NSNotification *) notification
+{
+    if ([[notification name] isEqualToString:@"FoodIsReady"])
+    NSLog (@"Coming!");
+}
+@end
     </script>
-    <script type="text/template" id="angular_message_service.1">// Usage
-var channel = MessageService.getMessageChannel($scope);
-// Bind
-channel.on("eventName", function(data) {
-    // Handle Event
-});
+    <script type="text/template" id="angular_message_service.1">@implementation MargeSimpson
 //...
-//...
-// Trigger
-channel.trigger("eventName", { data: data });
+- (void) callForFood
+{
+    [[NSNotificationCenter defaultCenter]
+    postNotificationName:@"FoodIsReady"
+    object:self];
+}
+@end
     </script>
-    <script type="text/template" id="angular_scope.0">var app = angular.module("App", []);
+    <script type="text/template" id="angular_scope.0">var mrBurns = new require('events').EventEmitter();
     </script>
-    <script type="text/template" id="angular_scope.1">app.controller("MargeCtrl", function($scope, MessageService) {
-    var channel = MessageService.getMessageChannel($scope);
-    channel.on("here", function(events, data) {
-        feed(data);
-    });
-    channel.trigger("food:ready");
-});
+    <script type="text/template" id="angular_scope.1">function releasingTheHounds(){
+    //...
+}
+mrBurns.on('releaseTheHounds', releasingTheHounds);
+
     </script>
-    <script type="text/template" id="angular_scope.2">app.controller("BartCtrl", function($scope, MessageService) {
-    var channel = MessageService.getMessageChannel($scope);
-    channel.on("food:ready", function(events, data) {
-        rollerBlaid2("KITCHEN");
-        channel.trigger("here", { name: "Bart" });
-    });
-});
-app.controller("LisaCtrl", function($scope, MessageService) {
-...
+    <script type="text/template" id="angular_scope.2">mrBurns.emit('releaseTheHounds');
     </script>
     <script type="text/template" id="angular_chronosjs_channel">var app = angular.module("App.channels", [])
     .factory("chronosjsChannel", function ($window) {

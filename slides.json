@@ -21,156 +21,7 @@
                         "class": "absolute-element",
                         "style": "position: absolute; width: 800px; height: 300px; z-index: 4; left: 100px; top: 550px;"
                     },
-                    "value": "Choose Your Channels"
-                }
-            ]
-        ]
-    },
-    {
-        "steps": [
-            [
-                {
-                    "name": "h2",
-                    "value": "Connection Before Content"
-                },
-                {
-                    "name": "notes",
-                    "value": [
-                        "@LivePerson it is all about creating a meaningful connection",
-                        "So We have a saying: connection before content",
-                        "I would like to introduce Miki Dimenstein",
-                        "Although not long ago, he was still playing with Java & Maven",
-                        "Miki is today working for the LivePerson Frontend Infra team",
-                        "And this is Itai Koren, also known as itkoren, a FED for the LivePerson Infra team"
-                    ]
-                },
-                {
-                    "name": "p",
-                    "attributes": {
-                        "class": "fragment",
-                        "data-fragment-index": "0",
-                        "style": "height: 300px;"
-                    },
-                    "value": [
-                        {
-                            "name": "img",
-                            "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7647770/073ffa18-fae3-11e4-9b1a-94483fd590b5.png",
-                                "style": "width: 100px; height: 100px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 160px; top: 160px;",
-                                "class": "absolute-element"
-                            }
-                        },
-                        {
-                            "name": "div",
-                            "value": [
-                                {
-                                    "name": "div",
-                                    "attributes": {
-                                        "style": "position: absolute; z-index: 4; left: 280px; top: 174px;",
-                                        "class": "absolute-element"
-                                    },
-                                    "value": [
-                                        {
-                                            "name": "h4",
-                                            "attributes": {
-                                                "style": "font-weight: bold;"
-                                            },
-                                            "value": "Michael Dimenshtein"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "name": "div",
-                                    "value": [
-                                        {
-                                            "name": "div",
-                                            "attributes": {
-                                                "style": "position: absolute; z-index: 4; left: 280px; top: 234px;",
-                                                "class": "absolute-element"
-                                            },
-                                            "value": "Email: michaeld@liveperson.com"
-                                        },
-                                        {
-                                            "name": "div",
-                                            "attributes": {
-                                                "style": "position: absolute; z-index: 4; left: 280px; top: 274px;",
-                                                "class": "absolute-element"
-                                            },
-                                            "value": "Github: @miki2826"
-                                        },
-                                        {
-                                            "name": "div",
-                                            "attributes": {
-                                                "style": "position: absolute; z-index: 4; left: 280px; top: 314px;",
-                                                "class": "absolute-element"
-                                            },
-                                            "value": "Twitter: @dimenshtein"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "p",
-                    "attributes": {
-                        "class": "fragment",
-                        "data-fragment-index": "1",
-                        "style": "height: 300px;"
-                    },
-                    "value": [
-                        {
-                            "name": "img",
-                            "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7647773/13fb52ac-fae3-11e4-8172-bec579a050d0.png",
-                                "style": "width: 100px; height: 100px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 160px; top: 380px;",
-                                "class": "absolute-element"
-                            }
-                        },
-                        {
-                            "name": "div",
-                            "value": [
-                                {
-                                    "name": "div",
-                                    "attributes": {
-                                        "style": "position: absolute; z-index: 4; left: 280px; top: 394px;",
-                                        "class": "absolute-element"
-                                    },
-                                    "value": [
-                                        {
-                                            "name": "h4",
-                                            "attributes": {
-                                                "style": "font-weight: bold;"
-                                            },
-                                            "value": "Itai Koren"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "name": "div",
-                                    "value": [
-                                        {
-                                            "name": "div",
-                                            "attributes": {
-                                                "style": "position: absolute; z-index: 4; left: 280px; top: 454px;",
-                                                "class": "absolute-element"
-                                            },
-                                            "value": "Email: itaik@liveperson.com"
-                                        },
-                                        {
-                                            "name": "div",
-                                            "attributes": {
-                                                "style": "position: absolute; z-index: 4; left: 280px; top: 494px;",
-                                                "class": "absolute-element"
-                                            },
-                                            "value": "Github & Twitter: @itkoren"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
+                    "value": "Event Driven Overview"
                 }
             ]
         ]
@@ -755,25 +606,6 @@
         "steps": [
             [
                 {
-                    "name": "img",
-                    "attributes": {
-                        "src": "https://cloud.githubusercontent.com/assets/3624786/8147890/fe536c64-1289-11e5-8934-3033943ef0bd.png",
-                        "style": "width: 600px;"
-                    }
-                },
-                {
-                    "name": "notes",
-                    "value": [
-                        "Itai: Seems Good After all"
-                    ]
-                }
-            ]
-        ]
-    },
-    {
-        "steps": [
-            [
-                {
                     "name": "h3",
                     "value": "Javascript is Callback Driven by Nature"
                 },
@@ -961,7 +793,7 @@
             [
                 {
                     "name": "h2",
-                    "value": "AngularJS $scope"
+                    "value": "iOS NSNotification"
                 },
                 {
                     "name": "div",
@@ -979,7 +811,7 @@
                                         "data-fragment-index": "0",
                                         "style": "line-height: 80px;"
                                     },
-                                    "value": "Scope is the Glue"
+                                    "value": "Encapsulates information so that it can be broadcast to other objects"
                                 },
                                 {
                                     "name": "li",
@@ -988,7 +820,7 @@
                                         "data-fragment-index": "1",
                                         "style": "line-height: 80px;"
                                     },
-                                    "value": "Inherited Scope"
+                                    "value": "Broadcast done using NSNotificationCenter object"
                                 },
                                 {
                                     "name": "li",
@@ -997,16 +829,7 @@
                                         "data-fragment-index": "1",
                                         "style": "line-height: 90px;"
                                     },
-                                    "value": "Parent -> Child"
-                                },
-                                {
-                                    "name": "li",
-                                    "attributes": {
-                                        "class": "fragment",
-                                        "data-fragment-index": "2",
-                                        "style": "line-height: 60px;"
-                                    },
-                                    "value": "$broadcast, $emit & $on"
+                                    "value": "Contains name that is a tag for identifying the notification"
                                 }
                             ]
                         }
@@ -1015,7 +838,7 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Itai: The scope is the glue for everything. It acts as the elements which connects the controllers, the data and the presentation layer.",
+                        "write stuffItai: The scope is the glue for everything. It acts as the elements which connects the controllers, the data and the presentation layer.",
                         "When trying to create a controller to controller communication, the simplest way for controllers to communicate is through the use of scope. Each time a controller is instantiated within another controller, that controller (the child) inherits the scope from the parent controller.",
                         "Inherited scope, though, does not deal with communication between siblings. For that, we can used event-based communication with the Angular services $on, $emit, and $broadcast."
                     ]
@@ -1066,8 +889,45 @@
                 {
                     "name": "notes",
                     "value": [
-                        "Itai: Another maybe even better example is the scope of Angular JS",
-                        "Angular JS scope controls the awareness of changes out of the box, but we can also use it to implement a generic message service"
+                        "All instances of TestClass will be notified"
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "steps": [
+            [
+                {
+                    "name": "h2",
+                    "value": "NodeJS EventEmitter"
+                },
+                {
+                    "name": "div",
+                    "attributes": {
+                        "style": "height: 600px; width: 900px; margin-top: 100px; text-align: left;"
+                    },
+                    "value": [
+                        {
+                            "name": "ul",
+                            "value": [
+                                {
+                                    "name": "li",
+                                    "attributes": {
+                                        "class": "fragment",
+                                        "data-fragment-index": "0",
+                                        "style": "line-height: 80px;"
+                                    },
+                                    "value": "Native Event Bus implementation for NodeJS"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "notes",
+                    "value": [
+                        "write stuff"
                     ]
                 }
             ]

@@ -56,7 +56,7 @@ Reveal.initialize({
     // Opens links in an iframe preview overlay
     previewLinks: false,
 
-    theme: queryHash.theme || "simple", //"sky", //"solarized", //"beige", // available themes are in /css/theme
+    theme: queryHash.theme || "moon", //"sky", //"solarized", //"beige", // available themes are in /css/theme
 
     // Transition style
     transition: queryHash.transition || "linear", // default/cube/page/concave/zoom/linear/fade/none
@@ -69,6 +69,7 @@ Reveal.initialize({
 
     // Number of slides away from the current that are visible
     viewDistance: 50,
+    dataBackground: "#2ba056",
 
     // Parallax scrolling
     //parallaxBackgroundImage: "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg",
@@ -123,15 +124,6 @@ Reveal.initialize({
 setTimeout(function () {
     var style = document.getElementById("dynamic-style");
     style.textContent = "\
-.reveal,\
-.reveal h1,\
-.reveal h2,\
-.reveal h3,\
-.reveal h4,\
-.reveal h5,\
-.reveal h6 { \
-    font-family: Courier, \"Lucida Console\", monospace;\
-}\
 \
 .reveal pre {\
     margin: 1px;\
@@ -167,3 +159,7 @@ window.addEventListener("keyup", function () {
         }, 500);
     }
 }, false);
+/*
+.body {\
+ data-background:#2ba056\
+}\*/
