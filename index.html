@@ -48,7 +48,7 @@ channel.trigger("eventName", { data: data });
     }
 });
     </script>
-    <script type="text/template" id="angular_message_service.0">@implementation SimpsonCharacter
+    <script type="text/template" id="ios_nsnotification.0">@implementation SimpsonCharacter
 - (id) init
 {
     //...
@@ -63,7 +63,7 @@ channel.trigger("eventName", { data: data });
 }
 @end
     </script>
-    <script type="text/template" id="angular_message_service.1">@implementation MargeSimpson
+    <script type="text/template" id="ios_nsnotification.1">@implementation MargeSimpson
 //...
 - (void) callForFood
 {
@@ -73,115 +73,34 @@ channel.trigger("eventName", { data: data });
 }
 @end
     </script>
-    <script type="text/template" id="angular_scope.0">var mrBurns = new require('events').EventEmitter();
+    <script type="text/template" id="node_eventemitter.0">var mrBurns = new require('events').EventEmitter();
     </script>
-    <script type="text/template" id="angular_scope.1">function releasingTheHounds(){
+    <script type="text/template" id="node_eventemitter.1">function releasingTheHounds(){
     //...
 }
 mrBurns.on('releaseTheHounds', releasingTheHounds);
+//......
 
+mrBurns.emit('releaseTheHounds');
     </script>
-    <script type="text/template" id="angular_scope.2">mrBurns.emit('releaseTheHounds');
-    </script>
-    <script type="text/template" id="angular_chronosjs_channel">var app = angular.module("App.channels", [])
-    .factory("chronosjsChannel", function ($window) {
-        var chronosjsChannel = new $window.Chronos.Channels();
-        return chronosjsChannel;
-    });
-    </script>
-    <script type="text/template" id="angular_chronosjs_earth_controller">app.controller("EarthCtrl", ["chronosjsChannel", function(chronosjsChannel) {
-  function publishAngle() {
-    var data = getAngle(sunImage);
-    chronosjsChannel.trigger({
-      appName: "earth",
-      eventName: "rotation",
-      data: data
-    });
-  }
-  setInterval(publishAngle, 200);
-}]);
-    </script>
-    <script type="text/template" id="angular_chronosjs_homer_directive">angular.module("App.ui-homer", [])
- .directive("homerImage", ["chronosjsChannel", function (chronosjsChannel) {
-   return {
-     template: "<image ng-src=\"img/{{src}}.jpg\" class=\"homer\"></image>",
-     restrict: "EAC",
-     link: function (scope, elm, attrs) {
-       //...
-       //...
-       chronosjsChannel.bind({
-         appName: "earth",
-         eventName: "rotation",
-         func: understandAngle,
-         async: true
-       });
-       scope.src = attrs.default;
-     }
-   };
-}]);
-    </script>
-    <script type="text/template" id="angular_chronosjs_courier_supervisor.0">var app = angular.module("App.channels", [])
- .factory("chronosjsCourierSupervisor", function ($window) {
-  var supervisor = {
-    couriers: {},
-    createWidget: function(opt) {
-      this.couriers[opt.id] = $window.Chronos.PostMessageCourier({ target: {
-    </script>
-    <script type="text/template" id="angular_chronosjs_courier_supervisor.1">        url: opt.url,
-        style: {/*...*/},
-        callback: function () {
-          this.couriers[options.id].trigger({
-            appName: "configure",
-            eventName: "position",
-            data: {/*...*/}
-          });}}});
-    },
-    </script>
-    <script type="text/template" id="angular_chronosjs_courier_supervisor.2">    applyAll: function(fnName, options) {
-      // Iterate over all couriers and invoke function
-    };
-    return supervisor;
-});
-    </script>
-    <script type="text/template" id="angular_chronosjs_courier_earth_controller.0">app.controller("EarthCtrl", ["chronosjsCourierSupervisor",
-  function(chronosjsCourierSupervisor) {
-
-    (function createWidgets() {
-      chronosjsCourierSupervisor.createWidget({ id:"w1",top:"0px",left:"0px",url:"http://domain-x.com/..." });
-      chronosjsCourierSupervisor.createWidget({ id:"w2",top:"35px",left:"0px",url:"http://domain-y.com/..." });
-      // More Widgets
-    })();
-    </script>
-    <script type="text/template" id="angular_chronosjs_courier_earth_controller.1">    function publishAngle() {
-      var data = getAngle(sunImage);
-      chronosjsCourierSupervisor.applyAll("trigger", {
-        appName: "earth",
-        eventName: "rotation",
-        data: data
-      });
+    <script type="text/template" id="android_guava.0">public class SideshowBob {
+    @Subscribe
+    public void killBart(BartIsHereEvent event) {
+        //.....
     }
-    setInterval(publishAngle, 200);
-}]);
-    </script>
-    <script type="text/template" id="angular_chronosjs_courier_homer_widget.0">var courier = new window.Chronos.PostMessageCourier();
-    </script>
-    <script type="text/template" id="angular_chronosjs_courier_homer_widget.1">//...
+}
+//.....
+
+EventBus eventBus = new EventBus();
+SideshowBob sideshowBob = new SideshowBob();
+eventBus.register(sideshowBob);
 //...
-courier.bind({
-    appName: "configure",
-    eventName: "position",
-    func: initPosition,
-    async: true
-});
-courier.bind({
-    appName: "earth",
-    eventName: "rotation",
-    func: understandAngle,
-    async: true
-});
+
+eventBus.post(new BartIsHereEvent());
     </script>
     <script src="codemirror/codemirror.js"></script>
     <script src="codemirror/javascript.js"></script>
+    <script src="codemirror/clike.js"></script>
     <script src="codemirror/q.js"></script>
     <script src="codemirror/revealjs-codemirror-core.js"></script>
     <!-- Get the RevealularJS lib -->

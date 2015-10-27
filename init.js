@@ -56,7 +56,7 @@ Reveal.initialize({
     // Opens links in an iframe preview overlay
     previewLinks: false,
 
-    theme: queryHash.theme || "moon", //"sky", //"solarized", //"beige", // available themes are in /css/theme
+    theme: queryHash.theme || "sky", //"sky", //"solarized", //"beige", // available themes are in /css/theme
 
     // Transition style
     transition: queryHash.transition || "linear", // default/cube/page/concave/zoom/linear/fade/none
@@ -125,16 +125,11 @@ setTimeout(function () {
     var style = document.getElementById("dynamic-style");
     style.textContent = "\
 \
-@font-face {\
-    font-family: opensans;\
-    src: url(OpenSans-Regular.ttf);\
-}\
 body {\
  background:#2ba056;\
  background-color:#2ba056;\
 }\
 \.reveal {\
-    font-family: opensans;\
     color: white; \
 }\
 \.reveal h1,\
@@ -144,7 +139,7 @@ body {\
     .reveal h5,\
     .reveal h6 {\
         color: white;\
-        font-family: opensans;}\
+        text-transform: none;}\
 .reveal pre {\
     margin: 1px;\
     padding: 1px 20px;\
@@ -158,7 +153,7 @@ for (var i = 0; i < codes.length; i++) {
 
 revealjscodemirror.codemirrorify({
     lineNumbers: false,
-    styleActiveLine: true,
+    styleActiveLine: false,
     matchBrackets: true,
     scrollbarStyle: "null",
     theme: "xq-dark"
@@ -182,4 +177,8 @@ window.addEventListener("keyup", function () {
 /*
 .body {\
  data-background:#2ba056\
+ @font-face {\
+ font-family: opensans;\
+ src: url(OpenSans-Regular.ttf);\
+ }\
 }\*/
