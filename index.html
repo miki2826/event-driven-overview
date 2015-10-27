@@ -48,7 +48,7 @@ channel.trigger("eventName", { data: data });
     }
 });
     </script>
-    <script type="text/template" id="ios_nsnotification.0">@implementation SimpsonCharacter
+    <script type="text/x-objectivec" id="ios_nsnotification.0">@implementation SimpsonCharacter
 - (id) init
 {
     //...
@@ -63,7 +63,7 @@ channel.trigger("eventName", { data: data });
 }
 @end
     </script>
-    <script type="text/template" id="ios_nsnotification.1">@implementation MargeSimpson
+    <script type="text/x-objectivec" id="ios_nsnotification.1">@implementation MargeSimpson
 //...
 - (void) callForFood
 {
@@ -83,20 +83,20 @@ mrBurns.on('releaseTheHounds', releasingTheHounds);
 
 mrBurns.emit('releaseTheHounds');
     </script>
-    <script type="text/template" id="android_guava.0">public class SideshowBob {
+    <script type="text/x-java" id="android_guava.0">public class SideshowBob {
     @Subscribe
     public void killBart(BartIsHereEvent event) {
         //.....
     }
+    //.....
+    EventBus eventBus = new EventBus();
+    SideshowBob sideshowBob = new SideshowBob();
+    eventBus.register(sideshowBob);
+    //...
+
+    eventBus.post(new BartIsHereEvent());
 }
-//.....
 
-EventBus eventBus = new EventBus();
-SideshowBob sideshowBob = new SideshowBob();
-eventBus.register(sideshowBob);
-//...
-
-eventBus.post(new BartIsHereEvent());
     </script>
     <script src="codemirror/codemirror.js"></script>
     <script src="codemirror/javascript.js"></script>

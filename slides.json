@@ -860,7 +860,7 @@
                             "attributes": {
                                 "id": "ios_nsnotification.0",
                                 "class": "code absolute-element",
-                                "mimeMode": "text/x-objectivec"
+                                "mode": "clike"
                             },
                             "value": ""
                         }
@@ -880,7 +880,7 @@
                             "attributes": {
                                 "id": "ios_nsnotification.1",
                                 "class": "code absolute-element",
-                                "mode": "text/x-objectivec"
+                                "mode": "clike"
                             },
                             "value": ""
                         }
@@ -970,7 +970,7 @@
                             "attributes": {
                                 "id": "android_guava.0",
                                 "class": "code absolute-element",
-                                "mode": "javascript"
+                                "mode": "clike"
                             },
                             "value": ""
                         }
