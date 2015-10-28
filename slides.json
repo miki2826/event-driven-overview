@@ -1057,7 +1057,7 @@
                         {
                             "name": "img",
                             "attributes": {
-                                "src": "https://cloud.githubusercontent.com/assets/3624786/7811015/a7785186-03af-11e5-9647-d7e3faf56ce1.png",
+                                "src": "img/the_end.jpg",
                                 "style": "width: 800px; height: 500px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 100px; top: 6px;",
                                 "class": "absolute-element"
                             }
