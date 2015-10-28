@@ -142,6 +142,7 @@ body {\
         text-transform: none;}\
 .reveal pre {\
     margin: 1px;\
+    box-shadow: none;\
     padding: 1px 20px;\
 }";
 }, 1000);
@@ -156,7 +157,7 @@ revealjscodemirror.codemirrorify({
     styleActiveLine: false,
     matchBrackets: true,
     scrollbarStyle: "null",
-    theme: "xq-dark"
+    theme: "xq-light"
 });
 
 //
